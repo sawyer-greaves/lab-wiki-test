@@ -18,7 +18,7 @@ Git hosting services typically don't allow you to add the same public key to
 multiple accounts. This is probably because the public key is likely also being used
 by the hosting service to determine which user has initiated a Git network
 transaction and thereby determine what permissions that user has (see
-[Q & A](#Q & A)). Regardless, if you have multiple accounts with the same Git hosting
+[Q and A](#QandA)). Regardless, if you have multiple accounts with the same Git hosting
 service (e.g. two GitHub accounts or two Bitbucket accounts) and you want to work
 with repositories associated with two or more accounts from the same computer, the
 correct SSH key must be used for each account. By default, Git and SSH won't know
@@ -200,7 +200,7 @@ repositories.
 Blog Source: [Setting up multiple GitHub accounts, the nicer way](https://dev.to/arnellebalane/setting-up-multiple-github-accounts-the-nicer-way-1m5m)
 
 ---
-## Q & A
+## QandA
 
 **Why do GitHub and Bitbucket use the `git` user when using SSH (e.g. `git@github.com`)?**
 
