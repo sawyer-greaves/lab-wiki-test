@@ -1,4 +1,4 @@
-[Home](../Home.md)
+[Home](../Home)
 # How to Edit the Wiki
 
 The [Bitbucket documentation](https://confluence.atlassian.com/x/FA4zDQ) has more

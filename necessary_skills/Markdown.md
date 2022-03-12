@@ -1,4 +1,4 @@
-[Home](../Home.md)
+[Home](../Home)
 # Markdown Syntax
 
 This wiki uses the [Markdown](http://daringfireball.net/projects/markdown/) syntax.

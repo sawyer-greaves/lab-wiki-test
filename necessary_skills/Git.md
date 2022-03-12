@@ -1,4 +1,4 @@
-[Home](../Home.md)
+[Home](../Home)
 # Git
 
 Git is a distributed Version Control System (DVCS) used primarily to keep track of
