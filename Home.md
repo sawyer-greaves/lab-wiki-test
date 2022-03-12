@@ -8,9 +8,8 @@ Welcome to the Utah Telerobotics Lab Wiki!
 - [Standards and Procedures](Standards_and_Procedures.md)
 
 ---
-## Necessary Skills
+## Necessary Skills for All Lab Members
 
-### All Lab Members
 - [How to Edit the Wiki](necessary_skills/Editing_the_Wiki.md)
 - [Markdown Syntax](necessary_skills/Markdown.md)
 - [Git](necessary_skills/Git.md)
