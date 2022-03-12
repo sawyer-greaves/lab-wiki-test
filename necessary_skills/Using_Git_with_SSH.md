@@ -1,7 +1,7 @@
 [Home](../Home)
 # Using Git with the SSH Protocol
 
-SSH (Secure SHell) is a protocol alternative to HTTPS used by Git to perform network
+SSH (Secure SHell) is a protocol alternative to HTTPS that can be used by Git to perform network
 transactions (e.g. `git fetch`, `git pull`, `git push`). SSH uses public key
 authentication instead of a traditional username and password. This involves
 creating two text-based files: the private key and the public key. The public key is
