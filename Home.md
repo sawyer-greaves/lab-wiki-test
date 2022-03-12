@@ -14,3 +14,8 @@ Welcome to the Utah Telerobotics Lab Wiki!
 - [Markdown Syntax](necessary_skills/Markdown.md)
 - [Git](necessary_skills/Git.md)
     - [Using Git with the SSH Protocol](necessary_skills/Using_Git_with_SSH.md)
+
+---
+## Logistical
+
+- [Lab Wiki TODO List](Todo.md)
