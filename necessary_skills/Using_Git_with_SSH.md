@@ -1,4 +1,4 @@
-[Home](Home.md)
+[Home](../Home.md)
 
 # Using Git with the SSH Protocol
 
