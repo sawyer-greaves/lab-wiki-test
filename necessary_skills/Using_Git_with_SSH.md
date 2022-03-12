@@ -44,27 +44,22 @@ transaction. It does not affect how Git specifically behaves.
 
 2. Create (or edit) the SSH configuration file `~/.ssh/config`. The basic format for
    a custom host is:
-
    ```
    Host {host-alias}
        HostName {actual-hostname}
        IdentityFile {path/to/private/key/file}
        IdentitiesOnly yes
    ```
-
    The alias `{host-alias}` can be anything you want, but there are two conventions
    people use:
-
    ```
    {actual-hostname}-{username}
    {username}.{actual-hostname}
    ```
-
    Let's assume you have two GitHub accounts: `mainuser` and `otheruser`. On
    GitHub.com, we've also assigned the `id_rsa` public key to the `mainuser` account
    and an `otheruser_key` public key to the `otheruser` account. We could then put
    the following in `~/.ssh/config`.
-
    ```
    # mainuser Account
    Host github.com
@@ -81,12 +76,10 @@ transaction. It does not affect how Git specifically behaves.
 
 3. Once the configuration is set, the specified key will be used whenever you use a
    particular alias:
-
    ```
    git clone git@github.com:mainuser/repository.git
    git clone git@github.com-otheruser:otheruser/repository.git 
    ```
-    
    The first `git clone` will use `id_rsa` for authentication and the second
    `git clone` will use `otheruser_key` for authentication. In both cases, the part 
    between `@` and `:` will be replaced by SSH with `github.com` because that is
@@ -99,7 +92,6 @@ transaction. It does not affect how Git specifically behaves.
 
 4. Existing repositories should also use the custom host aliases. These can be
    updated using `git remote set-url`. For example:
-
    ```
    git remote set-url origin git@github.com-otheruser:otheruser/repository.git
    ```
@@ -107,7 +99,6 @@ transaction. It does not affect how Git specifically behaves.
 5. Since the Git hosting service uses the email on each commit to determine which
    user to associate with the commit, you'll want to make sure the `user.email` Git
    configuration variable is set correctly for each repository:
-
    ```
    cd mainuser-repository
    git config user.name "Your Name"
@@ -117,7 +108,6 @@ transaction. It does not affect how Git specifically behaves.
    git config user.name "Your Name"
    git config user.email "otheruser@email.com"
    ```
-
    Notice the absence of the `--global` flag in each `git config` command. This
    sets the local configuration for each repository specifically. An alternative to
    setting the local Git configuration for each repository is to use "*conditional
@@ -144,33 +134,28 @@ repositories.
    to the `otheruser` account. Since `id_rsa` is a default key, we only need to set
    up Git to use a different key when we are using a repository associated with the
    `otheruser` account. We could do this by putting the following in `~/.gitconfig`.
-
    ```
    [includeIf "gitdir:/path/to/otheruser/repository/"]
        [core]
            sshCommand = "ssh -i ~/.ssh/otheruser_key"
    ```
-
    The `[includeIf]` block makes Git override the global configuration when working
    with the repository at `/path/to/otheruser/repository/`. In this case it
    overrides the `core.sshCommand` Git config variable. This allows us to add the
    `-i` flag to the `ssh` command Git uses when performing network transactions for
    this repository. The `-i` flag takes the path to a private key file
-   (identification file) to use for that particular SSH instance. 
-
+   (identification file) to use for that particular SSH instance.
    The `[includeIf]` block will actually apply to all repositories in the directory
    of its argument if it ends in a `/`, so you could put all the repositories
    associated with the `otheruser` account into the same directory, thus avoiding a
    conditional include block for every `otheruser` repository on your computer. For
    example, if we put all the `otheruser` repositories into
    `~/otheruser-repositories/`:
-   
    ```
    [includeIf "gitdir:~/otheruser-repositories/"]
        [core]
            sshCommand = "ssh -i ~/.ssh/otheruser_key"
    ```
-   
    All repositories inside `~/otheruser-repositories/` will use the `otheruser_key`
    SSH key while all repositories outside the `~/otheruser-repositories/`
    directory will use the default Git configuration and therefore the default
@@ -180,16 +165,13 @@ repositories.
 3. Since the Git hosting service uses the email on each commit to determine which
    user to associate with the commit, you'll want to make sure the `user.email` Git
    configuration variable is set correctly for each repository. This is set globally with:
-
    ```
    git config --global user.name "Your Name"
    git config --global user.email "mainuser.email.com"
    ```
-
    this sets up the correct email when working with `mainuser` associated
    repositories. We then override the global configuration for `otheruser` associated
    repositories by adding to the `[includeIf]` block:
-
    ```
    [includeIf "gitdir:~/otheruser-repositories/"]
        [user]
