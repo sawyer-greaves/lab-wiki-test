@@ -3,6 +3,11 @@
 Welcome to the Utah Telerobotics Lab Wiki!
 
 ---
+## General
+
+- [Standards and Procedures](Standards_and_Procedures.md)
+
+---
 ## Necessary Skills
 
 ### All Lab Members
