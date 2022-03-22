@@ -13,22 +13,27 @@ then given to the Git hosting service. The combination of public and private key
 Typically you create a private-public key pair using `ssh-keygen` on the command line. This will create the private and public keys in `~/.ssh`. You then copy the contents of the `.pub` file and paste it into a field on the Git hosting service website.
 
 ---
-## Multiple Users of the Same Git Hosting Service on the Same Computer
+## Using Multiple Accounts of a Git Hosting Service from the Same Operating System User on the Same Computer
 
 Git hosting services typically don't allow you to add the same public key to
 multiple accounts. This is probably because the public key is likely also being used
-by the hosting service to determine which user has initiated a Git network
-transaction and thereby determine what permissions that user has (see
+by the hosting service to determine which hosting service account has initiated a Git network
+transaction and thereby determine what permissions that account has (see
 [Q & A](#QandA)). Regardless, if you have multiple accounts with the same Git hosting
 service (e.g. two GitHub accounts or two Bitbucket accounts) and you want to work
-with repositories associated with two or more accounts from the same computer, the
-correct SSH key must be used for each account. By default, Git and SSH won't know
-which SSH key to use when performing network transactions and will use the default
-key. This will cause authentication errors for the accounts not associated with the
-default key.
+with repositories associated with two or more of these accounts from the same operating system
+user on the same computer, the correct SSH key must be used for each account. By
+default, Git and SSH won't know which SSH key to use when performing network
+transactions and will use the default key associated with the operating system user.
+This will cause authentication errors for the accounts not associated with the default
+key.
 
 There are two ways of handling this scenario: Using custom hosts with your SSH
 config file or using conditional includes with your Git config file.
+
+>Note that this problem will not arise if each operating system user on a particular
+computer only interacts with repositories from **one** account from each Git hosting
+service. This is part of why it is recommended to create your own operating system level user on each of the lab computers you are actively using. Doing so will also help avoid forgetting to update the `user.name` and `user.email` Git config variables when commiting to repositories associated with two different accounts.
 
 ### Using Custom Hosts with Your SSH Config File
 
