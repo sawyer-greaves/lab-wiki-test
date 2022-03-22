@@ -102,7 +102,7 @@ transaction. It does not affect how Git specifically behaves.
    ```
 
 5. Since the Git hosting service uses the email on each commit to determine which
-   user to associate with the commit, you'll want to make sure the `user.email` Git
+   account to associate with the commit, you'll want to make sure the `user.email` Git
    configuration variable is set correctly for each repository:
    ```
    cd mainuser-repository
@@ -168,7 +168,7 @@ repositories.
    are set up by default.
 
 3. Since the Git hosting service uses the email on each commit to determine which
-   user to associate with the commit, you'll want to make sure the `user.email` Git
+   account to associate with the commit, you'll want to make sure the `user.email` Git
    configuration variable is set correctly for each repository. This is set globally with:
    ```
    git config --global user.name "Your Name"
@@ -196,7 +196,7 @@ Blog Source: [Setting up multiple GitHub accounts, the nicer way](https://dev.to
 The `git` user is an operating system level user. The custom Git service that is
 running on the server is set up such that the `git` operating system user has
 permission to interact with the Git service only. In other words, your GitHub or
-Bitbucket user is not set up as an operating system level user such that you can log
+Bitbucket account is not set up as an operating system level user such that you can log
 into the server via SSH. Everyone uses the `git` user. See
 [here](https://superuser.com/questions/1268850/why-does-ssh-to-github-require-the-git-user).
 
