@@ -6,6 +6,7 @@ Welcome to the Utah Telerobotics Lab Wiki!
 ## General
 
 - [Standards and Procedures](Standards_and_Procedures.md)
+- [Lab Computer Management Standards](Lab_Computer_Management_Standards.md)
 
 ---
 ## Necessary Skills
