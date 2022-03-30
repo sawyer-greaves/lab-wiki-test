@@ -1,6 +1,8 @@
 [Home](../Home)
 # Git
 
+Here is a test link to the [ProGit textbook](Pro_Git.pdf)
+
 Git is a distributed Version Control System (DVCS) used primarily to keep track of
 changes in souce code. Learning how to use Git is required by everyone in the lab
 even if they never write any code because this wiki is
