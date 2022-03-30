@@ -15,6 +15,7 @@
     - https://askubuntu.com/questions/1262419/safer-alternative-to-using-smbcredentials
     - https://askubuntu.com/questions/1027271/secure-password-when-mounting-the-file-server-using-smbcredentials/1081421#1081421
     - Fully Delete a user (2 steps): 1 In the System properties window, click on settings in user profiles and then delete the user profile. This deletes the data associated with the profile. Then delete the user in the Accounts section of the settings app.
+    - The lab's default password is `telerobo2156`.
 - Fill out [Linux](necessary_skills/Linux.md)
 - Fill out [C/C++ Programming Language](necessary_skills/C_and_Cpp.md)
 - Fill out [CMake](necessary_skills/CMake.md)
