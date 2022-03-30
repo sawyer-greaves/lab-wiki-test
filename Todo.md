@@ -10,7 +10,7 @@
 - Create an Onboarding page
 - Create a Lab Computer Management page with explanation of how to map the group drive for both Windows and Linux
     - https://wiki.ubuntu.com/MountWindowsSharesPermanently
-    - //chips.eng.utah.edu/telerobotics /media/adam/telerobotics-group cifs credentials=/home/adam/.smbcredentials,uid=adam,gid=adam,vers=2.0 0 0
+    - //chips.eng.utah.edu/telerobotics /home/adam/telerobotics-group cifs credentials=/home/adam/.smbcredentials,uid=adam,gid=adam,vers=2.0 0 0
     - https://serverfault.com/questions/222074/fstab-and-cifs-mounting-possible-to-store-authentication-information-outside-of
     - https://askubuntu.com/questions/1262419/safer-alternative-to-using-smbcredentials
     - https://askubuntu.com/questions/1027271/secure-password-when-mounting-the-file-server-using-smbcredentials/1081421#1081421
