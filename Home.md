@@ -24,6 +24,7 @@ Welcome to the Utah Telerobotics Lab Wiki!
 - [Linux](necessary_skills/Linux.md)
 - [C/C++ Programming Language](necessary_skills/C_and_Cpp.md)
 - [CMake](necessary_skills/CMake.md)
+    - [Professional CMake Reference Textbook](necessary_skills/Professional_CMake_11th_Edition.pdf)
 - [Qt Application Framework](necessary_skills/Qt.md)
 - [Doxygen](necessary_skills/Doxygen.md)
 
