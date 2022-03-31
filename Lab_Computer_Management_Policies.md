@@ -1,5 +1,5 @@
 [Home](Home)
-# Lab Computer Management Standards
+# Lab Computer Management Policies
 
 ## User Accounts on Lab Computers
 
