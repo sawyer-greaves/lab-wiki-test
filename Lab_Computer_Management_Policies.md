@@ -13,13 +13,19 @@ Every computer in the lab must have a user for the purposes of lab computer admi
 - The `Telerobotics` user **must not** be used for anything other than general administration of the computer (e.g. creating and deleting other users, installing software for all users, etc.). **No lab work should be conducted from the `Telerobotics` user**.
 - If a computer has multiple operating systems, there **must** be a `Telerobotics` user on each operating system.
 
-By having a `Telerobotics` user on every computer, we can avoid lost data due to forgotten passwords and can create/delete users on the computer under which actual research/work should be taking place. The department IT team will usually also put a `localadmin` user on Windows operating systems. This user serves the same purpose that the `Telerobotics` user is meant to serve.
+By having a `Telerobotics` user on every computer, we can avoid lost data due to forgotten passwords and can create/delete users on the computer under which actual research/work should be taking place. The department IT team will usually also put a `localadmin` user on Windows operating systems. This user serves the same purpose that the `Telerobotics` user is meant to serve but we have the `Telerobotics` users to avoid contacting IT whenever we need to create/delete a user, etc.
 
-In general, each member of the lab should have a **personal user account** on the computer(s) that they regularly use. The reason for this is that things like [SSH authentication with Git](necessary_skills/Using_Git_with_SSH.md) and [mounting the lab network drive](#mounting) require passwords and authentication that is specific to a particular member of the lab and these things get very messy when multiple people are sharing the same user.
+In general, each member of the lab should have a **personal user account** on the computer(s) that they regularly use. The reason for this is that things like [SSH authentication with Git](necessary_skills/Using_Git_with_SSH.md) and [mounting the lab network drive](#mounting) require passwords and authentication that is specific to a particular member of the lab and these things get very messy when multiple people are sharing the same user. It also makes it easy to remove any sensitive personal information such as saved web browser login info (Google Chrome login, etc.), saved cloud drive syncing login info (e.g. Google Drive, OneDrive, etc.), and other similar items when a member of the lab leaves/graduates by simply deleting any of their personal user accounts from lab computers.
 
-Exceptions to this rule would be computers on which no software development will be conducted (i.e. there will be no interaction with [Git repositories](necessary_skills/Git.md)) **and** mounting the lab network drive is not necessary. For example, a computer that is dedicated to **only** use and take data with a partcular piece of lab equipment would not need a user for every member of the lab that wants to use that computer to take data with the equipment. If someone wants to do something more on that computer, then that lab member should create a personal user on the computer.
+Exceptions to this rule would be computers on which **all** of the following applies:
 
->**Keep in Mind**: Since most people should be using their own personal user accounts on each computer, you should avoid hardcoding filepaths in your software projects that contain the user home directory. There are often ways to get the user home directory for whichever user is currently active (e.g. using the `$HOME` environment variable).
+- No software development will be conducted (i.e. there will be no interaction with [Git repositories](necessary_skills/Git.md))
+- Mounting the lab network drive is not necessary
+- Logging into web browsers, cloud drive syncing apps, or anything similar is not neceesary
+
+For example, a computer that is dedicated to **only** use and take data with a partcular piece of lab equipment would not need a user for every member of the lab that wants to use that computer to take data with the equipment. If someone wants to do something more on that computer, then that lab member should create a personal user on the computer.
+
+>**Keep in Mind**: Since most people should be using their own personal user accounts on each computer, you should avoid hardcoding filepaths in your software projects that contain a user home directory. There are often ways to get the user home directory for whichever user is currently active (e.g. using the `$HOME` environment variable).
 
 ### Creating and Deleting Users on Windows
 
@@ -54,7 +60,7 @@ Exceptions to this rule would be computers on which no software development will
 
 The "allow list" (found in the Security options) is a list of TeamViewer IDs, which is a number that is computer-specific rather than person-specific, of the computers that we want to allow access to the lab computer. No computer other than those with IDs in the "allow list" can connect under any circumstances.
 
-Currently, there are three ways to connect to a computer with TeamViewer: using an assigned account and easy access, using the randomly generated password, and using the personal password. The above rules are meant to make it impossible to remote login to a lab computer by disabling all of the three methods by default and only enabling the personal password method when the "allow list" is active and contains up-to-date computer IDs. If a personal password is set and no items are in the "allow list" then it may be possible for any computer to remote login using the personal password.
+Currently, there are three ways to connect to a computer with TeamViewer: (1) using an assigned account and easy access, (2) using the randomly generated password, and (3) using the personal password. The above rules are meant to make it impossible to remote login to a lab computer by disabling all of the three methods by default and only enabling the personal password method when the "allow list" is active and contains up-to-date computer IDs. If a personal password is set and no items are in the "allow list" then it may be possible for any computer to remote login using the personal password.
 
 #### Setting Up Your Personal Computer to Access a Lab Computer Via TeamViewer
 If the above rules are followed on each lab computer, you can set up a personal computer to remote login to a lab computer by following these steps:
