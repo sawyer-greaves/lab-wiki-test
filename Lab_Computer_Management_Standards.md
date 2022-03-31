@@ -1,7 +1,7 @@
 [Home](Home)
 # Lab Computer Management Standards
 
-## Users on Lab Computers
+## User Accounts on Lab Computers
 
 >**The lab's default password for computer user accounts is `telerobo2156`. Please use this password for all user accounts on lab computers except personal user accounts that are actively being used.**
 
@@ -43,24 +43,25 @@ Exceptions to this rule would be computers on which no software development will
 ---
 ## Remote Access to Lab Computers
 
-### Through TeamViewer
+### Via TeamViewer
 [TeamViewer](https://teamviewer.com) is installed on many of the lab computers and can be used to initiate a remote session to control a computer as if you were in the lab. If TeamViewer is installed on a lab computer, it **must** be configured according to the following rules:
 
 - **Do not** assign a TeamViewer account (found in the General options)
 - **Do not** enable easy access (a TeamViewer account must be assigned to enable this anyway)
 - **Disable** the random password (found in the Security options)
 - If there is at least one computer in the "allow list" (see below), set the "personal password" to `telerobo2156` (found in the Advanced options). If no computers are in the "allow list" then the "personal password" should be **removed**.
+- You may turn on the option to start TeamViewer with the operating system
 
-The "allow list" (found in the Security options) is a list of unique TeamViewer IDs of the computers that we want to allow access to the lab computer. No computer other than those with IDs in the "allow list" can connect under any circumstances.
+The "allow list" (found in the Security options) is a list of TeamViewer IDs, which is a number that is computer-specific rather than person-specific, of the computers that we want to allow access to the lab computer. No computer other than those with IDs in the "allow list" can connect under any circumstances.
 
-Currently, there are three ways to connect to a computer with TeamViewer: using an assigned account and easy access, using the randomly generated password, and using the personal password. The above rules are meant to make it impossible to remote login to a lab computer by disabling all of the three methods by default and only enabling the personal password method when the "allow list" is active and contains up-to-date computer IDs.
+Currently, there are three ways to connect to a computer with TeamViewer: using an assigned account and easy access, using the randomly generated password, and using the personal password. The above rules are meant to make it impossible to remote login to a lab computer by disabling all of the three methods by default and only enabling the personal password method when the "allow list" is active and contains up-to-date computer IDs. If a personal password is set and no items are in the "allow list" then it may be possible for any computer to remote login using the personal password.
 
-#### Setting Up Your Personal Computer to Access a Lab Computer
+#### Setting Up Your Personal Computer to Access a Lab Computer Via TeamViewer
 If the above rules are followed on each lab computer, you can set up a personal computer to remote login to a lab computer by following these steps:
 
-- Add your personal computer's TeamViewer ID to the "allow list" of the lab computer in the TeamViewer Security options.
-- Add the lab computer's TeamViewer ID and the personal password `telerobo2156` to your personal computer's contacts list.
+- Add your personal computer's TeamViewer ID to the "allow list" of the lab computer in the TeamViewer Security options. TeamViewer may ask you to login with a TeamViewer account when adding to the allow list, but if you say you don't want to you should be able to get to a point where you can add TeamViewer IDs (which are computer-specific rather than person-specific) to the allow list.
+- Add the lab computer's TeamViewer ID and the personal password `telerobo2156` to your personal computer's contacts list or your personal TeamViewer account's contact list.
 
->:exclamation: **Don't forget to remove the TeamViewer ID from the allow list of the lab computer, when your personal computer no longer needs access to it.**
+>:exclamation: **Don't forget to remove the TeamViewer ID from the allow list of the lab computer when your personal computer no longer needs access to it.**
 
 Following these steps, you won't need to enter a password every time you login to the lab computer from your personal computer.
