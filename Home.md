@@ -3,10 +3,10 @@
 Welcome to the Utah Telerobotics Lab Wiki!
 
 ---
-## General
+## Lab Policies, Standards, and Procedures
 
-- [Standards and Procedures](Standards_and_Procedures.md)
 - [Lab Computer Management Policies](Lab_Computer_Management_Policies.md)
+- [Git Standards](Git_Standards.md)
 
 ---
 ## Necessary Skills

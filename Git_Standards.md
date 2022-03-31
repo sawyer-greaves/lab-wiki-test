@@ -1,7 +1,5 @@
 [Home](Home)
-# Lab Standards and Procedures
-
-## Git Standards
+# Git Standards
 
 - Make commits and push often.
 
