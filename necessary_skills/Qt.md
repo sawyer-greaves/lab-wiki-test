@@ -1,2 +1,4 @@
 [Home](../Home)
 # Qt Application Framework
+
+Qt 6 requires Ubuntu 20.04 or newer and Qt Creator version 6 or newer depends on Qt 6 so if you have any version of Ubuntu older than Ubuntu 20.04, you should probably install Qt 5 and Qt Creator using the Ubuntu repositories (using `apt`). If you need a different Qt 5 version than what the Ubuntu repositories provide, you can use the online installer to install it, but you will need to install Qt Creator through the Ubuntu repositories and you will need to add the newly installed version of Qt to your kits in Qt Creator. The versions of Qt installed through the online installer will not automatically appear in Qt Creator because it is installed via a different method.
