@@ -15,3 +15,4 @@
 - Fill out [Qt Application Framework](necessary_skills/Qt.md)
 - Fill out [Doxygen](necessary_skills/Doxygen.md)
 - Fill out [OpenCV](useful_resources/OpenCV.md)
+- Fill out [Eigen Linear Algebra Library](useful_resources/Eigen_Library.md)

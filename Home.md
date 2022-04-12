@@ -39,6 +39,7 @@ At the top of each page, there should be a link to come back to this home page.
 ---
 ## Useful Resources
 
+- [Eigen Linear Algebra Library for C++](useful_resources/Eigen_Library.md)
 - [OpenCV Computer Vision Library](useful_resources/OpenCV.md)
 
 ---
