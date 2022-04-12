@@ -15,3 +15,4 @@
 - Fill out [CMake](necessary_skills/CMake.md)
 - Fill out [Qt Application Framework](necessary_skills/Qt.md)
 - Fill out [Doxygen](necessary_skills/Doxygen.md)
+- Fill out [OpenCV](useful_resources/OpenCV.md)
