@@ -15,7 +15,7 @@ Every computer in the lab must have a user for the purposes of lab computer admi
 
 By having a `Telerobotics` user on every computer, we can avoid lost data due to forgotten passwords and can create/delete users on the computer under which actual research/work should be taking place. The department IT team will usually also put a `localadmin` user on Windows operating systems. This user serves the same purpose that the `Telerobotics` user is meant to serve but we have the `Telerobotics` users to avoid contacting IT whenever we need to create/delete a user, etc.
 
-In general, each member of the lab should have a **personal user account** on the computer(s) that they regularly use. The reason for this is that things like [SSH authentication with Git](necessary_skills/Using_Git_with_SSH.md) and [mounting the lab network drive](#mounting) require passwords and authentication that is specific to a particular member of the lab and these things get very messy when multiple people are sharing the same user. It also makes it easy to remove any sensitive personal information such as saved web browser login info (Google Chrome login, etc.), saved cloud drive syncing login info (e.g. Google Drive, OneDrive, etc.), and other similar items when a member of the lab leaves/graduates by simply deleting any of their personal user accounts from lab computers.
+In general, each member of the lab should have a **personal user account** on the computer(s) that they regularly use. The reason for this is that things like [SSH authentication with Git](necessary_skills/Using_Git_with_SSH.md) and [mounting the lab network drive](Lab_Network_Drive.md) require passwords and authentication that is specific to a particular member of the lab and these things get very messy when multiple people are sharing the same user. It also makes it easy to remove any sensitive personal information such as saved web browser login info (Google Chrome login, etc.), saved cloud drive syncing login info (e.g. Google Drive, OneDrive, etc.), and other similar items when a member of the lab leaves/graduates by simply deleting any of their personal user accounts from lab computers.
 
 Exceptions to this rule would be computers on which **all** of the following applies:
 
@@ -32,19 +32,6 @@ For example, a computer that is dedicated to **only** use and take data with a p
 - Fully Delete a user (2 steps): 1 In the System properties window, click on settings in user profiles and then delete the user profile. This deletes the data associated with the profile. Then delete the user in the Accounts section of the settings app.
 
 ### Creating and Deleting Users on Linux
-
----
-## Mapping/Mounting the Lab Network Drive (Group Drive)
-<a name="mouting"></a>
-
-### Windows
-
-### Linux
-    - https://wiki.ubuntu.com/MountWindowsSharesPermanently
-    - `//chips.eng.utah.edu/telerobotics /home/adam/telerobotics-group cifs credentials=/home/adam/.smbcredentials,uid=adam,gid=adam,vers=2.0 0 0`
-    - https://serverfault.com/questions/222074/fstab-and-cifs-mounting-possible-to-store-authentication-information-outside-of
-    - https://askubuntu.com/questions/1262419/safer-alternative-to-using-smbcredentials
-    - https://askubuntu.com/questions/1027271/secure-password-when-mounting-the-file-server-using-smbcredentials/1081421#1081421
 
 ---
 ## Remote Access to Lab Computers

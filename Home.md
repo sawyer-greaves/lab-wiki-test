@@ -7,6 +7,7 @@ Welcome to the Utah Telerobotics Lab Wiki!
 
 - [Lab Computer Management Policies](Lab_Computer_Management_Policies.md)
 - [Git Standards](Git_Standards.md)
+- [Lab Network Drive (Group Drive)](Lab_Network_Drive.md)
 
 ---
 ## Necessary Skills
