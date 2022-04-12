@@ -1,7 +1,7 @@
 [Home](Home)
 # Lab Wiki TODO List
 
-- Create an Onboarding page
+- Fill out [Onboarding](Onboarding.md)
 - Finish [Lab Computer Managment Policies](Lab_Computer_Management_Policies.md)
 - Fill out [Git Standards](Git_Standards.md)
 - Fill out [Lab Network Drive (Group Drive)](Lab_Network_Drive.md)

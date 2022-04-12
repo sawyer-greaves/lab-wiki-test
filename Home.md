@@ -2,6 +2,12 @@
 
 Welcome to the Utah Telerobotics Lab Wiki!
 
+If you're a new student, please read and follow the onboarding page:
+
+- [Onboarding](Onboarding.md)
+
+At the top of each page, there should be a link to come back to this home page.
+
 ---
 ## Lab Policies, Standards, and Procedures
 

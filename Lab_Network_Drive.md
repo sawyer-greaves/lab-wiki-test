@@ -18,3 +18,4 @@ The lab has a network drive to store files generated for research conducted by t
     - https://serverfault.com/questions/222074/fstab-and-cifs-mounting-possible-to-store-authentication-information-outside-of
     - https://askubuntu.com/questions/1262419/safer-alternative-to-using-smbcredentials
     - https://askubuntu.com/questions/1027271/secure-password-when-mounting-the-file-server-using-smbcredentials/1081421#1081421
+    
