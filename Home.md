@@ -30,6 +30,11 @@ Welcome to the Utah Telerobotics Lab Wiki!
 - [Doxygen](necessary_skills/Doxygen.md)
 
 ---
+## Useful Resources
+
+- [OpenCV Computer Vision Library](useful_resources/OpenCV.md)
+
+---
 ## Logistical
 
 - [Lab Wiki TODO List](Todo.md)
