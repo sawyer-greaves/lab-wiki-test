@@ -43,6 +43,11 @@ At the top of each page, there should be a link to come back to this home page.
 - [OpenCV Computer Vision Library](useful_resources/OpenCV.md)
 
 ---
+## Lab Equipment
+
+- [Teensy-based Magnetometer](https://bitbucket.org/utahtelerobotics/teensy-magnetometer/src/main/)
+
+---
 ## Logistical
 
 - [Lab Wiki TODO List](Todo.md)
