@@ -35,6 +35,7 @@ At the top of each page, there should be a link to come back to this home page.
     - [Professional CMake Reference Textbook](necessary_skills/Professional_CMake_11th_Edition.pdf)
 - [Qt Application Framework](necessary_skills/Qt.md)
 - [Doxygen](necessary_skills/Doxygen.md)
+- [ROS](necessary_skills/ROS.md)
 
 ---
 ## Useful Resources
