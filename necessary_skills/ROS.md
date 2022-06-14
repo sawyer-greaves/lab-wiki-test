@@ -49,6 +49,6 @@ Below are important web-based resources for learning and using ROS.
 
 **ROS Package Index** - [index.ros.org](https://index.ros.org/)
 
-**ROS Answers: A Q&A site for ROS** - [answers.ros.org](https://answers.ros.org/)
+**ROS Answers**: A Q&A site for ROS - [answers.ros.org](https://answers.ros.org/)
 
-**ROS Discourse: A forum for ROS** - [discourse.ros.org](https://discourse.ros.org/)
+**ROS Discourse**: A forum for ROS - [discourse.ros.org](https://discourse.ros.org/)
