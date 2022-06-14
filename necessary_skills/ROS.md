@@ -39,16 +39,44 @@ There are currently two major versions of ROS: **ROS 1** and **ROS 2**. Within e
 
 Below are important web-based resources for learning and using ROS.
 
-**ROS Home Website** - [ros.org](https://www.ros.org/)
+- **ROS Home Website** (ROS 1, ROS 2) - [ros.org](https://www.ros.org/)
 
-**ROS Documentation** - [Launch Page](https://docs.ros.org/)
+  - ROS 1 and ROS 2 product landing page, with high-level description of ROS and links to other ROS sites
 
-**ROS 1 Documentation (ROS Wiki)** - [wiki.ros.org](https://wiki.ros.org/)
+- **ROS Documentation** (ROS 1, ROS 2)- [docs.ros.org](https://docs.ros.org/)
 
-**ROS 2 Documentation** - [docs.ros.org](https://docs.ros.org/en/rolling/)
+  - A landing page from which you can access documentation for any ROS version
 
-**ROS Package Index** - [index.ros.org](https://index.ros.org/)
+- **ROS 1 Documentation** (ROS 1) - [wiki.ros.org](https://wiki.ros.org/)
 
-**ROS Answers**: A Q&A site for ROS - [answers.ros.org](https://answers.ros.org/)
+  - Also called the **ROS Wiki**
+  - ROS 1 documentation and user modifiable content
+  - Active until at least the last ROS 1 distribution is EOL
 
-**ROS Discourse**: A forum for ROS - [discourse.ros.org](https://discourse.ros.org/)
+- **ROS 2 Documentation** (ROS 2)
+
+  - **Rolling** - [docs.ros.org/en/rolling/](https://docs.ros.org/en/rolling/)
+  - **Humble** - [docs.ros.org/en/humble/](https://docs.ros.org/en/humble/)
+  - **Galactic** - [docs.ros.org/en/galactic/](https://docs.ros.org/en/galactic/)
+  - **Foxy** - [docs.ros.org/en/foxy/](https://docs.ros.org/en/foxy/)
+  - Change the distribution the documentation is for at the bottom of the navigation tree on the left of the page
+
+- **ROS Package Index** (ROS 1, ROS 2) - [index.ros.org](https://index.ros.org/)
+
+  - Indexed list of all packages (i.e. [Python Package Index (PyPI)](https://pypi.org/) for ROS packages)
+  - See which ROS distributions a package supports
+  - Link to a package's repository, API documentation, or website
+  - Inspect a package's license, build type, maintainers, status, and dependencies
+  - Get more info for a package on ROS Answers
+
+- **ROS Answers** (ROS 1, ROS 2) - [answers.ros.org](https://answers.ros.org/)
+
+  - A Q&A community site for ROS, similar to [Stack Exchange](https://stackexchange.com/)
+
+- **ROS Discourse** (ROS 1, ROS 2) - [discourse.ros.org](https://discourse.ros.org/)
+
+  - Forum for general discussions and announcements for the ROS community
+
+- **ROS Enhancement Proposals (REPs)** (ROS 1, ROS 2) - [ros.org/reps/](https://ros.org/reps/rep-0000.html)
+
+  - Proposals for new designs and conventions
