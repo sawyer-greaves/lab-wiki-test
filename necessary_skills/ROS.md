@@ -11,7 +11,7 @@ In order to learn ROS you need to have relatively strong exisiting knowledge in 
  - Using a [terminal and command line tools](Linux.md)
  - Strong programming knowledge in **at least one**, but ideally both of:
     - [C++](C_and_Cpp.md) and [CMake](CMake.md)
-    - Python
+    - [Python](Python.md)
 
 All in all, the more you understand about programming with computers, the better off you are. So don't shy away from that computer science goodness.
 

@@ -33,6 +33,7 @@ At the top of each page, there should be a link to come back to this home page.
 - [C/C++ Programming Language](necessary_skills/C_and_Cpp.md)
 - [CMake](necessary_skills/CMake.md)
     - [Professional CMake Reference Textbook](necessary_skills/Professional_CMake_11th_Edition.pdf)
+- [Python](necessary_skills/Python.md)
 - [Qt Application Framework](necessary_skills/Qt.md)
 - [Doxygen](necessary_skills/Doxygen.md)
 - [ROS](necessary_skills/ROS.md)
