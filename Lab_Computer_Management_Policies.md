@@ -52,7 +52,7 @@ Currently, there are three ways to connect to a computer with TeamViewer: (1) us
 #### Setting Up Your Personal Computer to Access a Lab Computer Via TeamViewer
 If the above rules are followed on each lab computer, you can set up a personal computer to remote login to a lab computer by following these steps:
 
-- Add your personal computer's TeamViewer ID to the "allow list" of the lab computer in the TeamViewer Security options. TeamViewer may ask you to login with a TeamViewer account when adding to the allow list, but if you say you don't want to you should be able to get to a point where you can add TeamViewer IDs (which are computer-specific rather than person-specific) to the allow list.
+- Add your personal computer's TeamViewer ID to the "allow list" of the lab computer in the TeamViewer Security options. TeamViewer may ask you to login with a TeamViewer account when adding to the allow list, but if you say you don't want to you should be able to get to a point where you can add TeamViewer IDs (which are computer-specific rather than person-specific) to the allow list. **Remember, do not assign a TeamViewer account to any lab computer by logging in.**
 - Add the lab computer's TeamViewer ID and the personal password `telerobo2156` to your personal computer's contacts list or your personal TeamViewer account's contact list.
 
 >:exclamation: **Don't forget to remove the TeamViewer ID from the allow list of the lab computer when your personal computer no longer needs access to it.**
