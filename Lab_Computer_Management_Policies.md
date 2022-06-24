@@ -10,12 +10,12 @@ Every computer in the lab must have a user for the purposes of lab computer admi
 - Username: `Telerobotics` or `telerobotics`
 - Password: `telerobo2156`
 - The `Telerobotics` user must have full administration privileges
-- The `Telerobotics` user **must not** be used for anything other than general administration of the computer (e.g. creating and deleting other users, installing software for all users, etc.). **No lab work should be conducted from the `Telerobotics` user**.
+- The `Telerobotics` user **must not** be used for anything other than general administration of the computer (e.g. creating and removing other users, installing software for all users, etc.). **No lab work should be conducted from the `Telerobotics` user**.
 - If a computer has multiple operating systems, there **must** be a `Telerobotics` user on each operating system.
 
-By having a `Telerobotics` user on every computer, we can avoid lost data due to forgotten passwords and can create/delete users on the computer under which actual research/work should be taking place. The department IT team will usually also put a `localadmin` user on Windows operating systems. This user serves the same purpose that the `Telerobotics` user is meant to serve but we have the `Telerobotics` users to avoid contacting IT whenever we need to create/delete a user, etc.
+By having a `Telerobotics` user on every computer, we can avoid lost data due to forgotten passwords and can create/remove users on the computer under which actual research/work should be taking place. The department IT team will usually also put a `localadmin` user on Windows operating systems. This user serves the same purpose that the `Telerobotics` user is meant to serve but we have the `Telerobotics` users to avoid contacting IT whenever we need to create/remove a user, etc.
 
-In general, each member of the lab should have a **personal user account** on the computer(s) that they regularly use. The reason for this is that things like [SSH authentication with Git](necessary_skills/Using_Git_with_SSH.md) and [mounting the lab network drive](Lab_Network_Drive.md) require passwords and authentication that is specific to a particular member of the lab and these things get very messy when multiple people are sharing the same user. It also makes it easy to remove any sensitive personal information such as saved web browser login info (Google Chrome login, etc.), saved cloud drive syncing login info (e.g. Google Drive, OneDrive, etc.), and other similar items when a member of the lab leaves/graduates by simply deleting any of their personal user accounts from lab computers.
+In general, each member of the lab should have a **personal user account** on the computer(s) that they regularly use. The reason for this is that things like [SSH authentication with Git](necessary_skills/Using_Git_with_SSH.md) and [mounting the lab network drive](Lab_Network_Drive.md) require passwords and authentication that is specific to a particular member of the lab and these things get very messy when multiple people are sharing the same user. It also makes it easy to remove any sensitive personal information such as saved web browser login info (Google Chrome login, etc.), saved cloud drive syncing login info (e.g. Google Drive, OneDrive, etc.), and other similar items when a member of the lab leaves/graduates by simply removing any of their personal user accounts from lab computers.
 
 Exceptions to this rule would be computers on which **all** of the following applies:
 
@@ -27,11 +27,37 @@ For example, a computer that is dedicated to **only** use and take data with a p
 
 >**Keep in Mind**: Since most people should be using their own personal user accounts on each computer, you should avoid hardcoding filepaths in your software projects that contain a user home directory. There are often ways to get the user home directory for whichever user is currently active (e.g. using the `$HOME` environment variable).
 
-### Creating and Deleting Users on Windows
+### Creating and Removing Users on Windows
 
-- Fully Delete a user (2 steps): 1 In the System properties window, click on settings in user profiles and then delete the user profile. This deletes the data associated with the profile. Then delete the user in the Accounts section of the settings app.
+Administrator privileges are required to perform the steps in this section.
 
-### Creating and Deleting Users on Linux
+**Create a user:**
+
+**Remove a user:**
+
+- Fully Remove a user (2 steps): 1 In the System properties window, click on settings in user profiles and then remove the user profile. This deletes the data associated with the profile. Then remove the user in the Accounts section of the settings app.
+
+### Creating and Removing Users on Linux (Ubuntu)
+
+Administrator privileges are required to perform the steps in this section.
+
+**Create a user:**
+
+1. Navigate to the Users menu in Settings.
+2. Unlock the Settings window. There is usually a button that says "Unlock" at the top of the window. Unlocking the window is like typing `sudo` on the command line.
+3. Click on Add User.
+4. Specify a name and username. Note that the name can have spaces and can be changed later on, but **the username cannot have spaces, cannot be changed, and should typically be all lowercase**. For example, the name can be `John Doe` and the username can be `johndoe` or `john`. The username is typically automatically populated from the name field so make sure the username is something you're okay with. The name will be what is displayed on the login screen. The username will also be the name of your home directory.
+5. Give administrator privileges to the user if necessary.
+6. Specify a password. Be sure to follow the rules as explained above.
+7. Assign necessary groups to the user ([see the Linux page for instructions](necessary_skills/Linux.md)). If the new user has administrator privileges, they can perform this step from their own user.
+
+**Remove a user:**
+
+1. Navigate to the Users menu in Settings.
+2. Unlock the Settings window. There is usually a button that says "Unlock" at the top of the window. Unlocking the window is like typing `sudo` on the command line.
+3. Select the user you wish to remove. You cannot remove the currently logged in user.
+4. Click on Remove User.
+5. Choose to delete all user files. **This will remove the user's home directory and everything associated with this user. Make sure you have stored any data that you don't want to lose in another location.**
 
 ---
 ## Remote Access to Lab Computers
