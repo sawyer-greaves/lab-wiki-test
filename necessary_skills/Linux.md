@@ -50,6 +50,18 @@ PDFs
 - [Linux Command Line Cheat Sheet](Linux_Command_Line_Cheat_Sheet.pdf) by Jason Cannon
 - [Linux Administration](Linux_Administration.pdf) by Jason Cannon
 
+### Free Online Resources
+
+None yet. Please add any resources you'd like to share with the lab.
+
+### Paid Online Resources
+
+- Linux courses offered by Jason Cannon on Udemy
+    - Udemy is almost always offering sales on courses so you should be able to get these for $10-$20
+    - [Learn Linux in 5 Days and Level Up Your Career](https://www.udemy.com/course/learn-linux-in-5-days/)
+    - [Linux for Beginners](https://www.udemy.com/course/linuxforbeginners/)
+    - [Linux Shell Scripting: A Project-Based Approach to Learning](https://www.udemy.com/course/linux-shell-scripting-projects/)
+
 ## Managing Groups
 
 Groups are a way to specify file permissions and other privileges broadly for all users that are members of the group. For example, if a group has some set of permissions on a file, a user that is a member of the group will have the same permissions on that file even if the file does not give permissions to that user specifically. Every user is associated with a *primary group* and zero or more *secondary groups*. Typically, the primary group for a user defaults to a group with the same name as the user. The primary group is the group that will be assigned to new files created by that user.
