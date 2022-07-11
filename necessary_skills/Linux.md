@@ -38,10 +38,11 @@ There are many learning resources available online and it's up to you how you'd 
 This wiki contains several useful PDFs.
 
 A few notes about these resources:
-  1. The Linux for Beginners book is a great place to start. Read the Introduction and then you can skip down to the "Connecting Directly" section of the "Getting Connected" chapter. The "Getting Connected" chapter mostly deals with accessing a remote Linux server. Keep in mind that this book was probably written in about 2013 so the Ubuntu UI will look a bit different. The concepts should all still apply today. You can skip over information that is specific to a distribution family that you are not using (e.g. you can skip RPM-based info if you are using Ubuntu).
-  2. The `apt` command is now generally preferred over `apt-cache` and `apt-get` since `apt` uses these other commands for you.
-  3. The Linux Command Line Cheat Sheet Section 10 - Installing Packages only shows commands for RPM-based distributions. Package commands for DEB-based distributions are absent.
-  4. The Linux Administration book is a great lookup reference when you need to do a particular thing or want to know more about a particular topic.
+
+1. The Linux for Beginners book is a great place to start. Read the Introduction and then you can skip down to the "Connecting Directly" section of the "Getting Connected" chapter. The "Getting Connected" chapter mostly deals with accessing a remote Linux server. Keep in mind that this book was probably written in about 2013 so the Ubuntu UI will look a bit different. The concepts should all still apply today. You can skip over information that is specific to a distribution family that you are not using (e.g. you can skip RPM-based info if you are using Ubuntu).
+2. The `apt` command is now generally preferred over `apt-cache` and `apt-get` since `apt` uses these other commands for you.
+3. The Linux Command Line Cheat Sheet Section 10 - Installing Packages only shows commands for RPM-based distributions. Package commands for DEB-based distributions are absent.
+4. The Linux Administration book is a great lookup reference when you need to do a particular thing or want to know more about a particular topic.
 
 PDFs
 
