@@ -3,6 +3,7 @@
 
 Linux is a powerful operating system that is used in a great deal of robotic systems (it was the only OS supported by [ROS](ROS.md) until recently). Linux philosophy is quite different from more mainstream operating systems such as Windows and macOS that focus on a graphical user interface (GUI) as the primary means for users to interact with the system. This means it is rather easy for new users of Linux to become overwhelmed or confused even if they consider themselves pretty computer savvy, but don't let this deter you from learning! This page is intended to help you get up to speed with Linux and there are a lot of useful online resources at your disposal. Simply be prepared that your knowledge from other operating systems will not necessarily trivialize the transition for you. Also be aware that simple tasks like creating a new text file may at first take you longer than you are used to, but be patient as you become acquainted with the way Linux likes to do things. In Linux, the command line terminal is still a prominent part of user interaction and you will not be able to become a proficient user without taking the time to develop this skill. Although Linux may seem archaic or cumbersome at first, there is a reason it is still widely used today and you won't regret developing this skill as a robotics engineer.
 
+---
 ## Background and Linux Distributions
 
 ### What is Linux?
@@ -29,6 +30,7 @@ There are many [flavors of Linux][distros], called **distributions**. A distribu
 - **Package File Format** - `.deb`
 - **Example Distributions** - Debian, Raspberry Pi OS, Ubuntu, and flavors of Ubuntu like Kubuntu and Linux Mint
 
+---
 ## Introduction to Ubuntu
 
 Ubuntu is currently the most commonly used Linux distribution in robotics. Practically all software packages useful for robotics support Ubuntu at a minimum. Ubuntu is released in three editions: Desktop, Server, and Core. Typically you will want to have the Desktop edition. Ubuntu is released every six months in April and October with long-term support (LTS) releases every two years. The version numbering reflects this release pattern where the first number indicates the year and the second number indicates the month. For example, Ubuntu 22.04 was released in April (04 part) of 2022 (22 part). The LTS version is always the April release of even years (i.e. Ubuntu 18.04, 20.04, and 22.04 are LTS releases). **It is recommend to stick to LTS releases only**. In addition to the version number, every release is assigned a two word code name where both words start with the same letter. With each new release, this code name letter is incremented. For example, Ubuntu 22.04 is code named **Jammy Jellyfish**. Here is a list of [releases of Ubuntu Linux](https://wiki.ubuntu.com/Releases) with their code names.
@@ -39,6 +41,7 @@ Once you have a particular version of Ubuntu installed, you should **never avoid
 
 However, upgrading to a new release of Ubuntu (e.g. from 20.04 to 22.04) is a substantial update and is more likely to cause problems. Upgrading to a new release should be done at the latest when LTS support for your current version has expired (usually 5 years from release). It is recommended when upgrading to a new release that you install the new release from scratch rather than use Ubuntu's internal upgrade mechanism. It is also recommended that you make sure any libraries and software you rely on is supported on the new release before upgrading. Upgrading can be a bit tedious, but it is usually very important to keep up with modern releases because compatibility with new useful software and hardware will become very limited.
 
+---
 ## Learning To Use Linux
 
 There are many learning resources available online and it's up to you how you'd like to tackle learning Linux. In this section, several suggestions are made. If you've found a resource not in this section that has been useful to you, please share it with the lab by adding it here.
@@ -70,6 +73,7 @@ None yet. Please share any resources you've found useful with the lab.
     - [Linux for Beginners](https://www.udemy.com/course/linuxforbeginners/)
     - [Linux Shell Scripting: A Project-Based Approach to Learning](https://www.udemy.com/course/linux-shell-scripting-projects/)
 
+---
 ## Linux and Ubuntu Reference and Documentation
 
 This section lists websites that are useful as Linux and Ubuntu reference and documentation.
@@ -90,6 +94,7 @@ This section lists websites that are useful as Linux and Ubuntu reference and do
     - Policies like the POSIX Standard but specific to Debian distributions.
     - Useful for Ubuntu since it is Debian-based.
 
+---
 ## Managing Groups
 
 Groups are a way to specify file permissions and other privileges broadly for all users that are members of the group. For example, if a group has some set of permissions on a file, a user that is a member of the group will have the same permissions on that file even if the file does not give permissions to that user specifically. Every user is associated with a *primary group* and zero or more *secondary groups*. Typically, the primary group for a user defaults to a group with the same name as the user. The primary group is the group that will be assigned to new files created by that user.
