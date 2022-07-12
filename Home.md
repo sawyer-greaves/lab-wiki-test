@@ -30,6 +30,10 @@ At the top of each page, there should be a link to come back to this home page.
 ### Most Lab Members
 
 - [Linux](necessary_skills/Linux.md)
+    - [Linux for Beginners Book](Linux_for_Beginners.pdf)
+    - [Linux Command Line Cheat Sheet](Linux_Command_Line_Cheat_Sheet.pdf)
+    - [Linux Administration Book](Linux_Administration.pdf)
+    - [Computer Science from the Bottom Up Book](Computer_Science_from_the_Bottom_Up.pdf)
 - [C/C++ Programming Language](necessary_skills/C_and_Cpp.md)
 - [CMake](necessary_skills/CMake.md)
     - [Professional CMake Reference Textbook](necessary_skills/Professional_CMake_11th_Edition.pdf)
