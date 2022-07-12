@@ -37,18 +37,16 @@ There are many learning resources available online and it's up to you how you'd 
 
 This wiki contains several useful PDFs.
 
-A few notes about these resources:
-
-1. The Linux for Beginners book is a great place to start. Read the Introduction and then you can skip down to the "Connecting Directly" section of the "Getting Connected" chapter. The "Getting Connected" chapter mostly deals with accessing a remote Linux server. Keep in mind that this book was probably written in about 2013 so the Ubuntu UI will look a bit different. The concepts should all still apply today. You can skip over information that is specific to a distribution family that you are not using (e.g. you can skip RPM-based info if you are using Ubuntu).
-2. The `apt` command is now generally preferred over `apt-cache` and `apt-get` since `apt` uses these other commands for you.
-3. The Linux Command Line Cheat Sheet Section 10 - Installing Packages only shows commands for RPM-based distributions. Package commands for DEB-based distributions are absent.
-4. The Linux Administration book is a great lookup reference when you need to do a particular thing or want to know more about a particular topic.
-
-PDFs
-
 - [Linux for Beginners](Linux_for_Beginners.pdf) by Jason Cannon
+    - This book is a great place to start. Read the Introduction and then you can skip down to the "Connecting Directly" section of the "Getting Connected" chapter. The "Getting Connected" chapter mostly deals with accessing a remote Linux server. Keep in mind that this book was probably written in about 2013 so the Ubuntu UI will look a bit different. The concepts should all still apply today. You can skip over information that is specific to a distribution family that you are not using (e.g. you can skip RPM-based info if you are using Ubuntu).
+    - The `apt` command is now generally preferred over `apt-cache` and `apt-get` since `apt` uses these other commands for you.
 - [Linux Command Line Cheat Sheet](Linux_Command_Line_Cheat_Sheet.pdf) by Jason Cannon
+    - Section 10 - Installing Packages only shows commands for RPM-based distributions. Package commands for DEB-based distributions are absent.
 - [Linux Administration](Linux_Administration.pdf) by Jason Cannon
+    - This book is a great lookup reference when you need to perform a particular task or want to know more about a particular topic.
+    - The `apt` command is now generally preferred over `apt-cache` and `apt-get` since `apt` uses these other commands for you.
+- [Computer Science from the Bottom Up](Computer_Science_from_the_Bottom_Up.pdf)
+    - This is an **excellent** resource to dive deeper into Linux as an operating system and to understand the writing and running of software better. It is highly recommended reading. Note the author uses UK English.
 
 ### Free Online Resources
 
@@ -61,6 +59,12 @@ None yet. Please add any resources you'd like to share with the lab.
     - [Learn Linux in 5 Days and Level Up Your Career](https://www.udemy.com/course/learn-linux-in-5-days/)
     - [Linux for Beginners](https://www.udemy.com/course/linuxforbeginners/)
     - [Linux Shell Scripting: A Project-Based Approach to Learning](https://www.udemy.com/course/linux-shell-scripting-projects/)
+
+## Linux and Ubuntu Reference
+
+This section lists websites that are useful for reference dealing with Linux and Ubuntu.
+
+
 
 ## Managing Groups
 
