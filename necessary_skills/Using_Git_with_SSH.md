@@ -5,7 +5,7 @@ SSH (Secure SHell) is a protocol alternative to HTTPS that can be used by Git to
 transactions (e.g. `git fetch`, `git pull`, `git push`). SSH uses public key
 authentication instead of a traditional username and password. This involves
 creating two text-based files: the private key and the public key. The public key is
-then given to the Git hosting service. The combination of public and private key is used to verify your indentiy instead of a username and password.
+then given to the Git hosting service. The combination of public and private key is used to verify your identity instead of a username and password.
 
 ---
 ## Setting Up SSH
@@ -19,7 +19,7 @@ Git hosting services typically don't allow you to add the same public key to
 multiple accounts. This is probably because the public key is likely also being used
 by the hosting service to determine which hosting service account has initiated a Git network
 transaction and thereby determine what permissions that account has (see
-[Q & A](#QandA)). Regardless, if you have multiple accounts with the same Git hosting
+[Q & A](#QAndA)). Regardless, if you have multiple accounts with the same Git hosting
 service (e.g. two GitHub accounts or two Bitbucket accounts) and you want to work
 with repositories associated with two or more of these accounts from the same operating system
 user on the same computer, the correct SSH key must be used for each account. By
@@ -33,7 +33,7 @@ config file or using conditional includes with your Git config file.
 
 >Note that this problem will not arise if each operating system user on a particular
 computer only interacts with repositories from **one** account from each Git hosting
-service. This is part of why it is recommended to create your own operating system level user on each of the lab computers you are actively using. Doing so will also help avoid forgetting to update the `user.name` and `user.email` Git config variables when commiting to repositories associated with two different accounts.
+service. This is part of why it is recommended to create your own operating system level user on each of the lab computers you are actively using. Doing so will also help avoid forgetting to update the `user.name` and `user.email` Git config variables when committing to repositories associated with two different accounts.
 
 ### Using Custom Hosts with Your SSH Config File
 
@@ -189,7 +189,7 @@ Blog Source: [Setting up multiple GitHub accounts, the nicer way](https://dev.to
 
 ---
 ## Q & A
-<a name="QandA"></a>
+<a name="QAndA"></a>
 
 **Why do GitHub and Bitbucket use the `git` user when using SSH (e.g. `git@github.com`)?**
 

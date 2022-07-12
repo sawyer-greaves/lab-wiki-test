@@ -21,9 +21,9 @@ Exceptions to this rule would be computers on which **all** of the following app
 
 - No software development will be conducted (i.e. there will be no interaction with [Git repositories](necessary_skills/Git.md))
 - Mounting the lab network drive is not necessary
-- Logging into web browsers, cloud drive syncing apps, or anything similar is not neceesary
+- Logging into web browsers, cloud drive syncing apps, or anything similar is not necessary
 
-For example, a computer that is dedicated to **only** use and take data with a partcular piece of lab equipment would not need a user for every member of the lab that wants to use that computer to take data with the equipment. If someone wants to do something more on that computer, then that lab member should create a personal user on the computer.
+For example, a computer that is dedicated to **only** use and take data with a particular piece of lab equipment would not need a user for every member of the lab that wants to use that computer to take data with the equipment. If someone wants to do something more on that computer, then that lab member should create a personal user on the computer.
 
 >**Keep in Mind**: Since most people should be using their own personal user accounts on each computer, you should avoid hardcoding filepaths in your software projects that contain a user home directory. There are often ways to get the user home directory for whichever user is currently active (e.g. using the `$HOME` environment variable).
 

@@ -5,7 +5,7 @@
 [ProGit textbook](Pro_Git.pdf)
 
 Git is a distributed Version Control System (DVCS) used primarily to keep track of
-changes in souce code. Learning how to use Git is required by everyone in the lab
+changes in source code. Learning how to use Git is required by everyone in the lab
 even if they never write any code because this wiki is
 [managed as a Git repository of Markdown files](Editing_the_Wiki.md).
 

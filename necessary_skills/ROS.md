@@ -6,7 +6,7 @@
 ---
 ## Prerequisites to Learn ROS
 
-In order to learn ROS you need to have relatively strong exisiting knowledge in computer science and programming. You do not need to be an expert, but you will need to know more than you might think and you shouldn't expect to pick it up in just a few days, especially if you're coming from a mechanical engineering background. Frankly, knowing MATLAB and Arudino is a great start, but if that's all you have experience with you will find yourself lost very quickly. To make sure you're prepared to succeed, the following is a list of things you **must** be comfortable with before you attempt to learn ROS:
+In order to learn ROS you need to have relatively strong existing knowledge in computer science and programming. You do not need to be an expert, but you will need to know more than you might think and you shouldn't expect to pick it up in just a few days, especially if you're coming from a mechanical engineering background. Frankly, knowing MATLAB and Arudino is a great start, but if that's all you have experience with you will find yourself lost very quickly. To make sure you're prepared to succeed, the following is a list of things you **must** be comfortable with before you attempt to learn ROS:
 
  - Using a [terminal and command line tools](Linux.md)
  - Strong programming knowledge in **at least one**, but ideally both of:
