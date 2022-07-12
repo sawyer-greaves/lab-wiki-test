@@ -60,11 +60,25 @@ None yet. Please add any resources you'd like to share with the lab.
     - [Linux for Beginners](https://www.udemy.com/course/linuxforbeginners/)
     - [Linux Shell Scripting: A Project-Based Approach to Learning](https://www.udemy.com/course/linux-shell-scripting-projects/)
 
-## Linux and Ubuntu Reference
+## Linux and Ubuntu Reference and Documentation
 
-This section lists websites that are useful for reference dealing with Linux and Ubuntu.
+This section lists websites that are useful as Linux and Ubuntu reference and documentation.
 
-
+- [Linux Kernel Documentation](https://www.kernel.org/doc/html/latest/)
+    - The official documentation of the Linux kernel.
+- [Linux Manpages](https://www.kernel.org/doc/man-pages/)
+    - Search manpages for software on Linux systems.
+- [Ubuntu Manpage Repository](https://manpages.ubuntu.com/)
+    - Search manpages for software on Ubuntu systems.
+- [Ubuntu Packages Search](https://packages.ubuntu.com/)
+    - Search the Ubuntu package repositories for available packages/software.
+- [POSIX Standard](https://pubs.opengroup.org/onlinepubs/9699919799/)
+    - Standards most Unix-like operating systems follow to improve compatibility across systems.
+- [Filesystem Hierarchy Standard](https://refspecs.linuxfoundation.org/fhs.shtml)
+    - Standard for how the directories on a Unix-like system should be organized. Very useful for programmers.
+- [Debian Policy Manual](https://www.debian.org/doc/debian-policy/index.html#) 
+    - Policies like POSIX but specific to Debian distributions.
+    - Useful for Ubuntu as well since it is Debian-based.
 
 ## Managing Groups
 
