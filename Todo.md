@@ -4,7 +4,7 @@
 - Fill out [Onboarding](Onboarding.md)
 - Finish [Lab Computer Management Policies](Lab_Computer_Management_Policies.md)
 - Fill out [Git Standards](Git_Standards.md)
-- Fill out [Lab Network Drive (Group Drive)](Lab_Network_Drive.md)
+- Finish [Lab Network Drive (Group Drive)](Lab_Network_Drive.md)
 - Finish [How to Edit the Wiki](necessary_skills/Editing_the_Wiki.md)
 - Finish [Markdown Syntax](necessary_skills/Markdown.md)
 - Finish [Git](necessary_skills/Git.md)
@@ -17,3 +17,4 @@
 - Fill out [ROS](necessary_skills/ROS.md)
 - Fill out [Eigen Linear Algebra Library](useful_resources/Eigen_Library.md)
 - Fill out [OpenCV](useful_resources/OpenCV.md)
+- Finish [Visual Studio Code](useful_resources/Visual_Studio_Code.md)
