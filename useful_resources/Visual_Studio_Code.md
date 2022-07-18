@@ -6,6 +6,8 @@ The [Visual Studio Code home page][1] has a link to install VS Code on Windows a
 - [VS Code Documentation][2]
 - [VS Code Documentation GitHub Repository][3]
 - [Introductory Videos][4]
+- [Keyboard Shortcuts for Windows](VSCode_keyboard_shortcuts_windows.pdf)
+- [Keyboard Shortcuts for Linux](VSCode_keyboard_shortcuts_linux.pdf)
 
 Using VS Code for:
 - [Markdown][5]
