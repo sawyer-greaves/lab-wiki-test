@@ -2,6 +2,8 @@
 
 Welcome to the Utah Telerobotics Lab Wiki!
 
+The Utah Telerobotics Lab Wiki is part of a Git repository on Bitbucket dedicated for the purpose of hosting the lab wiki. Every Bitbucket repository comes with a wiki and the `lab-wiki` repository is simply an empty repository in which we are utilizing only the wiki feature to host our lab wiki. Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for instructions on contributing to the wiki. The [Bitbucket documentation](https://confluence.atlassian.com/x/FA4zDQ) also has more information about using a wiki.
+
 If you're a new student, please read and follow the onboarding page:
 
 - [Onboarding](Onboarding.md)
@@ -20,7 +22,7 @@ At the top of each page, there should be a link to come back to this home page.
 
 ### All Lab Members
 
-- [How to Edit the Wiki](necessary_skills/Editing_the_Wiki.md)
+- [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md)
 - [Markdown Syntax](necessary_skills/Markdown.md)
 - [Git](necessary_skills/Git.md)
     - [Git Cheatsheet](necessary_skills/Atlassian_Git_Cheatsheet.pdf)
@@ -45,6 +47,7 @@ At the top of each page, there should be a link to come back to this home page.
 ---
 ## Useful Resources
 
+- [Visual Studio Code](useful_resources/Visual_Studio_Code.md)
 - [Eigen Linear Algebra Library for C++](useful_resources/Eigen_Library.md)
 - [OpenCV Computer Vision Library](useful_resources/OpenCV.md)
 
