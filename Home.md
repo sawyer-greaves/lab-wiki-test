@@ -2,13 +2,15 @@
 
 Welcome to the Utah Telerobotics Lab Wiki!
 
-The Utah Telerobotics Lab Wiki is part of a Git repository on Bitbucket dedicated for the purpose of hosting the lab wiki. Every Bitbucket repository comes with a wiki and the `lab-wiki` repository is simply an empty repository in which we are utilizing only the wiki feature to host our lab wiki. Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for instructions on contributing to the wiki. The [Bitbucket documentation](https://confluence.atlassian.com/x/FA4zDQ) also has more information about using a wiki.
+The Utah Telerobotics Lab Wiki is part of a Git repository on Bitbucket dedicated for the purpose of hosting the lab wiki. Every Bitbucket repository comes with a wiki and the `lab-wiki` repository is simply an empty repository in which we are utilizing only the wiki feature to host this wiki.
+
+This Home page acts as the wiki's table of contents and every wiki page should have a `Home` link at the top to return here. As an additional navigational option, Bitbucket displays a breadcrumb trail above each page. Clicking on an item in the trail will allow you to browse the directory structure of the wiki and open desired wiki pages directly.
 
 If you're a new student, please read and follow the onboarding page:
 
 - [Onboarding](Onboarding.md)
 
-At the top of each page, there should be a link to come back to this home page.
+Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for instructions on contributing to the wiki. The [Bitbucket documentation](https://confluence.atlassian.com/x/FA4zDQ) also has more information about using a wiki. The [Lab Wiki TODO List](Todo.md) contains a list of to-do items for the wiki itself. **Please keep this list up to date.**
 
 ---
 ## Lab Policies, Standards, and Procedures
