@@ -33,9 +33,26 @@ Administrator privileges are required to perform the steps in this section.
 
 **Create a user:**
 
+1. Open Settings.
+2. Navigate to "Accounts" and then "Family & other users".
+3. Click on "Add someone else to this PC".
+4. Windows will prompt you for a personal Microsoft account. We want to create a local user account, not one that is linked to a personal Microsoft account. Click on "I don't have this person's sign-in information".
+5. Windows will prompt you to create a Microsoft account. We don't want to do this either. Click on "Add a user without a Microsoft account".
+6. Enter a user name. Try to avoid spaces.
+7. Enter a password.
+8. Enter security questions.
+9. Click Next.
+10. Click on the new account created in "Family & other users" and then click on "Change account type".
+11. Change the account type to Administrator and click OK.
+
+
 **Remove a user:**
 
-- Fully Remove a user (2 steps): 1 In the System properties window, click on settings in user profiles and then remove the user profile. This deletes the data associated with the profile. Then remove the user in the Accounts section of the settings app.
+1. Open Settings.
+2. Navigate to "Accounts" and then "Family & other users".
+3. Click on the account you wish to remove.
+4. Click on "Remove".
+5. Click on "Delete account and data". This will delete the account, the user's home folder under `C:\Users\`, and all data associated with the user.
 
 ### Creating and Removing Users on Linux (Ubuntu)
 
