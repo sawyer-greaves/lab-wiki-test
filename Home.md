@@ -4,7 +4,7 @@ Welcome to the Utah Telerobotics Lab Wiki!
 
 The Utah Telerobotics Lab Wiki is part of a Git repository on Bitbucket dedicated for the purpose of hosting the lab wiki. Every Bitbucket repository comes with a wiki and the `lab-wiki` repository is simply an empty repository in which we are utilizing only the wiki feature to host this wiki.
 
-This Home page acts as the wiki's table of contents and every wiki page should have a `Home` link at the top to return here. As an additional navigational option, Bitbucket displays a breadcrumb trail above each page. Clicking on an item in the trail will allow you to browse the directory structure of the wiki and open desired wiki pages directly.
+This Home page acts as the wiki's table of contents and every wiki page should have a `Home` link at the top to return here. As an additional navigation option, Bitbucket displays a breadcrumb trail above each page. Clicking on an item in the trail will allow you to browse the directory structure of the wiki and open desired wiki pages directly.
 
 If you're a new student, please read and follow the onboarding page:
 
