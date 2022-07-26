@@ -1,6 +1,8 @@
 [Home](Home)
 # Lab Computer Management Policies
 
+[TOC]
+
 ## User Accounts on Lab Computers
 
 >**The lab's default password for computer user accounts is `telerobo2156`. Please use this password for all user accounts on lab computers except personal user accounts that are actively being used.**
@@ -34,25 +36,25 @@ Administrator privileges are required to perform the steps in this section.
 **Create a user:**
 
 1. Open Settings.
-2. Navigate to "Accounts" and then "Family & other users".
-3. Click on "Add someone else to this PC".
-4. Windows will prompt you for a personal Microsoft account. We want to create a local user account, not one that is linked to a personal Microsoft account. Click on "I don't have this person's sign-in information".
-5. Windows will prompt you to create a Microsoft account. We don't want to do this either. Click on "Add a user without a Microsoft account".
-6. Enter a user name. Try to avoid spaces.
+2. Navigate to *Accounts* and then *Family & other users*.
+3. Click on *Add someone else to this PC*.
+4. Windows will prompt you for a personal Microsoft account. We want to create a local user account, not one that is linked to a personal Microsoft account. Click on *I don't have this person's sign-in information*.
+5. Windows will prompt you to create a Microsoft account. We don't want to do this either. Click on *Add a user without a Microsoft account*.
+6. Enter a user name. Avoid spaces in the username.
 7. Enter a password.
 8. Enter security questions.
-9. Click Next.
-10. Click on the new account created in "Family & other users" and then click on "Change account type".
-11. Change the account type to Administrator and click OK.
+9. Click *Next*.
+10. Click on the new account created in *Family & other users* and then click on *Change account type*.
+11. Change the account type to *Administrator* and click *OK*.
 
 
 **Remove a user:**
 
 1. Open Settings.
-2. Navigate to "Accounts" and then "Family & other users".
+2. Navigate to *Accounts* and then *Family & other users*.
 3. Click on the account you wish to remove.
-4. Click on "Remove".
-5. Click on "Delete account and data". This will delete the account, the user's home folder under `C:\Users\`, and all data associated with the user.
+4. Click on *Remove*.
+5. Click on *Delete account and data*. **This will delete the account, the user's home folder under `C:\Users\`, and all data associated with the user. Make sure you have stored any data that you don't want to lose in another location.**
 
 ### Creating and Removing Users on Linux (Ubuntu)
 
@@ -60,20 +62,20 @@ Administrator privileges are required to perform the steps in this section.
 
 **Create a user:**
 
-1. Navigate to the Users menu in Settings.
-2. Unlock the Settings window. There is usually a button that says "Unlock" at the top of the window. Unlocking the window is like typing `sudo` on the command line.
-3. Click on Add User.
-4. Specify a name and username. Note that the name can have spaces and can be changed later on, but **the username cannot have spaces, cannot be changed, and should typically be all lowercase**. For example, the name can be `John Doe` and the username can be `johndoe` or `john`. The username is typically automatically populated from the name field so make sure the username is something you're okay with. The name will be what is displayed on the login screen. The username will also be the name of your home directory.
+1. Navigate to the *Users* menu in Settings.
+2. Unlock the Settings window. There is usually a button that says *Unlock...* at the top of the window. Unlocking the window is like typing `sudo` on the command line.
+3. Click on *Add User...*
+4. Specify a name and username. Note that the name can have spaces and can be changed later on, but **the username cannot have spaces, cannot be changed, and should typically be all lowercase**. For example, the name can be `John Doe` and the username can be `johndoe` or `john`. The username is typically automatically populated from the name field so make sure the username is something you're okay with. The name will be what is displayed on the login screen. The username will be used as the name of your home directory.
 5. Give administrator privileges to the user if necessary.
 6. Specify a password. Be sure to follow the rules as explained above.
 7. Assign necessary groups to the user ([see the Linux page for instructions](necessary_skills/Linux.md)). If the new user has administrator privileges, they can perform this step from their own user.
 
 **Remove a user:**
 
-1. Navigate to the Users menu in Settings.
-2. Unlock the Settings window. There is usually a button that says "Unlock" at the top of the window. Unlocking the window is like typing `sudo` on the command line.
+1. Navigate to the *Users* menu in Settings.
+2. Unlock the Settings window. There is usually a button that says *Unlock...* at the top of the window. Unlocking the window is like typing `sudo` on the command line.
 3. Select the user you wish to remove. You cannot remove the currently logged in user.
-4. Click on Remove User.
+4. Click on *Remove User...*
 5. Choose to delete all user files. **This will remove the user's home directory and everything associated with this user. Make sure you have stored any data that you don't want to lose in another location.**
 
 ---
