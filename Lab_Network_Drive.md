@@ -27,7 +27,7 @@ To map the group drive on Windows, follow these steps:
 
 1. Open the File Explorer.
 2. Right click on `This PC` or `Network` in the file tree on the left side of the window and select the *Map Network Drive...* context menu option.
-![](images/map_group_drive_windows_1.png)
+    ![](images/map_group_drive_windows_1.png)
 3. Select a drive letter that isn't already in use to assign to the group drive. Using `Z:` is recommended if it is available but you may chose any available letter.
 4. Put the group drive URL `\\chips.eng.utah.edu\telerobotics` into the Folder box and make sure *Reconnect at sign-in* is checked.
 5. Click *Finish*.
