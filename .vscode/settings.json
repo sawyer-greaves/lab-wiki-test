@@ -11,6 +11,7 @@
         "hardcoding",
         "localadmin",
         "mkdir",
+        "MSVC",
         "POSIX",
         "prepended",
         "smbcredentials",
