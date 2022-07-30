@@ -17,7 +17,6 @@ The Qt Company recommends to install Qt and Qt Creator using the Qt Online Insta
 Run the installer and follow the instructions. **Below are some specific instructions as you go though the process. Please follow them!**
 
 1. The Qt Online Installer doesn't really configure things correctly to perform an installation for the entire system (i.e. to install it for every user). The installer is pretty much configured to install on a per-user basis. Furthermore, the online installer requires you to create an account with Qt. The Qt Maintenance Tool will also cache your login information and auto-populate these fields when you start it. With these facts in mind, make sure the installation directory is set as follows:
-
     - **Install Directory On Windows:** `C:\Users\your_user_folder\Qt`
         - Replace `your_user_folder` with the name of the folder associated with your user account (e.g. `C:\Users\John\Qt`).
         - Note that the above recommended directory is not the default used by the online installer on Windows (which happens to be`C:\Qt`). **You will need to change the install directory from the default to the recommended directory.**
