@@ -32,6 +32,10 @@ There are many [flavors of Linux][distros], called **distributions**. A distribu
 - **Package File Format** - `.deb`
 - **Example Distributions** - Debian, Raspberry Pi OS, Ubuntu, and flavors of Ubuntu like Kubuntu and Linux Mint
 
+[unixlike]: https://en.wikipedia.org/wiki/Unix-like
+[unix]: https://en.wikipedia.org/wiki/Unix
+[distros]: https://en.wikipedia.org/wiki/List_of_Linux_distributions
+
 ---
 ## Introduction to Ubuntu
 
@@ -218,6 +222,10 @@ Removes the user `<username>` from the group `<groupname>`. This is safer than u
 
 Creates a new group on the system with the name `<new_groupname>`. It is unlikely you will need to use this command.
 
-[unixlike]: https://en.wikipedia.org/wiki/Unix-like
-[unix]: https://en.wikipedia.org/wiki/Unix
-[distros]: https://en.wikipedia.org/wiki/List_of_Linux_distributions
+---
+## Change the Default Terminal in Ubuntu
+
+It is possible to install alternative terminal emulation programs (e.g. [Terminator](https://terminator-gtk3.readthedocs.io/en/latest/)) and it is possible to decide which of these emulators is set as the default (e.g. which terminal is started with Ctrl+Alt+T). To set the default terminal emulator, run the following command in a terminal and follow the instructions (Note that the GNOME terminal is the terminal emulator that ships by default with Ubuntu):
+```
+sudo update-alternatives --config x-terminal-emulator
+```
