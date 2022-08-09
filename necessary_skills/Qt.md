@@ -5,11 +5,12 @@
 
 Qt is pronounced "cute" not "cue tee".
 
+---
 ## Installing the Qt Framework and Qt Creator
 
 ### Prerequisites for Linux
 
-On Linux, neither the Qt Online Installer nor the Qt packages in the Ubuntu repositories come with a C++ compiler. You will need to separately install the GNU `gcc` compiler, `make` program, and other packages for software development. In addition, some Qt modules for graphical applications require the OpenGL libraries and headers to be installed. Before installing Qt and Qt Creator, you'll want to install the `libgl1-mesa-dev` and `build-essential` packages:
+On Linux, neither the Qt Online Installer nor the Qt packages in the Ubuntu repositories come with a C++ compiler. You will need to separately install the GNU `gcc` compiler, `make` program, and other packages for software development. In addition, some Qt modules for graphical applications require the OpenGL libraries and headers to be installed. Before installing Qt and Qt Creator, you'll want to install the `build-essential` and `libgl1-mesa-dev` packages:
 ```
 sudo apt install build-essential libgl1-mesa-dev
 ```
@@ -57,6 +58,8 @@ Once the installation is complete you may delete the Qt Online Installer executa
 
 It is recommended that you use the Qt Online Installer (see above) even on Ubuntu. However, for the sake of completeness and for reasons described in the next section, instructions for installing Qt using the Ubuntu Package Repositories and `apt` are given here. Note that using the Ubuntu Package Repositories means you will not be able to select your version of Qt and therefore will not have access to bug fixes found in later versions. This method will install Qt and Qt Creator for your entire system (unlike the Qt Online Installer which does a per-user installation).
 
+#### Installing Qt 5
+
 1. Install the Qt 5 Framework:
     ```
     sudo apt install qt5-default
@@ -68,6 +71,22 @@ It is recommended that you use the Qt Online Installer (see above) even on Ubunt
 3. **(Optional)** Install Qt and Qt Creator documentation
     ```
     sudo apt install qt5-doc qtbase5-doc-html qtcreator-doc
+    ```
+
+#### Installing Qt 6
+Note that Qt 6 does not exist in the Ubuntu Repositories until Ubuntu 22.04 or later.
+
+1. Install the Qt 6 Framework:
+    ```
+    sudo apt install qt6-base-dev
+    ```
+2. Install Qt Creator
+    ```
+    sudo apt install qtcreator
+    ```
+3. **(Optional)** Install Qt Creator documentation
+    ```
+    sudo apt install qtcreator-doc
     ```
 
 ### A Note About Qt Creator On Ubuntu Older Than 20.04
