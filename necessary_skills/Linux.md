@@ -65,7 +65,10 @@ This wiki contains several useful PDFs.
 
 ### Free Online Resources
 
-None yet. Please share any resources you've found useful with the lab.
+- [UNIX Tutorial for Beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/)
+    - This quick tutorial is recommended by the [ROS](ROS.md) tutorials.
+    - The tutorial mostly focuses on teaching commands for the command line but contains a lot of useful contextual/background information too.
+    - Tutorial **seven** is particularly useful and covers material related to building source code which is not covered by the Jason Cannon resources.
 
 ### Paid Online Resources
 
