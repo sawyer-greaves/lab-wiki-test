@@ -3,14 +3,14 @@
 
 [TOC]
 
-Linux is a powerful operating system (OS) that is used in a great deal of robotic systems (it was the only OS supported by [ROS](ROS.md) until recently). Linux philosophy is quite different from more mainstream operating systems such as Windows and macOS that focus on a graphical user interface (GUI) as the primary means for users to interact with the system. This means it is rather easy for new users of Linux to become overwhelmed or confused even if they consider themselves pretty computer savvy, but don't let this deter you from learning! This page is intended to help you get up to speed with Linux and there are a lot of useful online resources at your disposal. Simply be prepared that your knowledge from other operating systems will not necessarily trivialize the transition for you. Also be aware that simple tasks like creating a new text file may at first take you longer than you are used to, but be patient as you become acquainted with the way Linux likes to do things. In Linux, the command line terminal is still a prominent part of user interaction and you will not be able to become a proficient user without taking the time to develop this skill. Although Linux may seem archaic or cumbersome at first, there is a reason it is still widely used today and you won't regret developing this skill as a robotics engineer.
+Linux is a powerful operating system (OS) that is used in a great deal of robotic systems (it was the only OS supported by [ROS](ROS.md) until recently). Linux philosophy is quite different from more mainstream operating systems such as Windows and MacOS that focus on a graphical user interface (GUI) as the primary means for users to interact with the system. This means it is rather easy for new users of Linux to become overwhelmed or confused even if they consider themselves pretty computer savvy, but don't let this deter you from learning! This page is intended to help you get up to speed with Linux and there are a lot of useful online resources at your disposal. Simply be prepared that your knowledge from other operating systems will not necessarily trivialize the transition for you. Also be aware that simple tasks like creating a new text file may at first take you longer than you are used to, but be patient as you become acquainted with the way Linux likes to do things. In Linux, the command line terminal is still a prominent part of user interaction and you will not be able to become a proficient user without taking the time to develop this skill. Although Linux may seem archaic or cumbersome at first, there is a reason it is still widely used today and you won't regret developing this skill as a robotics engineer.
 
 ---
 ## Background and Linux Distributions
 
 ### What is Linux?
 
-Linux is what we call a [Unix-like][unixlike] operating system. Fun fact, macOS is also a Unix-like OS. [Unix][unix] is one of the first multitasking operating systems (developed by Bell Labs in 1969) and it came to be widely used, sparking many Unix-like variants to be created. However, Unix was not completely open-source (you had to pay) and this bothered a lot of people. In response, the GNU project (the G is not silent) was created to build Unix from scratch with entirely open-source software. This project completed most of the software needed to make an OS useful (e.g. libraries, compilers, text editors, a command-line shell, and a windowing system), but stalled out on the actual OS itself (called a kernel). Eventually, a kernel was written by Linus Torvalds while he was in college and this kernel combined with the GNU software eventually became Linux (you will notice the word `gnu` appear frequently in Linux). Another fun fact, Linus had originally intended to call his kernel **Freax** (pronounced *freaks*), not surprising from a college student.
+Linux is what we call a [Unix-like][unixlike] operating system. Fun fact, MacOS is also a Unix-like OS. [Unix][unix] is one of the first multitasking operating systems (developed by Bell Labs in 1969) and it came to be widely used, sparking many Unix-like variants to be created. However, Unix was not completely open-source (you had to pay) and this bothered a lot of people. In response, the GNU project (the G is not silent) was created to build Unix from scratch with entirely open-source software. This project completed most of the software needed to make an OS useful (e.g. libraries, compilers, text editors, a command-line shell, and a windowing system), but stalled out on the actual OS itself (called a kernel). Eventually, a kernel was written by Linus Torvalds while he was in college and this kernel combined with the GNU software eventually became Linux (you will notice the word `gnu` appear frequently in Linux). Another fun fact, Linus had originally intended to call his kernel **Freax** (pronounced *freaks*), not surprising from a college student.
 
 ### Linux Distributions
 
@@ -95,6 +95,63 @@ This section lists websites that are useful as Linux and Ubuntu reference and do
 - [Debian Policy Manual](https://www.debian.org/doc/debian-policy/index.html#) 
     - Policies like the POSIX Standard but specific to Debian distributions.
     - Useful for Ubuntu since it is Debian-based.
+
+---
+## Installing software (DEB-based Distributions)
+
+The standard method of installing software on Linux is quite different from the way it is typically done on Windows or MacOS. On Windows or MacOS you may be used to downloading and running an installer executable from the internet. This method is not common on Linux.
+
+### APT Package Manager Tool and online software/package repositories
+Linux uses a *package manager* to install software and software dependencies for you. On DEB-based distributions of Linux (like Ubuntu) the package manager is most often invoked using the command line tool `apt`. Ubuntu manages a set of online package repositories (servers) that `apt` uses to download a requested software package. These repositories will contain most of the software you will need. Some software is not hosted on the Ubuntu repositories and instead may be hosted in an online repository managed by the software publisher. This is the case for Visual Studio Code, Google Chrome, and ROS to name a few examples. In these cases, the publisher website will often give instructions to install the software. These instructions may at first seem confusing, but they usually consist of a few simple commands to download a repository authorization key (usually using `wget` or `curl` commands), add the repository to the list `apt` uses to search for software, and then use `apt` to download and install the software package itself. What's nice about this method is that once the publisher's repository is added to the list for `apt`, all of the software packages offered on that publisher's repository are available through `apt` You can forget about which repository a package comes from. `apt` will be your single interface for installing and updating packages from all of the repositories in its list.
+
+Here are some useful commands to search for and install software using `apt` (you may need to prepend some commands with `sudo` if you need root privileges):
+
+**Updating and Upgrading**
+```
+apt update
+apt upgrade
+```
+`apt update` causes `apt` to update its knowledge of what is available on the package repositories. This means `apt` will become aware of new packages as well as new versions of packages so it can let you know if installed packages could be updated to newer versions. `apt update` does not actually install or update any packages. `apt upgrade` will take the new knowledge from `apt update` and actually perform the updates to packages that could be updated to a newer version. Neither `apt update` nor `apt upgrade` will  update your system to a new release of Linux (e.g., Ubuntu 20.04 to 22.04).
+
+**Listing packages**
+```
+apt list                 # List all available packages
+apt list --installed     # List all installed packages
+```
+The output of the above commands is usually too much to sift through. You can pipe the output into `grep` to filter the lines of the output to only show lines with some specific text.
+```
+apt list | grep <specific-text>
+apt list --installed | grep <specific-text>
+apt list | grep python     # Show only lines containing the word "python"
+```
+
+**Getting information about a specific package**
+```
+apt show <package-name>
+```
+
+**Installing a package**
+```
+apt install <package-name>
+# To install multiple packages, simply list them
+apt install <package1> <package2> <package3>
+```
+
+**Uninstalling a package**
+```
+apt remove <package-name>
+apt autoremove
+```
+
+`apt autoremove` is used to remove packages that were installed as a dependency, but are no longer a dependency to any package (perhaps because you uninstalled a package that depended on it).
+
+### Installing with DEB Package Files (`.deb`)
+
+Sometimes a software publisher will simply provide you a DEB package file with the `.deb` file extension. These files can be installed using `dpkg` or by double clicking on them (which opens a software user interface that invokes `dpkg` in the background).
+
+<!--- TODO: Finish this --->
+
+Often, installing the DEB package file will add the publisher's software repository to `apt` automatically (this happens with Google Chrome and Visual Studio Code for example).
 
 ---
 ## Managing Groups
