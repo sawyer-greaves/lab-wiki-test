@@ -106,5 +106,6 @@ This section still needs to be filled out.
 - [colcon Documentation](https://colcon.readthedocs.io/en/released/index.html)
     - `colcon` stands for *collective construction*.
     - `colcon` is the main build tool used for building ROS 2 packages.
+    - It is worth reading at least the *User Documentation* portion (it is shorter than it appears at first).
 
 #### Paid Online Resources
