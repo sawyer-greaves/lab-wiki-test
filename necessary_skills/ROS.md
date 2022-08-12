@@ -103,5 +103,8 @@ This section still needs to be filled out.
     - The [Tutorials](https://docs.ros.org/en/rolling/Tutorials.html) included in the ROS 2 Documentation are an excellent way to get started!
     - The ROS 2 Documentation also contains [How-to Guides](https://docs.ros.org/en/rolling/How-To-Guides.html) which can be used to learn how to complete specific tasks. **Do the tutorials first if you are new to ROS 2**.
     - The [Concepts](https://docs.ros.org/en/rolling/Concepts.html) section of the ROS 2 Documentation is a great way to get background information and a deeper understanding of ROS 2. Use this section as you are doing the tutorials.
+- [colcon Documentation](https://colcon.readthedocs.io/en/released/index.html)
+    - `colcon` stands for *collective construction*.
+    - `colcon` is the main build tool used for building ROS 2 packages.
 
 #### Paid Online Resources
