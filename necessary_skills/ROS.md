@@ -91,7 +91,8 @@ Below are some recommendations on how to learn ROS. **It is strongly recommended
 
 ### ROS 1 Learning Resources
 
-This section still needs to be filled out.
+- [catkin-tools Documentation](https://catkin-tools.readthedocs.io/en/latest/)
+    - `catkin-tools` is the most recently developed build tool used for building in ROS 1. Note that `colcon` (see below) should be used if you are working with ROS 2 even if you are building ROS 1 packages as `colcon` can build both ROS 1 and ROS 2 packages.
 
 ### ROS 2 Learning Resources
 
@@ -109,3 +110,12 @@ This section still needs to be filled out.
     - It is worth reading at least the *User Documentation* portion (it is shorter than it appears at first).
 
 #### Paid Online Resources
+
+### Understanding The Build Process in ROS
+
+These links are useful for understanding the build process in ROS (focus is mainly on ROS 2):
+
+- [A Universal Build Tool](https://design.ros2.org/articles/build_tool.html)
+    - Describes the state of the build process in early ROS 2 and details the transition to using `colcon`.
+- [The build system “ament_cmake” and the meta build tool “ament_tools”](http://design.ros2.org/articles/ament.html)
+    - Describes the `ament_cmake` build system and the `ament_tools` build tool that preceded the `colcon` build tool.
