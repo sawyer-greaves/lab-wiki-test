@@ -56,7 +56,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 ---
 ## Lab Equipment
 
-- [Universal Robots UR5e Robot Arm](lab_equipment/UR5.md)
+- [Universal Robots UR5e Robot Arm](lab_equipment/UR5e.md)
 - [Teensy-based Magnetometer](https://bitbucket.org/utahtelerobotics/teensy-magnetometer/src/main/)
 
 ---
