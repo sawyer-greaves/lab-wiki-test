@@ -32,6 +32,10 @@ There are many [flavors of Linux][distros], called **distributions**. A distribu
 - **Package File Format** - `.deb`
 - **Example Distributions** - Debian, Raspberry Pi OS, Ubuntu, and flavors of Ubuntu like Kubuntu and Linux Mint
 
+[unixlike]: https://en.wikipedia.org/wiki/Unix-like
+[unix]: https://en.wikipedia.org/wiki/Unix
+[distros]: https://en.wikipedia.org/wiki/List_of_Linux_distributions
+
 ---
 ## Introduction to Ubuntu
 
@@ -65,7 +69,10 @@ This wiki contains several useful PDFs.
 
 ### Free Online Resources
 
-None yet. Please share any resources you've found useful with the lab.
+- [UNIX Tutorial for Beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/)
+    - This quick tutorial is recommended by the [ROS](ROS.md) tutorials.
+    - The tutorial mostly focuses on teaching commands for the command line but contains a lot of useful contextual/background information too.
+    - Tutorial **seven** is particularly useful and covers material related to building source code which is not covered by the Jason Cannon resources.
 
 ### Paid Online Resources
 
@@ -147,11 +154,28 @@ apt autoremove
 
 ### Installing with DEB Package Files (`.deb`)
 
-Sometimes a software publisher will simply provide you a DEB package file with the `.deb` file extension. These files can be installed using `dpkg` or by double clicking on them (which opens a software user interface that invokes `dpkg` in the background).
+Sometimes a software publisher will simply provide you a DEB package file with the `.deb` file extension. Often, installing the DEB package file will add the publisher's software repository to `apt` automatically (this happens with Google Chrome and Visual Studio Code for example). In this case, there will be no need to use a newer DEB file to update the software later (updates would be taken care of automatically by `apt`). There are two main methods on Ubuntu to install DEB packages.
 
-<!--- TODO: Finish this --->
+#### Install using the Ubuntu Software GUI
 
-Often, installing the DEB package file will add the publisher's software repository to `apt` automatically (this happens with Google Chrome and Visual Studio Code for example).
+Simply double-clicking on the DEB file in the file explorer will open the Ubuntu Software GUI and guide you through the installation.
+
+#### Install with the Command Line using `dpkg`
+
+The `dpkg` command is the package manager program used behind the scenes by `apt` and the Ubuntu Software GUI. The difference between `dpkg` and `apt` is that the first does not automatically resolve dependencies required by a package. If a package relies on dependencies that are not on the system, `dpkg` returns an error. You’ll need to install dependencies manually before you can install the DEB package using `dpkg`.
+
+To install a DEB package using `dpkg` run the command:
+```
+sudo dpkg -i <package_path>
+```
+
+#### Uninstalling software installed using a DEB Package File
+
+This can be a tricky process because you need to know the official name of the software package that was installed by the DEB package file, not the `.deb` file name. You may be able to search your installed packages with `dpkg` or `apt` to find the official package name. Once you have it, you can uninstall the software using the command
+```
+sudo dpkg -r <package_name>
+```
+If you used `dpkg` to install the package, you should use `dpkg` to remove it. Similarly, if you used `apt` to install the package, you should use `apt` to remove it.
 
 ---
 ## Managing Groups
@@ -198,6 +222,10 @@ Removes the user `<username>` from the group `<groupname>`. This is safer than u
 
 Creates a new group on the system with the name `<new_groupname>`. It is unlikely you will need to use this command.
 
-[unixlike]: https://en.wikipedia.org/wiki/Unix-like
-[unix]: https://en.wikipedia.org/wiki/Unix
-[distros]: https://en.wikipedia.org/wiki/List_of_Linux_distributions
+---
+## Change the Default Terminal in Ubuntu
+
+It is possible to install alternative terminal emulation programs (e.g. [Terminator](https://terminator-gtk3.readthedocs.io/en/latest/)) and it is possible to decide which of these emulators is set as the default (e.g. which terminal is started with Ctrl+Alt+T). To set the default terminal emulator, run the following command in a terminal and follow the instructions (Note that the GNOME terminal is the terminal emulator that ships by default with Ubuntu):
+```
+sudo update-alternatives --config x-terminal-emulator
+```

@@ -91,4 +91,31 @@ Below are some recommendations on how to learn ROS. **It is strongly recommended
 
 ### ROS 1 Learning Resources
 
+- [catkin-tools Documentation](https://catkin-tools.readthedocs.io/en/latest/)
+    - `catkin-tools` is the most recently developed build tool used for building in ROS 1. Note that `colcon` (see below) should be used if you are working with ROS 2 even if you are building ROS 1 packages as `colcon` can build both ROS 1 and ROS 2 packages.
+
 ### ROS 2 Learning Resources
+
+#### Free Online Resources
+
+- [The ROS 2 Documentation](https://docs.ros.org/en/rolling/)
+    - Make sure to set the documentation to the distribution you are using.
+    - Start with the [installation guides](https://docs.ros.org/en/rolling/Installation.html).
+    - The [Tutorials](https://docs.ros.org/en/rolling/Tutorials.html) included in the ROS 2 Documentation are an excellent way to get started!
+    - The ROS 2 Documentation also contains [How-to Guides](https://docs.ros.org/en/rolling/How-To-Guides.html) which can be used to learn how to complete specific tasks. **Do the tutorials first if you are new to ROS 2**.
+    - The [Concepts](https://docs.ros.org/en/rolling/Concepts.html) section of the ROS 2 Documentation is a great way to get background information and a deeper understanding of ROS 2. Use this section as you are doing the tutorials.
+- [colcon Documentation](https://colcon.readthedocs.io/en/released/index.html)
+    - `colcon` stands for *collective construction*.
+    - `colcon` is the main build tool used for building ROS 2 packages.
+    - It is worth reading at least the *User Documentation* portion (it is shorter than it appears at first).
+
+#### Paid Online Resources
+
+### Understanding The Build Process in ROS
+
+These links are useful for understanding the build process in ROS (focus is mainly on ROS 2):
+
+- [A Universal Build Tool](https://design.ros2.org/articles/build_tool.html)
+    - Describes the state of the build process in early ROS 2 and details the transition to using `colcon`.
+- [The build system “ament_cmake” and the meta build tool “ament_tools”](http://design.ros2.org/articles/ament.html)
+    - Describes the `ament_cmake` build system and the `ament_tools` build tool that preceded the `colcon` build tool.
