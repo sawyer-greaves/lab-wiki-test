@@ -113,7 +113,32 @@ Below are some recommendations on how to learn ROS. **It is strongly recommended
 
 ### Understanding The Build Process in ROS
 
-These links are useful for understanding the build process in ROS (focus is mainly on ROS 2):
+#### Build Systems vs. Build Tools
+
+To understand the build process in ROS it is important to understand the purpose of and difference between *build systems* and *build tools*.
+
+A *build system* operates on a single package or piece of software and uses an abstract project description to generate a set of instructions to build and install the software. Examples of build systems are:
+
+- `Make`
+- `CMake`
+- `Python setuptools`
+
+ROS has extended `CMake` to create its own build systems to suit its unique purposes for C++ packages:
+
+- `catkin` (based on CMake, used in ROS 1)
+- `ament_cmake` (an evolution of `catkin` also based on `CMake`, used in ROS 2)
+
+A *build tool* operates on a set of packages and invokes the build system of each package in the correct order according to a generated package dependency graph. It does not need to know specifically how to build a package because that is the responsibility of the build system each package employs. A build tool only needs to know how to set up the environment for building and using the package. Examples of build tools used in ROS are:
+
+- `catkin_make` (used in ROS 1)
+- `catkin_make_isolated` (used in ROS 1)
+- `catkin_tools` (recommended option in ROS 1)
+- `ament_tools` (used in ROS 2)
+- `colcon` (recommended option in ROS 2)
+
+The developers of ROS have acknowledged that the names of these build systems and build tools are confusing. It is quite difficult to tell from the name whether something is a build tool or build system (e.g. `catkin` is a build system, but `catkin_make` is a build tool even though `Make` is the name of a build system). The move to using `colcon` as a universal build tool allows new ROS developers to just remember the build systems and one build tool, namely `colcon`, because `colcon` can invoke all of the above build systems.
+
+Below are some useful links for a deeper understanding the build process in ROS (focus is mainly on ROS 2):
 
 - [A Universal Build Tool](https://design.ros2.org/articles/build_tool.html)
     - Describes the state of the build process in early ROS 2 and details the transition to using `colcon`.
