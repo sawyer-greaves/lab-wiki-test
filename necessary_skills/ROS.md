@@ -91,8 +91,16 @@ Below are some recommendations on how to learn ROS. **It is strongly recommended
 
 ### ROS 1 Learning Resources
 
+#### Free Online Resources
+
 - [catkin-tools Documentation](https://catkin-tools.readthedocs.io/en/latest/)
     - `catkin-tools` is the most recently developed build tool used for building in ROS 1. Note that `colcon` (see below) should be used if you are working with ROS 2 even if you are building ROS 1 packages as `colcon` can build both ROS 1 and ROS 2 packages.
+
+#### Paid Online Resources
+
+- ROS 1 courses offered on Udemy
+    - Udemy is almost always offering sales on courses so you should be able to get lifetime access to these for $10-$20 each
+    - [ROS For Beginners (ROS Noetic, Melodic, Kinetic)](https://www.udemy.com/course/ros-for-beginners/) - by Edouard Renard
 
 ### ROS 2 Learning Resources
 
@@ -110,6 +118,11 @@ Below are some recommendations on how to learn ROS. **It is strongly recommended
     - It is worth reading at least the *User Documentation* portion (it is shorter than it appears at first).
 
 #### Paid Online Resources
+
+- ROS 2 courses offered on Udemy
+    - Udemy is almost always offering sales on courses so you should be able to get lifetime access to these for $10-$20 each
+    - [ROS2 For Beginners (ROS Foxy, Humble - 2022)](https://www.udemy.com/course/ros2-for-beginners/) - by Edouard Renard
+    - [Learn ROS2 as a ROS1 Developer and Migrate Your ROS Projects](https://www.udemy.com/course/learn-ros2-as-a-ros1-developer-and-migrate-your-ros-projects/) - by Edouard Renard
 
 ### Understanding The Build Process in ROS
 

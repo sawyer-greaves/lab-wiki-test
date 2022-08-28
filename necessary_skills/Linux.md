@@ -77,7 +77,7 @@ This wiki contains several useful PDFs.
 ### Paid Online Resources
 
 - Linux courses offered by Jason Cannon on Udemy
-    - Udemy is almost always offering sales on courses so you should be able to get these for $10-$20 each
+    - Udemy is almost always offering sales on courses so you should be able to get lifetime access to these for $10-$20 each
     - [Learn Linux in 5 Days and Level Up Your Career](https://www.udemy.com/course/learn-linux-in-5-days/)
     - [Linux for Beginners](https://www.udemy.com/course/linuxforbeginners/)
     - [Linux Shell Scripting: A Project-Based Approach to Learning](https://www.udemy.com/course/linux-shell-scripting-projects/)
