@@ -157,3 +157,23 @@ Below are some useful links for a deeper understanding the build process in ROS 
     - Describes the state of the build process in early ROS 2 and details the transition to using `colcon`.
 - [The build system “ament_cmake” and the meta build tool “ament_tools”](http://design.ros2.org/articles/ament.html)
     - Describes the `ament_cmake` build system and the `ament_tools` build tool that preceded the `colcon` build tool.
+
+#### Advanced C++ Concepts Used Frequently with ROS
+
+The following is a list of advanced C++ concepts that are used heavily in ROS and are not commonly part of a basic C++ knowledge. It is very important that enough time is taken to understand what these are, how they work, and how to properly use them. Understanding these concepts will ease the process of learning ROS.
+
+- [Templated functions and classes](https://en.cppreference.com/w/cpp/language/templates)
+- The [`auto`](https://en.cppreference.com/w/cpp/language/auto) keyword
+- From standard library header `<functional>`:
+    - [`std::bind()`](https://en.cppreference.com/w/cpp/utility/functional/bind)
+- From standard library header `<memory>`:
+    - [Smart Pointers](https://en.cppreference.com/w/cpp/memory) (e.g. `std::shared_ptr()`, `std::make_shared()`, etc).
+- From standard library header `<chrono>`:
+    - [`std::chrono:duration` objects](https://en.cppreference.com/w/cpp/chrono/duration)
+
+#### Advanced Python Concepts Used Frequently with ROS
+
+The following is a list of advanced Python concepts that are used heavily in ROS and are not commonly part of a basic Python knowledge. It is very important that enough time is taken to understand what these are, how they work, and how to properly use them. Understanding these concepts will ease the process of learning ROS.
+
+- From Asynchronous I/O `asyncio` standard python library:
+    - [Futures](https://docs.python.org/3/library/asyncio-future.html)
