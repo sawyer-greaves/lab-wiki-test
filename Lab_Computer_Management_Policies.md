@@ -81,6 +81,10 @@ Administrator privileges are required to perform the steps in this section.
 ---
 ## Remote Access to Lab Computers
 
+### Via Remote Desktop Connection (Windows Only)
+
+To download the VPN software for accessing the University of Utah network remotely, go to [vpn.utah.edu](https://vpn.utah.edu) and login with your university CIS login credentials. This will take you to a page where you can download and install the GlobalProtect Portal VPN software from Palo Alto Networks.
+
 ### Via TeamViewer
 [TeamViewer](https://teamviewer.com) is installed on many of the lab computers and can be used to initiate a remote session to control a computer as if you were in the lab. If TeamViewer is installed on a lab computer, it **must** be configured according to the following rules:
 
