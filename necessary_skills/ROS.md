@@ -17,6 +17,32 @@ In order to learn ROS you need to have relatively strong existing knowledge in c
 
 All in all, the more you understand about programming and the logistics of programming, the better off you are. So don't shy away from that computer science goodness.
 
+### Advanced C++ and Python Concepts Frequently Used with ROS
+
+The following are lists of advanced C++ and Python concepts that are heavily utilized in ROS programs or at least are very useful when dealing with ROS. These concepts are not commonly part of a basic C++ or Python knowledge. It is very important that enough time is taken to understand what these are, how they work, and how to properly use them. **Understanding these concepts will ease the process of learning ROS.**
+
+#### Advanced C++ Concepts
+
+- [Templated functions and classes](https://en.cppreference.com/w/cpp/language/templates)
+- The [`auto`](https://en.cppreference.com/w/cpp/language/auto) keyword
+- From Standard Library header `<functional>`:
+    - [`std::bind()`](https://en.cppreference.com/w/cpp/utility/functional/bind)
+- From Standard Library header `<memory>`:
+    - [Smart Pointers](https://en.cppreference.com/w/cpp/memory) (e.g. `std::shared_ptr()`, `std::make_shared()`, etc)
+- From Standard Library header `<chrono>`:
+    - [`std::chrono:duration` objects](https://en.cppreference.com/w/cpp/chrono/duration)
+- From Standard Library header `<thread>`:
+    - [Threads](https://en.cppreference.com/w/cpp/thread#Threads) (e.g. `std::thread`, etc)
+- From Standard Library header `<future>`:
+    - [Futures](https://en.cppreference.com/w/cpp/thread#Futures) (e.g. `std::future`, `std::shared_future`, `std::promise`, `std::async()`, etc.)
+
+#### Advanced Python Concepts
+
+- From `asyncio` Standard Python Library Module (Asynchronous I/O):
+    - [Futures](https://docs.python.org/3/library/asyncio-future.html)
+- From `functools` Standard Python Library Module:
+    - [`partial()`](https://docs.python.org/3/library/functools.html#functools.partial)
+
 ---
 ## ROS Versions and Distributions
 
@@ -157,29 +183,3 @@ Below are some useful links for a deeper understanding the build process in ROS 
     - Describes the state of the build process in early ROS 2 and details the transition to using `colcon`.
 - [The build system “ament_cmake” and the meta build tool “ament_tools”](http://design.ros2.org/articles/ament.html)
     - Describes the `ament_cmake` build system and the `ament_tools` build tool that preceded the `colcon` build tool.
-
-#### Advanced C++ Concepts Used Frequently with ROS
-
-The following is a list of advanced C++ concepts that are heavily relied upon in ROS (or at least are very useful when dealing with ROS) and are not commonly part of a basic C++ knowledge. It is very important that enough time is taken to understand what these are, how they work, and how to properly use them. Understanding these concepts will ease the process of learning ROS.
-
-- [Templated functions and classes](https://en.cppreference.com/w/cpp/language/templates)
-- The [`auto`](https://en.cppreference.com/w/cpp/language/auto) keyword
-- From Standard Library header `<functional>`:
-    - [`std::bind()`](https://en.cppreference.com/w/cpp/utility/functional/bind)
-- From Standard Library header `<memory>`:
-    - [Smart Pointers](https://en.cppreference.com/w/cpp/memory) (e.g. `std::shared_ptr()`, `std::make_shared()`, etc)
-- From Standard Library header `<chrono>`:
-    - [`std::chrono:duration` objects](https://en.cppreference.com/w/cpp/chrono/duration)
-- From Standard Library header `<thread>`:
-    - [Threads](https://en.cppreference.com/w/cpp/thread#Threads) (e.g. `std::thread`, etc)
-- From Standard Library header `<future>`:
-    - [Futures](https://en.cppreference.com/w/cpp/thread#Futures) (e.g. `std::future`, `std::shared_future`, `std::promise`, `std::async()`, etc.)
-
-#### Advanced Python Concepts Used Frequently with ROS
-
-The following is a list of advanced Python concepts that are heavily relied upon in ROS (or at least are very useful when dealing with ROS) and are not commonly part of a basic Python knowledge. It is very important that enough time is taken to understand what these are, how they work, and how to properly use them. Understanding these concepts will ease the process of learning ROS.
-
-- From `asyncio` Standard Python Library Module (Asynchronous I/O):
-    - [Futures](https://docs.python.org/3/library/asyncio-future.html)
-- From `functools` Standard Python Library Module:
-    - [`partial()`](https://docs.python.org/3/library/functools.html#functools.partial)
