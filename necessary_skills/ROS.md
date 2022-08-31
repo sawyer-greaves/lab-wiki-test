@@ -164,16 +164,20 @@ The following is a list of advanced C++ concepts that are used heavily in ROS an
 
 - [Templated functions and classes](https://en.cppreference.com/w/cpp/language/templates)
 - The [`auto`](https://en.cppreference.com/w/cpp/language/auto) keyword
-- From standard library header `<functional>`:
+- From Standard Library header `<functional>`:
     - [`std::bind()`](https://en.cppreference.com/w/cpp/utility/functional/bind)
-- From standard library header `<memory>`:
-    - [Smart Pointers](https://en.cppreference.com/w/cpp/memory) (e.g. `std::shared_ptr()`, `std::make_shared()`, etc).
-- From standard library header `<chrono>`:
+- From Standard Library header `<memory>`:
+    - [Smart Pointers](https://en.cppreference.com/w/cpp/memory) (e.g. `std::shared_ptr()`, `std::make_shared()`, etc)
+- From Standard Library header `<chrono>`:
     - [`std::chrono:duration` objects](https://en.cppreference.com/w/cpp/chrono/duration)
+- From Standard Library header `<thread>`:
+    - [Threads](https://en.cppreference.com/w/cpp/thread#Threads) (e.g. `std::thread`, etc)
+- From Standard Library header `<future>`:
+    - [Futures](https://en.cppreference.com/w/cpp/thread#Futures) (e.g. `std::future`, `std::shared_future`, `std::promise`, `std::async()`, etc.)
 
 #### Advanced Python Concepts Used Frequently with ROS
 
 The following is a list of advanced Python concepts that are used heavily in ROS and are not commonly part of a basic Python knowledge. It is very important that enough time is taken to understand what these are, how they work, and how to properly use them. Understanding these concepts will ease the process of learning ROS.
 
-- From Asynchronous I/O `asyncio` standard python library:
+- From Asynchronous I/O Standard Python Library - `asyncio`:
     - [Futures](https://docs.python.org/3/library/asyncio-future.html)
