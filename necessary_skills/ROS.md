@@ -160,7 +160,7 @@ Below are some useful links for a deeper understanding the build process in ROS 
 
 #### Advanced C++ Concepts Used Frequently with ROS
 
-The following is a list of advanced C++ concepts that are used heavily in ROS and are not commonly part of a basic C++ knowledge. It is very important that enough time is taken to understand what these are, how they work, and how to properly use them. Understanding these concepts will ease the process of learning ROS.
+The following is a list of advanced C++ concepts that are heavily relied upon in ROS (or at least are very useful when dealing with ROS) and are not commonly part of a basic C++ knowledge. It is very important that enough time is taken to understand what these are, how they work, and how to properly use them. Understanding these concepts will ease the process of learning ROS.
 
 - [Templated functions and classes](https://en.cppreference.com/w/cpp/language/templates)
 - The [`auto`](https://en.cppreference.com/w/cpp/language/auto) keyword
@@ -177,7 +177,9 @@ The following is a list of advanced C++ concepts that are used heavily in ROS an
 
 #### Advanced Python Concepts Used Frequently with ROS
 
-The following is a list of advanced Python concepts that are used heavily in ROS and are not commonly part of a basic Python knowledge. It is very important that enough time is taken to understand what these are, how they work, and how to properly use them. Understanding these concepts will ease the process of learning ROS.
+The following is a list of advanced Python concepts that are heavily relied upon in ROS (or at least are very useful when dealing with ROS) and are not commonly part of a basic Python knowledge. It is very important that enough time is taken to understand what these are, how they work, and how to properly use them. Understanding these concepts will ease the process of learning ROS.
 
-- From Asynchronous I/O Standard Python Library - `asyncio`:
+- From `asyncio` Standard Python Library Module (Asynchronous I/O):
     - [Futures](https://docs.python.org/3/library/asyncio-future.html)
+- From `functools` Standard Python Library Module:
+    - [`partial()`](https://docs.python.org/3/library/functools.html#functools.partial)
