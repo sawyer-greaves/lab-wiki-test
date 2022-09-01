@@ -177,7 +177,7 @@ A *build tool* operates on a set of packages and invokes the build system of eac
 
 The developers of ROS have acknowledged that the names of these build systems and build tools are confusing. It is quite difficult to tell from the name whether something is a build tool or build system (e.g. `catkin` is a build system, but `catkin_make` is a build tool even though `Make` is the name of a build system). The move to using `colcon` as a universal build tool allows new ROS developers to just remember the build systems and one build tool, namely `colcon`, because `colcon` can invoke all of the above build systems.
 
-Below are some useful links for a deeper understanding the build process in ROS (focus is mainly on ROS 2):
+Below are some useful links for a deeper understanding of the build process in ROS (the focus is mainly on ROS 2):
 
 - [A Universal Build Tool](https://design.ros2.org/articles/build_tool.html)
     - Describes the state of the build process in early ROS 2 and details the transition to using `colcon`.
