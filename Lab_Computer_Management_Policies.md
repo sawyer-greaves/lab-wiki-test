@@ -11,6 +11,8 @@
 
 >**Old lab default passwords:** None yet, this is where old passwords will be listed if the lab default password changes.
 
+>**Passwords on Linux:** You may need to bypass password complexity requirements to use the default lab password on Linux. To do so use `sudo passwd <username>` from the command line where you replace `<username>` with the username of the account whose password is being changed.
+
 Every computer in the lab must have a user for the purposes of lab computer administration according to the following rules:
 
 - Username: `Telerobotics` or `telerobotics`
