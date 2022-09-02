@@ -2,9 +2,12 @@
 
 # How to Edit this Wiki
 
+This page will help you learn how to edit this wiki to add your own contributions. The [Bitbucket documentation][1] also has more information about using a wiki.
+
+**Contents**
 [TOC]
 
-This page will help you learn how to edit this wiki to add your own contributions. The [Bitbucket documentation][1] also has more information about using a wiki.
+## Introduction
 
 Wiki pages are nothing more than plain text files with the `.md` extension. The `.md` extension indicates that the file is a Markdown file which contains [Markdown syntax](Markdown.md). Markdown syntax allows you to specify text formatting, links to other pages, and do other useful things. **It can also be learned in just an hour or two.** Once written, a Markdown file is then *rendered* (usually by a website like Bitbucket or GitHub) to display the formatted page. If you are reading this page on Bitbucket, you are seeing the rendered page.
 

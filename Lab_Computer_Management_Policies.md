@@ -1,6 +1,7 @@
 [Home](Home)
 # Lab Computer Management Policies
 
+**Contents**
 [TOC]
 
 ## User Accounts on Lab Computers

@@ -1,9 +1,10 @@
 [Home](../Home)
 # Qt Application Framework
 
-[TOC]
-
 Qt is pronounced "cute" not "cue tee".
+
+**Contents**
+[TOC]
 
 ---
 ## Installing the Qt Framework and Qt Creator

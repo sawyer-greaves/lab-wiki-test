@@ -2,9 +2,10 @@
 
 # Lab Network Drive (Group Drive)
 
-[TOC]
-
 The lab has a network drive to store files generated from research conducted by the lab. This drive is backed up at regular intervals and it is believed to have an effectively infinite amount of storage.
+
+**Contents**
+[TOC]
 
 ---
 ## Obtaining Access
