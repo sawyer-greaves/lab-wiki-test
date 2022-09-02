@@ -7,7 +7,9 @@
 
 ## User Accounts on Lab Computers
 
->**The lab's default password for computer user accounts is `Telerobo2156`. Please use this password for all user accounts on lab computers except personal user accounts that are actively being used.**
+>**The lab's default password for computer user accounts is `Telerobo2156`. Please use this password for lab administrator accounts on lab computers. Personal user accounts that are actively being used should have personal passwords. When you no longer need to use a personal account (e.g. when you graduate or will no longer be working with the lab) it should be deleted, but at the very least its password should be changed to the lab default password.**
+
+>**Old lab default passwords:** `telerobo2156`
 
 Every computer in the lab must have a user for the purposes of lab computer administration according to the following rules:
 
