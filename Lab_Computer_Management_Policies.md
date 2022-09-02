@@ -7,12 +7,12 @@
 
 ## User Accounts on Lab Computers
 
->**The lab's default password for computer user accounts is `telerobo2156`. Please use this password for all user accounts on lab computers except personal user accounts that are actively being used.**
+>**The lab's default password for computer user accounts is `Telerobo2156`. Please use this password for all user accounts on lab computers except personal user accounts that are actively being used.**
 
 Every computer in the lab must have a user for the purposes of lab computer administration according to the following rules:
 
 - Username: `Telerobotics` or `telerobotics`
-- Password: `telerobo2156`
+- Password: `Telerobo2156`
 - The `Telerobotics` user must have full administration privileges
 - The `Telerobotics` user **must not** be used for anything other than general administration of the computer (e.g. creating and removing other users, installing software for all users, etc.). **No lab work should be conducted from the `Telerobotics` user**.
 - If a computer has multiple operating systems, there **must** be a `Telerobotics` user on each operating system.
@@ -93,7 +93,7 @@ To download the VPN software for accessing the University of Utah network remote
 - **Do not** assign a TeamViewer account (found in the General options)
 - **Do not** enable easy access (a TeamViewer account must be assigned to enable this anyway)
 - **Disable** the random password (found in the Security options)
-- If there is at least one computer in the "allow list" (see below), set the "personal password" to `telerobo2156` (found in the Advanced options). If no computers are in the "allow list" then the "personal password" should be **removed**.
+- If there is at least one computer in the "allow list" (see below), set the "personal password" to `Telerobo2156` (found in the Advanced options). If no computers are in the "allow list" then the "personal password" should be **removed**.
 - You may turn on the option to start TeamViewer with the operating system
 
 The "allow list" (found in the Security options) is a list of TeamViewer IDs, which is a number that is computer-specific rather than person-specific, of the computers that we want to allow access to the lab computer. No computer other than those with IDs in the "allow list" can connect under any circumstances.
@@ -104,7 +104,7 @@ Currently, there are three ways to connect to a computer with TeamViewer: (1) us
 If the above rules are followed on each lab computer, you can set up a personal computer to remote login to a lab computer by following these steps:
 
 - Add your personal computer's TeamViewer ID to the "allow list" of the lab computer in the TeamViewer Security options. TeamViewer may ask you to login with a TeamViewer account when adding to the allow list, but if you say you don't want to you should be able to get to a point where you can add TeamViewer IDs (which are computer-specific rather than person-specific) to the allow list. **Remember, do not assign a TeamViewer account to any lab computer by logging in.**
-- Add the lab computer's TeamViewer ID and the personal password `telerobo2156` to your personal computer's contacts list or your personal TeamViewer account's contact list.
+- Add the lab computer's TeamViewer ID and the personal password `Telerobo2156` to your personal computer's contacts list or your personal TeamViewer account's contact list.
 
 >:exclamation: **Don't forget to remove the TeamViewer ID from the allow list of the lab computer when your personal computer no longer needs access to it.**
 
