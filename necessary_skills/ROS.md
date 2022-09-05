@@ -141,13 +141,30 @@ Below are some recommendations on how to learn ROS. **It is strongly recommended
 - [The ROS 2 Documentation](https://docs.ros.org/en/rolling/)
     - Make sure to set the documentation to the distribution you are using.
     - Start with the [installation guides](https://docs.ros.org/en/rolling/Installation.html).
-    - The [Tutorials](https://docs.ros.org/en/rolling/Tutorials.html) included in the ROS 2 Documentation are an excellent way to get started!
-    - The ROS 2 Documentation also contains [How-to Guides](https://docs.ros.org/en/rolling/How-To-Guides.html) which can be used to learn how to complete specific tasks. **Do the tutorials first if you are new to ROS 2**.
-    - The [Concepts](https://docs.ros.org/en/rolling/Concepts.html) section of the ROS 2 Documentation is a great way to get background information and a deeper understanding of ROS 2. Use this section as you are doing the tutorials.
-- [colcon Documentation](https://colcon.readthedocs.io/en/released/index.html)
-    - `colcon` stands for *collective construction*.
-    - `colcon` is the main build tool used for building ROS 2 packages.
-    - It is worth reading at least the *User Documentation* portion (it is shorter than it appears at first).
+    - [Tutorials](https://docs.ros.org/en/rolling/Tutorials.html)
+        - An excellent way to get started!
+    - [How-to Guides](https://docs.ros.org/en/rolling/How-To-Guides.html)
+        - Can be used to learn how to complete specific tasks.
+        - **Do the tutorials first if you are new to ROS 2**.
+    - [Concepts Articles](https://docs.ros.org/en/rolling/Concepts.html)
+        - A great way to get background information and a deeper understanding of ROS 2.
+        - **Read these articles before and/or during the tutorials.** They really complement the tutorials and provide information the tutorials lack or brush over.
+    - [`colcon` Documentation](https://colcon.readthedocs.io/en/released/index.html)
+        - `colcon` stands for ***col**lective **con**struction*.
+        - `colcon` is the main build tool used for building ROS 2 packages.
+        - It is worth reading at least the *User Documentation* portion (it is shorter than it appears at first).
+    - [`rcl` Documentation](https://docs.ros2.org/latest/api/rcl/)
+        - `rcl` stands for ***R**OS **C**lient **L**ibrary*.
+        - The core implementation of ROS upon which language specific libraries are built. Written in pure C.
+        - [Package source code](https://github.com/ros2/rcl) is found on GitHub.
+    - [`rclcpp` Documentation](https://docs.ros2.org/latest/api/rclcpp/)
+        - `rclcpp` stands for *ROS Client Library for C++*.
+        - C++ binding built on top of the `rcl`.
+        - [Package source code](https://github.com/ros2/rclcpp) is found on GitHub.
+    - [`rclpy` Documentation](https://docs.ros2.org/latest/api/rclpy/index.html)
+        - `rclpy` stands for *ROS Client Library for Python*.
+        - Python binding built on top of the `rcl`.
+        - [Package source code](https://github.com/ros2/rclpy) is found on GitHub.
 - [Robotics Back-End tutorials](https://roboticsbackend.com/)
     - A website created by Edouard Renard who runs some Udemy courses mentioned below.
 - [Robotics Back-End YouTube Channel](https://www.youtube.com/c/RoboticsBackEnd)
