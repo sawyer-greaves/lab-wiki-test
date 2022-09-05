@@ -123,6 +123,10 @@ Below are some recommendations on how to learn ROS. **It is strongly recommended
 
 - [catkin-tools Documentation](https://catkin-tools.readthedocs.io/en/latest/)
     - `catkin-tools` is the most recently developed build tool used for building in ROS 1. Note that `colcon` (see below) should be used if you are working with ROS 2 even if you are building ROS 1 packages as `colcon` can build both ROS 1 and ROS 2 packages.
+- [Robotics Back-End tutorials](https://roboticsbackend.com/)
+    - A website created by Edouard Renard who runs some Udemy courses mentioned below.
+- [Robotics Back-End YouTube Channel](https://www.youtube.com/c/RoboticsBackEnd)
+    - A YouTube channel run by Edouard Renard who runs some Udemy courses mentioned below.
 
 #### Paid Online Resources
 
@@ -144,6 +148,10 @@ Below are some recommendations on how to learn ROS. **It is strongly recommended
     - `colcon` stands for *collective construction*.
     - `colcon` is the main build tool used for building ROS 2 packages.
     - It is worth reading at least the *User Documentation* portion (it is shorter than it appears at first).
+- [Robotics Back-End tutorials](https://roboticsbackend.com/)
+    - A website created by Edouard Renard who runs some Udemy courses mentioned below.
+- [Robotics Back-End YouTube Channel](https://www.youtube.com/c/RoboticsBackEnd)
+    - A YouTube channel run by Edouard Renard who runs some Udemy courses mentioned below.
 
 #### Paid Online Resources
 
