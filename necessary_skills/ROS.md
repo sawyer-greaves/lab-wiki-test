@@ -206,6 +206,9 @@ The developers of ROS have acknowledged that the names of these build systems an
 
 Below are some useful links for a deeper understanding of the build process in ROS (the focus is mainly on ROS 2):
 
+- [About the build system](http://docs.ros.org/en/rolling/Concepts/About-Build-System.html)
+    - Defines what an *ament package* is and that this term is build system agnostic.
+    - Describes the different types of ament packages
 - [A Universal Build Tool](https://design.ros2.org/articles/build_tool.html)
     - Describes the state of the build process in early ROS 2 and details the transition to using `colcon`.
 - [The build system “ament_cmake” and the meta build tool “ament_tools”](http://design.ros2.org/articles/ament.html)
