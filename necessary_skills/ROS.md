@@ -213,3 +213,8 @@ Below are some useful links for a deeper understanding of the build process in R
     - Describes the state of the build process in early ROS 2 and details the transition to using `colcon`.
 - [The build system “ament_cmake” and the meta build tool “ament_tools”](http://design.ros2.org/articles/ament.html)
     - Describes the `ament_cmake` build system and the `ament_tools` build tool that preceded the `colcon` build tool.
+
+---
+## Using ROS with Conda Environments
+
+It is recommended to install and use ROS within a conda environment (See the [Python page](Python.md) to learn about Anaconda, conda and conda environments).
