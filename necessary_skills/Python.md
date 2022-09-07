@@ -20,15 +20,15 @@
 ## Anaconda and Conda (a package and environment manager)
 
 - [Anaconda.org](https://anaconda.org/)
-- [Conda Documentation](https://conda.io/en/latest/)
-- Conda Cheatsheet
+- [conda Documentation](https://conda.io/en/latest/)
+- conda Cheatsheet
     - [4.12.x](conda_4.12_cheatsheet.pdf)
     - [4.6.x](conda_4.6_cheatsheet.pdf)
 - [Conda: Myths and Misconceptions](http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
 
 ### Several Ways To Install: Anaconda, Miniconda, Miniforge, and Mambaforge
 
-There are many ways to install and use Conda (you might consider each as a distribution of sorts): Anaconda, Miniconda, Miniforge, and Mambaforge.
+There are many ways to install and use conda (you might consider each as a distribution of sorts): Anaconda, Miniconda, Miniforge, and Mambaforge.
 
 #### Anaconda
 
@@ -48,6 +48,17 @@ Miniforge is basically the same as Miniconda except for the following changes:
 - Optional support for Mamba in place of Conda.
 - An emphasis on supporting various CPU architectures (x86_64, ppc64le, and aarch64 including Apple M1).
 
+Miniforge is installed using the installers that cen be downloaded from the [Miniforge Github Repository](https://github.com/conda-forge/miniforge).
+
 #### Mambaforge
 
-The same as Miniforge but comes with Mamba.
+Mambaforge is the same as Miniforge but comes with mamba pre-installed (in addition to conda). Effectively, you can turn a Miniforge installation into a Mambaforge installation by using `conda` to install `mamba`:
+
+    conda install mamba -n base -c conda-forge
+
+ >:warning: **WARNING:** Installing mamba into any other environment than base can cause unexpected behavior!
+ 
+ Mamba is a drop-in replacement for conda that uses the same commands and configuration options but is faster and gives better error messages. Almost anywhere you use `conda` you can use `mamba` instead. **The only difference is that you should still use `conda` for activation and deactivation.**
+
+- [Mamba Documentation](https://mamba.readthedocs.io/en/latest/index.html)
+- [Mamba Github Repository](https://github.com/mamba-org/mamba)
