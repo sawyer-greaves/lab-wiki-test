@@ -62,3 +62,5 @@ Mambaforge is the same as Miniforge but comes with mamba pre-installed (in addit
 
 - [Mamba Documentation](https://mamba.readthedocs.io/en/latest/index.html)
 - [Mamba Github Repository](https://github.com/mamba-org/mamba)
+
+Mambaforge is installed using the installers that cen be downloaded from the [Miniforge Github Repository](https://github.com/conda-forge/miniforge).
