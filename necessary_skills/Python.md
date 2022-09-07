@@ -25,3 +25,29 @@
     - [4.12.x](conda_4.12_cheatsheet.pdf)
     - [4.6.x](conda_4.6_cheatsheet.pdf)
 - [Conda: Myths and Misconceptions](http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
+
+### Several Ways To Install: Anaconda, Miniconda, Miniforge, and Mambaforge
+
+There are many ways to install and use Conda (you might consider each as a distribution of sorts): Anaconda, Miniconda, Miniforge, and Mambaforge.
+
+#### Anaconda
+
+Anaconda is a downloadable, free, open-source, high-performance, and optimized Python and R distribution. Anaconda includes conda, conda-build, Python, and 250+ automatically installed, open-source scientific packages and their dependencies that have been tested to work well together, including SciPy, NumPy, and many others.
+
+#### Miniconda
+
+A free minimal installer for conda. Miniconda is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib, and a few others. You can still install packages that come included with Anaconda by using `conda install`.
+
+#### Miniforge
+
+Miniforge is basically the same as Miniconda except for the following changes:
+
+- conda-forge set as the default (and only) channel.
+    - Packages in the base environment are obtained from the conda-forge channel.
+- Optional support for PyPy in place of standard Python interpreter (the standard Python interpreter is called "CPython").
+- Optional support for Mamba in place of Conda.
+- An emphasis on supporting various CPU architectures (x86_64, ppc64le, and aarch64 including Apple M1).
+
+#### Mambaforge
+
+The same as Miniforge but comes with Mamba.
