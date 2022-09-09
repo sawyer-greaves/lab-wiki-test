@@ -217,4 +217,6 @@ Below are some useful links for a deeper understanding of the build process in R
 ---
 ## Using ROS with Conda Environments
 
-It is recommended to install and use ROS within a conda environment (See the [Python page](Python.md) to learn about Anaconda, conda and conda environments).
+It is recommended to install and use ROS 1 within a conda environment via [Robostack](https://robostack.github.io/) (See the [Python page](Python.md) to learn about Anaconda, conda, and conda environments).
+
+At the present time, using ROS 2 with conda and Robostack is not recommended. Robostack thru ROS 2 Humble is experimental and you will probably run into issues.
