@@ -12,6 +12,8 @@ If you're a new student, please read and follow the onboarding page:
 
 Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for instructions on contributing to the wiki. The [Bitbucket documentation](https://confluence.atlassian.com/x/FA4zDQ) also has more information about using a wiki. The [Lab Wiki TODO List](Todo.md) contains a list of to-do items for the wiki itself. **Please keep this list up to date.**
 
+[TOC]
+
 ---
 ## Lab Policies, Standards, and Procedures
 
