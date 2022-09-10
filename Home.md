@@ -36,10 +36,10 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 ### Most Lab Members
 
 - [Linux](necessary_skills/Linux.md)
-    - [Linux for Beginners Book](Linux_for_Beginners.pdf)
-    - [Linux Command Line Cheat Sheet](Linux_Command_Line_Cheat_Sheet.pdf)
-    - [Linux Administration Book](Linux_Administration.pdf)
-    - [Computer Science from the Bottom Up Book](Computer_Science_from_the_Bottom_Up.pdf)
+    - [Linux for Beginners Book](necessary_skills/Linux_for_Beginners.pdf)
+    - [Linux Command Line Cheat Sheet](necessary_skills/Linux_Command_Line_Cheat_Sheet.pdf)
+    - [Linux Administration Book](necessary_skills/Linux_Administration.pdf)
+    - [Computer Science from the Bottom Up Book](necessary_skills/Computer_Science_from_the_Bottom_Up.pdf)
 - [C/C++ Programming Language](necessary_skills/C_and_Cpp.md)
 - [CMake](necessary_skills/CMake.md)
     - [Professional CMake Reference Textbook](necessary_skills/Professional_CMake_11th_Edition.pdf)
@@ -72,7 +72,6 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
         - Robot and hardware implementations (Yaskawa Motoman robot arm, SAMM, Space Explorer 3D Mouse)
         - A framework for writing and managing control loops and controllers
         - Computer vision workflows built on top of [OpenCV](useful_resources/OpenCV.md) including a substantially featured computer vision GUI, camera calibration workflows, support for ROI's and ROI servoing, and camera drivers (Flea3)
-
 
 ---
 ## Lab Equipment
