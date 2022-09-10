@@ -53,6 +53,25 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 - [Eigen Linear Algebra Library for C++](useful_resources/Eigen_Library.md)
 - [OpenCV Computer Vision Library](useful_resources/OpenCV.md)
 
+
+---
+## Lab Custom Common Software Libraries
+
+- [libmatlab](https://bitbucket.org/utahtelerobotics/libmatlab/src/master/)
+    - A collection of libraries of MATLAB functions useful for robotics and magnetics applications.
+- [RoboticsFramework](https://bitbucket.org/utahtelerobotics/roboticsframework/src/master/) **(Linux Only**)
+    - A ROS-like, single-process robotics framework for [C++](necessary_skills/C_and_Cpp.md) based on top of the [Qt Application Framework](necessary_skills/Qt.md) and Qt's signal-slot features
+    - Can be used in conjunction with [ROS](necessary_skills/ROS.md) within a ROS node
+    - Components can be selectively built and installed so you can use only what is needed and avoid installing unnecessary dependencies
+    - Contains the following functionality:
+        - The Robotics Toolbox, a collection of types and functions for linear algebra and mathematical operations in robotics
+        - A collection of utility classes for timing, threading, optimization, signal processing and filtering, and magnetics
+        - ROS-like message passing between objects (in the same process), "real-time" data visualization, and data recording
+        - Robot and hardware implementations (Yaskawa Motoman robot arm, SAMM, Space Explorer 3D Mouse)
+        - A framework for writing and managing control loops and controllers
+        - Computer vision workflows built on top of [OpenCV](useful_resources/OpenCV.md) including a substantially featured computer vision GUI, camera calibration workflows, support for ROI's and ROI servoing, and camera drivers (Flea3)
+
+
 ---
 ## Lab Equipment
 
