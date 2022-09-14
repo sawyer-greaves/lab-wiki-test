@@ -92,6 +92,11 @@ Below are important web-based resources for learning and using ROS.
     - **Foxy** - [docs.ros.org/en/foxy/](https://docs.ros.org/en/foxy/)
     - Change the distribution the documentation is for at the bottom of the navigation tree on the left of the page
 
+- **ROS 2 Design** (ROS 2) - [design.ros2.org](http://design.ros2.org/)
+
+    - A repository of articles which are designed to inform and guide the ROS 2 design efforts
+    - **Very** useful for deeper understanding of ROS 2
+
 - **ROS Package Index** (ROS 1, ROS 2) - [index.ros.org](https://index.ros.org/)
 
     - Indexed list of all packages (i.e. [Python Package Index (PyPI)](https://pypi.org/) for ROS packages)
@@ -153,15 +158,24 @@ Below are some recommendations on how to learn ROS. **It is strongly recommended
         - `colcon` stands for ***col**lective **con**struction*.
         - `colcon` is the main build tool used for building ROS 2 packages.
         - It is worth reading at least the *User Documentation* portion (it is shorter than it appears at first).
-    - [`rcl` Documentation](https://docs.ros2.org/latest/api/rcl/)
+    - `rcl` API Documentation
         - `rcl` stands for ***R**OS **C**lient **L**ibrary*.
         - The core implementation of ROS upon which language specific libraries are built. Written in pure C.
-        - [Package source code](https://github.com/ros2/rcl) is found on GitHub.
-    - [`rclcpp` Documentation](https://docs.ros2.org/latest/api/rclcpp/)
+        - The full `rcl` library consists of several ROS packages:
+            - [`rcl` (core functionality) Documentation](https://docs.ros2.org/latest/api/rcl/)
+            - [`rcl_action` (functionality for actions) Documentation](https://docs.ros2.org/latest/api/rcl_action/index.html)
+            - [`rcl_lifecycle` (functionality for lifecycles) Documentation](https://docs.ros2.org/latest/api/rcl_lifecycle/index.html)
+        - The source code for all of the packages is found in the [ros2/rcl](https://github.com/ros2/rcl) repository on GitHub. The links above point to the latest documentation, to access documentation for a specific distribution, go to the branch on GitHub corresponding to the desired distribution and click on the links in the README of each package.
+    - `rclcpp` API Documentation
         - `rclcpp` stands for *ROS Client Library for C++*.
         - C++ binding built on top of the `rcl`.
-        - [Package source code](https://github.com/ros2/rclcpp) is found on GitHub.
-    - [`rclpy` Documentation](https://docs.ros2.org/latest/api/rclpy/index.html)
+        - The full `rclcpp` library consists of several ROS packages:
+            - [`rclcpp` (core functionality) Documentation](https://docs.ros2.org/latest/api/rclcpp/)
+            - [`rclcpp_action` (functionality for actions) Documentation](https://docs.ros2.org/latest/api/rclcpp_action/)
+            - [`rclcpp_components` (functionality for components) Documentation](https://docs.ros2.org/latest/api/rclcpp_components/)
+            - [`rclcpp_lifecycle` (functionality for lifecycles) Documentation](https://docs.ros2.org/latest/api/rclcpp_lifecycle/)
+        - The source code for all of the packages is found in the [ros2/rclcpp](https://github.com/ros2/rclcpp) repository on Github. The links above point to the latest documentation, to access documentation for a specific distribution, go to the branch on GitHub corresponding to the desired distribution and click on the links in the README of each package.
+    - [`rclpy` API Documentation](https://docs.ros2.org/latest/api/rclpy/index.html)
         - `rclpy` stands for *ROS Client Library for Python*.
         - Python binding built on top of the `rcl`.
         - [Package source code](https://github.com/ros2/rclpy) is found on GitHub.
