@@ -44,14 +44,15 @@ Administrator privileges are required to perform the steps in this section.
 1. Open Settings.
 2. Navigate to *Accounts* and then *Family & other users*.
 3. Click on *Add someone else to this PC*.
-4. Windows will prompt you for a personal Microsoft account. We want to create a local user account, not one that is linked to a personal Microsoft account. Click on *I don't have this person's sign-in information*.
-5. Windows will prompt you to create a Microsoft account. We don't want to do this either. Click on *Add a user without a Microsoft account*.
-6. Enter a user name. Avoid spaces in the username.
-7. Enter a password.
-8. Enter security questions.
-9. Click *Next*.
-10. Click on the new account created in *Family & other users* and then click on *Change account type*.
-11. Change the account type to *Administrator* and click *OK*.
+4. Windows will prompt you for a personal Microsoft account. If you have a personal Microsoft account, enter that information now and follow the on screen instructions. If you do not want to use a personal Microsoft account and instead want to create a local user account:
+    1. Click on *I don't have this person's sign-in information*.
+    2. Click on *Add a user without a Microsoft account*.
+    3. Enter a user name. Avoid spaces in the username.
+    4. Enter a password.
+    5. Enter security questions.
+    6. Click *Next*.
+5. Click on the new account created in *Family & other users* and then click on *Change account type*.
+6. Change the account type to *Administrator* and click *OK*.
 
 
 **Remove a user:**
