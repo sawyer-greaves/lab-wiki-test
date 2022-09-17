@@ -155,11 +155,11 @@ Below are some recommendations on how to learn ROS. **It is strongly recommended
         - A great way to get background information and a deeper understanding of ROS 2.
         - **Read these articles before and/or during the tutorials.** They really complement the tutorials and provide information the tutorials lack or brush over.
     - [`colcon` Documentation](https://colcon.readthedocs.io/en/released/index.html)
-        - `colcon` stands for ***col**lective **con**struction*.
+        - `colcon` stands for ***col****lective* ***con****struction*.
         - `colcon` is the main build tool used for building ROS 2 packages.
         - It is worth reading at least the *User Documentation* portion (it is shorter than it appears at first).
     - `rcl` API Documentation
-        - `rcl` stands for ***R**OS **C**lient **L**ibrary*.
+        - `rcl` stands for ***R****OS* ***C****lient* ***L****ibrary*.
         - The core implementation of ROS upon which language specific libraries are built. Written in pure C.
         - The full `rcl` library consists of several ROS packages:
             - [`rcl` (core functionality) Documentation](https://docs.ros2.org/latest/api/rcl/)
@@ -174,11 +174,11 @@ Below are some recommendations on how to learn ROS. **It is strongly recommended
             - [`rclcpp_action` (functionality for actions) Documentation](https://docs.ros2.org/latest/api/rclcpp_action/)
             - [`rclcpp_components` (functionality for components) Documentation](https://docs.ros2.org/latest/api/rclcpp_components/)
             - [`rclcpp_lifecycle` (functionality for lifecycles) Documentation](https://docs.ros2.org/latest/api/rclcpp_lifecycle/)
-        - The source code for all of the packages is found in the [ros2/rclcpp](https://github.com/ros2/rclcpp) repository on Github. The links above point to the latest documentation, to access documentation for a specific distribution, go to the branch on GitHub corresponding to the desired distribution and click on the links in the README of each package.
+        - The source code for all of the packages is found in the [ros2/rclcpp](https://github.com/ros2/rclcpp) repository on GitHub. The links above point to the latest documentation, to access documentation for a specific distribution, go to the branch on GitHub corresponding to the desired distribution and click on the links in the README of each package.
     - [`rclpy` API Documentation](https://docs.ros2.org/latest/api/rclpy/index.html)
         - `rclpy` stands for *ROS Client Library for Python*.
         - Python binding built on top of the `rcl`.
-        - [Package source code](https://github.com/ros2/rclpy) is found on GitHub.
+        - The source code for this package is found in the [ros2/rclpy](https://github.com/ros2/rclpy) repository on GitHub.
 - [Robotics Back-End tutorials](https://roboticsbackend.com/)
     - A website created by Edouard Renard who runs some Udemy courses mentioned below.
 - [Robotics Back-End YouTube Channel](https://www.youtube.com/c/RoboticsBackEnd)
@@ -233,4 +233,4 @@ Below are some useful links for a deeper understanding of the build process in R
 
 It is recommended to install and use ROS 1 within a conda environment via [Robostack](https://robostack.github.io/) (See the [Python page](Python.md) to learn about Anaconda, conda, and conda environments).
 
-At the present time, using ROS 2 with conda and Robostack is not recommended. Robostack thru ROS 2 Humble is experimental and you will probably run into issues.
+At the present time, using ROS 2 with conda and Robostack is not recommended. Robostack thru ROS 2 Humble is experimental and you will probably run into issues. If you need a Python virtual environment, [venv](https://docs.python.org/3/library/venv.html) is the recommend method since using a conda environment with the system ROS can get hairy quickly if you don't use the system Python version exactly.
