@@ -16,7 +16,6 @@
 - Finish [Markdown Syntax](necessary_skills/Markdown.md)
 - Finish [Git](necessary_skills/Git.md)
 - Fill out [C/C++ Programming Language](necessary_skills/C_and_Cpp.md)
-- Fill out [CMake](necessary_skills/CMake.md)
 - Fill out [Python](necessary_skills/Python.md)
 - Fill out [Qt Application Framework](necessary_skills/Qt.md)
 - Fill out [Doxygen](necessary_skills/Doxygen.md)
