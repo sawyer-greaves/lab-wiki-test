@@ -47,6 +47,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 - [Qt Application Framework](necessary_skills/Qt.md)
 - [Doxygen](necessary_skills/Doxygen.md)
 - [ROS](necessary_skills/ROS.md)
+- [Working with Strong Magnets](necessary_skills/Working_with_Strong_Magnets.md)
 
 ---
 ## Useful Resources
