@@ -229,8 +229,16 @@ Below are some useful links for a deeper understanding of the build process in R
     - Describes the `ament_cmake` build system and the `ament_tools` build tool that preceded the `colcon` build tool.
 
 ---
-## Using ROS with Conda Environments
+## Using ROS with Python Virtual Environments
+
+If you are developing ROS nodes in Python, you will  likely want to be using a virtual environment. The recommendations for using Python virtual environments differ based on how you install ROS.
+
+### System Installation of ROS
+
+If you are using a system installation of ROS, it is not recommended to use conda environments because the Python version installed in these environments can easily clash with the Python version used to build the ROS binaries. Instead, it is recommended to use [virtualenv](https://virtualenv.pypa.io/en/stable/) or [venv](https://docs.python.org/3/library/venv.html) which will use the system version of Python (which is the Python version used to build ROS binaries). See the [Using Python Packages with ROS 2](https://docs.ros.org/en/rolling/How-To-Guides/Using-Python-Packages.html) How-to page for more information.
+
+### Installing ROS in a Conda Environment using Robostack
 
 It is recommended to install and use ROS 1 within a conda environment via [Robostack](https://robostack.github.io/) (See the [Python page](Python.md) to learn about Anaconda, conda, and conda environments).
 
-At the present time, using ROS 2 with conda and Robostack is not recommended. Robostack thru ROS 2 Humble is experimental and you will probably run into issues. If you need a Python virtual environment, [venv](https://docs.python.org/3/library/venv.html) is the recommend method since using a conda environment with the system ROS can get hairy quickly if you don't use the system Python version exactly.
+At the present time, using ROS 2 with conda and Robostack is not recommended. Robostack thru ROS 2 Humble is experimental and you will probably run into issues. For now, stick with a system install of ROS and [virtualenv](https://virtualenv.pypa.io/en/stable/) or [venv](https://docs.python.org/3/library/venv.html) for your Python virtual environments.
