@@ -6,7 +6,6 @@
 - Update section  [Remote Access to Lab Computers](Lab_Computer_Management_Policies.md) with methods that replace TeamViewer
 - Finish section [Standards for Using the Group Drive](Lab_Network_Drive.md)
 - Finish [Using Git with SSH](necessary_skills/Using_Git_with_SSH.md)
-- Finish [ROS](necessary_skills/ROS.md)
 - Finish [Visual Studio Code](useful_resources/Visual_Studio_Code.md)
 
 ### Pages with little to no content
