@@ -105,6 +105,10 @@ Below are important web-based resources for learning and using ROS.
     - Inspect a package's license, build type, maintainers, status, and dependencies
     - Get more info for a package on ROS Answers
 
+- **rosdep Documentation** (ROS1, ROS2) - [docs.ros.org/en/independent/api/rosdep/html/](http://docs.ros.org/en/independent/api/rosdep/html/)
+
+    - rosdep is a command-line tool for installing system dependencies
+
 - **ROS Answers** (ROS 1, ROS 2) - [answers.ros.org](https://answers.ros.org/)
 
     - A Q&A community site for ROS, similar to [Stack Exchange](https://stackexchange.com/)
