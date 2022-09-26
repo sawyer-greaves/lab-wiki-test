@@ -74,7 +74,7 @@ Below are important web-based resources for learning and using ROS.
 
     - ROS 1 and ROS 2 product landing page, with high-level description of ROS and links to other ROS sites
 
-- **ROS Documentation** (ROS 1, ROS 2)- [docs.ros.org](https://docs.ros.org/)
+- **ROS Documentation** (ROS 1, ROS 2) - [docs.ros.org](https://docs.ros.org/)
 
     - A landing page from which you can access documentation for any ROS version
 
