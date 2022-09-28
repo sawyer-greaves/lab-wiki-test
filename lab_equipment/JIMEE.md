@@ -49,6 +49,7 @@ JIMEE's motor gets its power from a MEAN WELL USA `UHP-1000-36` 36V power supply
 Interrupting the flow of current between the power supply and the servo drive is a relay that is switched by the emergency stop on the accompanying [UR5e](UR5e.md). As such, **the UR5e must be turned on in order for power to be  delivered from the power supply to the servo drive.** I.e. if you want to spin the magnet, you have to turn on the UR5e. Once the UR5e is turned on, the relay will close the contacts and allow power to be delivered to the servo drive. If the emergency stop on the UR5e's teach pendant is pressed, the relay will lose power and the contacts will open, ceasing the delivery of power to the servo drive. 
 
 The following table indicates the configuration of the relay and should be consulted before any modifications are made:
+
 |Terminal Pair  | Configuration  |
 |-              |-               |
 |(13, 14)       |Normally Open   |
@@ -61,6 +62,7 @@ The terminal pair (A1, A2) is connected to the configurable output pair (0V, CO0
 
 ### **Status Light**
 A status light is affixed to the robot base on which JIMEE stands. It consists of 3 colors whose semantic meanings are as follows:
+
 |Status Light Color | Meaning |
 |-     |-    |
 |Green | TBD | 
@@ -68,6 +70,7 @@ A status light is affixed to the robot base on which JIMEE stands. It consists o
 |Red   | TBD |
 
 The status light is connected to the UR5e Control Box via an aviation plug and a 6-conductor wire with the following configuration:
+
 |Aviation Plug Terminal | Wire Color | Signal | UR5e Pin|
 |- |-     |-           |-   |
 |8 |Black |GND         |0V  |   
