@@ -69,13 +69,13 @@ A status light is affixed to the robot base on which JIMEE stands. It consists o
 
 The status light is connected to the UR5e Control Box via an aviation plug and a 6-conductor wire with the following configuration:
 |Aviation Plug Terminal | Wire Color | Signal | UR5e Pin|
-|- |-     |-           |-  |
-|8 |Black |GND         |0V |   
+|- |-     |-           |-   |
+|8 |Black |GND         |0V  |   
 |1 |Brown |Amber Light |DO1 |   
 |2 |Blue  |Green Light |DO0 |   
 |3 |Red   |Red Light   |DO2 |   
 |4 |White |Relay A1    |CO0 |   
-|5 |Green |Relay A2    |0V |   
+|5 |Green |Relay A2    |0V  |   
 
 
 ---
