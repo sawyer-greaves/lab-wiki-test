@@ -34,13 +34,13 @@ To perform velocity control, the servo drive accepts a signal from the motor enc
 
 To accept a reference command from the D/A card on the PC, the servo drive has an I/O port with the following configuration:
 
-| Signal | Wire Color | AMC I/O Port | Sensoray Port |
+| Signal | Wire Color | AMC I/O Port Pin | Sensoray Port/Pin |
 |-                              |-    |-   |-    |
-|GND                            | TBD | 2  | TBD |
+|GND                            | TBD | 2  | J3/48 |
 |Analog Output (180 rpm/V)      | TBD | 7  | TBD |
-|Analog Input + (Vref)          | TBD | 4  | TBD |
-|Analog Input - (GND)           | TBD | 5  | TBD |
-|Digital Input (Low to disable) | TBD | 11 | TBD |
+|Analog Input + (Vref)          | TBD | 4  | J1/42 |
+|Analog Input - (GND)           | TBD | 5  | J1/40 |
+|Digital Input (Low to disable) | TBD | 11 | J3/47 |
 
 
 ### Power Supply and Emergency-Stop-Actuated Relay
