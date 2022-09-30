@@ -34,13 +34,13 @@ To perform velocity control, the servo drive accepts a signal from the motor enc
 
 To accept a reference command from the D/A card on the PC, the servo drive has an I/O port with the following configuration:
 
-| Signal | Wire Color | AMC I/O Port Pin | Sensoray Port/Pin |
-|-                              |-    |-   |-    |
-|GND                            | TBD | 2  | J3/48 |
-|Analog Output (180 rpm/V)      | TBD | 7  | TBD |
-|Analog Input + (Vref)          | TBD | 4  | J1/42 |
-|Analog Input - (GND)           | TBD | 5  | J1/40 |
-|Digital Input (Low to disable) | TBD | 11 | J3/47 |
+| Signal | Wire Color | AMC I/O Port Pin | Sensoray Port, Pin |
+|-                              |-      |-   |-       |
+|GND                            | Black | 2  | J3, 48 |
+|Analog Output (180 rpm/V)      | TBD   | 7  | TBD    |
+|Analog Input + (Vref)          | Red   | 4  | J1, 42 |
+|Analog Input - (GND)           | Black | 5  | J1, 40 |
+|Digital Input (Low to disable) | Red   | 11 | J3, 47 |
 
 
 ### Power Supply and Emergency-Stop-Actuated Relay
@@ -50,35 +50,37 @@ Interrupting the flow of current between the power supply and the servo drive is
 
 The following table indicates the configuration of the relay and should be consulted before any modifications are made:
 
-|Terminal Pair  | Configuration  |
-|-              |-               |
-|(13, 14)       |Normally Open   |
-|(23, 24)       |Normally Open   |
-|(33/31, 34/32) |Normally Closed |
-|(43/41, 44/42) |Normally Closed |
-|(A1, A2)       |Actuator        |
+|Terminal Pair  | Configuration  | Use |
+|-              |-               |-                       |
+|(13, 14)       |Normally Open   | Servo Drive Power      |
+|(23, 24)       |Normally Open   | Servo Drive GND        |
+|(33/31, 34/32) |Normally Closed | Unused                 |
+|(43/41, 44/42) |Normally Closed | Red Status Light Power |
+|(A1, A2)       |Actuator        | Actuator               |
 
 The terminal pair (A1, A2) is connected to the configurable output pair (0V, CO0) on the UR5e.
 
 ### Status Light
 A status light is affixed to the robot base on which JIMEE stands. It consists of 3 colors whose semantic meanings are as follows:
 
-|Status Light Color | Meaning |
-|-     |-    |
-|Green | TBD | 
-|Amber | TBD |
-|Red   | TBD |
+|Status Light Color | Meaning                                |
+|-                  |-                                       |
+|Green              | Robot is on                            | 
+|Flashing Amber     | Program is running  on robot           |
+|Red                | System emergency stop has been pressed |
+
+When the emergency stop has been pressed, everything on the robot is disabled, including JIMEE. Thus, if the red light is on, it is safe to be around the robot. 
 
 The status light is connected to the UR5e Control Box via an aviation plug and a 6-conductor wire with the following configuration:
 
-|Aviation Plug Terminal | Wire Color | Signal | UR5e Pin|
-|- |-     |-           |-   |
-|8 |Black |GND         |0V  |   
-|1 |Brown |Amber Light |DO1 |   
-|2 |Blue  |Green Light |DO0 |   
-|3 |Red   |Red Light   |DO2 |   
-|4 |White |Relay A1    |CO0 |   
-|5 |Green |Relay A2    |0V  |   
+|Aviation Plug Terminal | Wire Color | Signal     | UR5e Pin |
+|-                      |-           |-           |-         |
+|8                      |Black       |GND         |0V        |   
+|1                      |Brown       |Amber Light |DO1       |   
+|2                      |Blue        |Green Light |DO0       |   
+|3                      |Red         |Red Light   |Power 24V |   
+|4                      |White       |Relay A1    |CO0       |   
+|5                      |Green       |Relay A2    |0V        |   
 
 
 ---
