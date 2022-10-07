@@ -30,7 +30,7 @@ To perform velocity control, the servo drive accepts a signal from the motor enc
 | 4  | Purple | Standby | 13 |
 | 6  | Green  | Ch A    | 6  | 
 | 8  | Orange | Ch B    | 4  |
-| 10 | Brown  | Ch 2    | 8  |
+| 10 | Brown  | Ch Z    | 8  |
 
 To accept a reference command from the D/A card on the PC, the servo drive has an I/O port with the following configuration:
 
