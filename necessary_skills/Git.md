@@ -1,8 +1,12 @@
 [Home](../Home)
 # Git
 
-[Git Cheatsheet](Atlassian_Git_Cheatsheet.pdf)
-[ProGit textbook](Pro_Git.pdf)
+**Contents**
+
+[TOC]
+
+---
+## Introduction
 
 Git is a distributed Version Control System (DVCS) used primarily to keep track of
 changes in source code. Learning how to use Git is required by everyone in the lab
@@ -33,6 +37,8 @@ students because they can clone the repository to their computer, make changes, 
 push those changes too, provided you've given them permissions to do so. Common Git
 hosting services include GitHub, Bitbucket, and GitLab.
 
+#### Our lab has a Bitbucket workspace
+
 For these reasons, our lab has a workspace on Bitbucket. Repositories created in this
 workspace belong to the lab and can be modified by members of the workspace. Once
 you learn Git, please see the lab
@@ -40,6 +46,52 @@ you learn Git, please see the lab
 Git repositories.
 
 ---
+## Using Git
+
+Git is a program that is invoked via the command-line command `git`. As such the primary way many people use Git is on the command-line. However, there exist a myriad of graphical user interfaces (GUIs) that invoke the `git` command under the hood for you and therefore simplify the use of Git for people more comfortable with graphical user interfaces. Don't feel obligated to use the command line to use Git, however, doing so will help enrich your understanding of Git.
+
+### Using Git on the Command Line
+
+#### Git Bash on Windows
+
+Git Bash allows you to use Git in a Bash shell for Windows (i.e. on the command line like you would on Linux). The easiest way to install and use Git Bash on Windows is to install it from the [Git for Windows](https://gitforwindows.org/) project. Installing Git Bash can be a bit confusing so see [Installing Git Bash on Windows](Git_Bash_Windows_Installation.md).
+
+Once Git Bash is installed, you can pull up a Git Bash terminal in any directory using the **Git Bash Here** option in the right-click context menu, as shown below.
+
+![Launching Git Bash from Right-CLick Context Menu](images/Git_Bash_Windows_context_menu.webp)
+
+#### Installing Git on Linux
+
+Installing Git on Linux is easy. Simply install it with the APT package manager:
+
+```
+sudo apt install git
+```
+
+### Using Git with Graphical User Interfaces (GUIs)
+
+Git keeps a list of popular Git GUI clients [here](https://git-scm.com/downloads/guis).
+
+Of particular interest in this list are:
+
+- GitKraken (Linux, Mac, Windows)
+- SourceTree (Mac, Windows)
+
+
+---
 ## Learning Git
 
 ### What You Need to Know
+
+Given there are many ways to use Git either through the command line or the wide variety of GUI interfaces, it makes sense to list general Git concepts that you should make yourself familiar with. YOu should know the following concepts and how to interact with them through your chosen method of using Git.
+
+- Configuration variables
+    - Know how to set them and how to see what values are active in a given context.
+    - Know the difference between the three configuration variable context levels **local** (i.e. repository), **global** (i.e. user), and **system** (i.e. computer). Note: It is uncommon to use the **system** context level.
+    - Know where these configuration variable values are stored (i.e. know what `.gitconfig` files are and where to find them).
+    - Know the function of these configuration variables at a minimum: **user.name**, **user.email**, **core.editor**.
+
+### Learning Resources
+
+- [ProGit Textbook](Pro_Git.pdf)
+- [Git Cheatsheet](Atlassian_Git_Cheatsheet.pdf)
