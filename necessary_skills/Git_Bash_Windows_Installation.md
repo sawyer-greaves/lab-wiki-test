@@ -1,7 +1,7 @@
 [Home](../Home)
 # Installing Git Bash on Windows
 
-The easiest way to install and use Git Bash on Windows is to install it from the [Git for Windows](https://gitforwindows.org/) project. The installation of Git Bash has several options that a novice user may not know the meaning of yet. Below are instructions for installing Git Bash taken from [here](https://adamtheautomator.com/git-bash/), and explains a bit about some of the options:
+Git Bash allows you to use Git in a Bash shell for Windows (i.e. on the command line like you would on Linux). The easiest way to install and use Git Bash on Windows is to install it from the [Git for Windows](https://gitforwindows.org/) project. The installation of Git Bash has several options that a novice user may not know the meaning of yet. Below are instructions for installing Git Bash taken from [here](https://adamtheautomator.com/git-bash/), and explains a bit about some of the options:
 
 1. Launch the installer you downloaded and click **Next** through the steps until you get to the **Select Components** screen.
 2. Now, check the boxes of additional components you want to include in the installation. Leave the ones selected by default, as shown below, and click **Next**.

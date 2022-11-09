@@ -7,16 +7,36 @@ authentication instead of a traditional username and password. This involves
 creating two text-based files: the private key and the public key. The public key is
 then given to the Git hosting service. The combination of public and private key is used to verify your identity instead of a username and password.
 
+**Contents**
+
+[TOC]
+
 ---
 ## Setting Up SSH
 
-Typically you create a private-public key pair using `ssh-keygen` on the command line. This will create the private and public keys in `~/.ssh`. You then copy the contents of the `.pub` file and paste it into a field on the Git hosting service website.
+Setting up SSH is done on a per computer user basis for each Git hosting service with which you wish to interact (e.g. Bitbucket, GitHub). In other words, each user on every computer you use will need to go through the following process in order to interact with repositories you have access to on Git hosting services. The process is generally as follows:
+
+1. Generate a default private-public key pair for your computer user. This must be done on every user on every computer you use.
+2. Add the public key to each Git hosting service you want to access.
+3. If you have multiple accounts with the same Git Hosting Service and want to access them all from the same computer user, see the next section which contains instructions for this situation.
+
+To create a private-public key pair you simply must use the `ssh-keygen` command on the command line on Linux. On Windows, the same command can be used from within [Git Bash](Git_Bash_Windows_Installation.md).
+
+```
+$ ssh-keygen
+```
+
+This command will ask you to specify a filename for the generated private-public key pair. Just press **Enter** to accept the default name. The command will then ask you for a passphrase. Again press **Enter** twice to avoid creating a passphrase. The command will create two files in a `.ssh` directory in your home directory: `id_rsa` and `id_rsa.pub`. These are both text files containing the private (`id_rsa`) and public (`id_rsa.pub`) keys.
+
+Once the key pair is created, you must log in to the Git hosting service for which you wish to set up SSH access. In the user settings of the website, there should be a page for SSH keys. Once at this page, simply add a key. Give the key a descriptive name describing the computer/user that the key is for (e.g. `TeleroboticsLabDeskWindows`, `TeleroboticsLabDeskUbuntu`, `TeleroboticsHelmholtzCoilsComputer`, etc.). Then copy the entire contents of `id_rsa.pub` into the key field. Once you have done this, you should be able to use SSH to interact with any repositories your hosting service account has access to.
+
+Note that the first time you interact with a Git hosting service using SSH from a particular computer user, SSH will ask about the authenticity of the web server it is interacting with. Simply type **yes** and press **Enter** when this occurs. This authenticity request will only happen once.
 
 ---
 ## Using Multiple Accounts of a Git Hosting Service from the Same Operating System User on the Same Computer
 
 Git hosting services typically don't allow you to add the same public key to
-multiple accounts. This is probably because the public key is likely also being used
+multiple accounts on the same hosting service. This is probably because the public key is likely also being used
 by the hosting service to determine which hosting service account has initiated a Git network
 transaction and thereby determine what permissions that account has (see
 [Q & A](#QAndA)). Regardless, if you have multiple accounts with the same Git hosting
