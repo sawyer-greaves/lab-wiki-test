@@ -1,5 +1,23 @@
 [Home](Home)
-# Git Standards
+# Lab Git Standards
+
+If you do not know what Git is or how to use it, please start at the [Git page](necessary_skills/Git.md). This pages contains the standards that everyone in the lab is expected to follow when using Git.
+
+**Contents**
+
+[TOC]
+
+## Bitbucket
+
+Our lab hosts all Git repositories on Bitbucket under a workspace named **Utah Telerobotics**. This workspace contains two user groups: **Administrators** and **Developers**. The Administrators group should consist of Jake and one responsible long-term member of the lab at all times. Every member of the lab should belong to the Developers group. Seek out the member of the lab with administrator privileges to be added as a member of the Developers group.
+
+Members of the Developers group have the ability to create repositories belonging to the lab workspace. All code written for research in the lab should be maintained in **private repositories** belonging to the lab workspace (as opposed to each member's personal workspace), thus these repositories will belong to the lab after the member has graduated and has been removed from the workspace. Members of the Developers group also have read access by default to all repositories created in the lab workspace.
+
+Lab workspace members have administrator privileges by default for the repositories they create. They are in charge of allowing others, be they lab workspace members or other Bitbucket users (e.g. members of other labs), read and/or write access on a per user basis. Do not remove the administrator privilege of the Administrators group or the read privilege of the Developers group from any repository in the lab workspace. Repositories must belong to an appropriate workspace project. If an appropriate project does not yet exist, contact the lab member with workspace administrator privileges to have one created.
+
+Repositories should be given a descriptive name using lowercase letters and dashes or underscores instead of spaces. Repository names must be unique across the workspace (i.e. the project a repository resides in is simply useful for sorting repositories and does not represent a new namespace of repositories). Make sure to add a good description to the repository.
+
+## Best Practices
 
 - Make smaller commits and push often.
 
