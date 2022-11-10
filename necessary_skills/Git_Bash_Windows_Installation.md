@@ -1,7 +1,7 @@
 [Home](../Home)
 # Installing Git Bash on Windows
 
-Git Bash allows you to use Git in a Bash shell for Windows (i.e. on the command line like you would on Linux). The easiest way to install and use Git Bash on Windows is to install it from the [Git for Windows](https://gitforwindows.org/) project. The installation of Git Bash has several options that a novice user may not know the meaning of yet. Below are instructions for installing Git Bash taken from [here](https://adamtheautomator.com/git-bash/), and explains a bit about some of the options:
+Git Bash allows you to use Git in a Bash shell for Windows (i.e. on the command line like you would on Linux). The easiest way to install and use Git Bash on Windows is to install it from the [Git for Windows](https://gitforwindows.org/) project. Unfortunately, the installation of Git Bash has several options that will likely be unfamiliar to a novice Git user, making the installation process rather confusing. Below are instructions for installing Git Bash taken from [here](https://adamtheautomator.com/git-bash/) which attempt to explain a bit about some of these options:
 
 1. Launch the installer you downloaded and click **Next** through the steps until you get to the **Select Components** screen.
 2. Now, check the boxes of additional components you want to include in the installation. Leave the ones selected by default, as shown below, and click **Next**.
@@ -12,7 +12,7 @@ Git Bash allows you to use Git in a Bash shell for Windows (i.e. on the command 
 
     ![Selecting Start Menu Folder Name](images/Git_Bash_Windows_2.webp)
 
-4. (*Note: For this step our lab recommends using Visual Studio Code as Git's default editor instead of Notepad, but you may use whatever default editor that you prefer.*) Select **Use Notepad as Git’s default editor** from the drop-down list as a default editor to use with Git, and click **Next**. Now Git files like **~./gitconfig** will open in Notepad by default.
+4. (*Note: For this step it is recommended in our lab to use Visual Studio Code as Git's default editor instead of Notepad which may require installing Visual Studio Code before Git Bash, but you may use any preferred editor as the default.*) Select **Use Notepad as Git’s default editor** from the drop-down list as a default editor to use with Git, and click **Next**. Now Git files like **~./gitconfig** will open in Notepad by default.
 
     ![Selecting Git’s Default Editor](images/Git_Bash_Windows_3.webp)
 

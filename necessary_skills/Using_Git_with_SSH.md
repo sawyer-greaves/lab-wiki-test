@@ -16,7 +16,7 @@ then given to the Git hosting service. The combination of public and private key
 
 Setting up SSH is done on a per computer user basis for each Git hosting service with which you wish to interact (e.g. Bitbucket, GitHub). In other words, each user on every computer you use will need to go through the following process in order to interact with repositories you have access to on Git hosting services. The process is generally as follows:
 
-1. Generate a default private-public key pair for your computer user. This must be done on every user on every computer you use.
+1. Generate a default private-public key pair for your computer user. This must be done on every user you use on every computer you use.
 2. Add the public key to each Git hosting service you want to access.
 3. If you have multiple accounts with the same Git Hosting Service and want to access them all from the same computer user, see the next section which contains instructions for this situation.
 
