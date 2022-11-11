@@ -1,3 +1,4 @@
+[Home](../Home)
 # Working with Strong Magnets
 
 
