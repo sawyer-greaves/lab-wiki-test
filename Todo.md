@@ -9,7 +9,6 @@
 ### Pages with little to no content
 
 - Fill out [Onboarding](Onboarding.md)
-- Finish [Markdown Syntax](necessary_skills/Markdown.md)
 - Fill out [C/C++ Programming Language](necessary_skills/C_and_Cpp.md)
 - Fill out [Python](necessary_skills/Python.md)
 - Fill out [Qt Application Framework](necessary_skills/Qt.md)
