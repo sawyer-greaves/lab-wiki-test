@@ -11,7 +11,6 @@
 ### Pages with little to no content
 
 - Fill out [Onboarding](Onboarding.md)
-- Fill out [Python](necessary_skills/Python.md)
 - Fill out [Qt Application Framework](necessary_skills/Qt.md)
 - Fill out [Doxygen](necessary_skills/Doxygen.md)
 - Fill out [Eigen Linear Algebra Library](useful_resources/Eigen_Library.md)
