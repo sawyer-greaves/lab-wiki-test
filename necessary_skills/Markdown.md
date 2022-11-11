@@ -11,6 +11,8 @@ Here is a demo of all the Markdown markup supported by Bitbucket for wiki pages 
 
 You can also use [Bitbucket mark up][BBmarkup] in comments, issues, and commit messages.
 
+If something is not covered on this page, you can usually find the syntax you need using a simple internet search. You'll want to test new syntax out first on the Bitbucket website to see if Bitbucket renders the syntax in the way you expect. This can easily be done by using the online editor and its preview feature.
+
 On this page:
 
 
@@ -77,11 +79,11 @@ All are created from this:
 
 	__double underscores__
 
-You must use the same character must be used to open and close an emphasis span. Emphasis can be used in the mi*dd*le of a word.
+You must use the same character to open and close an emphasis span. Emphasis can be used in the mi*dd*le of a word.
 
 	Emphasis can be used in the mi*dd*le of a word.
 
-But if you surround an * or _ with spaces, itâ€™ll be treated as a literal asterisk or underscore.
+But if you surround an * or _ with spaces, it'll be treated as a literal asterisk or underscore.
 
 To produce a literal asterisk or underscore at a position where it would otherwise be used as an emphasis delimiter, you can backslash escape it:
 
@@ -149,7 +151,13 @@ Markdown uses an image syntax that is intended to resemble the syntax for links,
 	![Alt text](http://www.addictedtoibiza.com/wp-content/uploads/2012/12/example.png)
 
 	![Alt text](http://www.addictedtoibiza.com/wp-content/uploads/2012/12/example.png "Optional title")
-	
+
+The above example references images that are available online through the use of a URL. You can also use a relative path to images that are within the directory structure of the wiki like so:
+
+![](images/UR5e_arm.png)
+
+    ![](images/UR5e_arm.png)
+
 - - -
 # Block Elements
 
