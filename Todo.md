@@ -11,7 +11,6 @@
 ### Pages with little to no content
 
 - Fill out [Onboarding](Onboarding.md)
-- Fill out [C/C++ Programming Language](necessary_skills/C_and_Cpp.md)
 - Fill out [Python](necessary_skills/Python.md)
 - Fill out [Qt Application Framework](necessary_skills/Qt.md)
 - Fill out [Doxygen](necessary_skills/Doxygen.md)
