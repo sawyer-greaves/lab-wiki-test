@@ -124,18 +124,75 @@ Qt 6 requires Ubuntu 20.04 or newer and Qt Creator version 6 or newer depends on
 ---
 ## Learning the Qt Framework and Qt Creator
 
-Give an explanation of how to learn Qt.
+The documentation offered by Qt is one of the best ways to learn the Qt Framework and Qt Creator. Below is a link to the documentation, along with a list of the most important topics to learn. Qt is vast and you don't need to learn everything it has to offer, but you definitely need to learn the core concepts.
 
+>**Note:** Whenever viewing the Qt documentation, make sure to set the documentation to the version of Qt you are using. Currently, this is done using a dropdown at the top of the navigation tree on the left side of the page.
+
+**Learning Resources from Qt**
+
+- [Qt Documentation][docs]
+- [Build with CMake][cmake_and_Qt]
+    - A guide on how to use CMake to build Qt-based projects.
+- Other Qt Build Tools
+    - [qmake][qmake]
+    - [Meta-Object Compiler (moc)][moc]
+    - [User Interface Compiler (uic)][uic]
+    - [Resource Compiler (rcc)][rcc]
+- [Qt Creator][creator]
+    - You should understand what Kits are and how to configure a project properly. The more familiar you are with your IDE, the smoother the programming process becomes.
+- [Getting Started][getstarted]
+- [Supported Platforms][platforms]
+- [Important Core Concept Overviews][overviews]
+    - [Core Internals][coreoverview]
+        - The **most important** concepts to learn. It is vital that you understand the Object Model and the QObject class, the Meta-Object System, the Event System, the Signals and Slots System, Timers, and Container Classes. It is also vital to become familiar with and read the Detailed Description for the [QCoreApplication][QCoreApp], [QApplication][QApp], and [QEvent][Qevent] classes. You will also want to learn the Threading topic as well. The Property System is much less important than the other topics.
+    - [User Interfaces][uioverview]
+        - Focus on Qt Widgets. Qt Widgets is for desktop UIs, Qt Quick is geared more toward touch screen UIs.
+    - [Development Tools][devtools]
+    - [Data Storage][datastorage]
+        - I/O and working with files.
+- [Qt Framework Modules][modules]
+    - [Qt Core][core]
+    - [Qt GUI][gui]
+    - [Qt Widgets][widgets]
+    - [Qt Serial Port][serial]
+    - [All Qt Classes][classes]
+- [Qt Forum][forum]
+    - A forum for talking about Qt.
+- [Qt Wiki][wiki]
+    - A wiki created and maintained by the community.
+
+**Other Resources**
+
+- Meta-Object Compiler and Signals and Slots In-Depth
+    - [Inside the Qt Object Model](https://www.youtube.com/watch?v=9gVd4hLSnUY&t=1081s) - Talk from CppCon 2017
+        - Explains how events and signals and slots work! **A must watch**.
+    - [DIY moc](https://www.youtube.com/watch?v=rtIBjTPE45Q) - Talk from Qt Developer Days 2014
 
 
 [mainpage]: https://www.qt.io/
 [features]: https://www.qt.io/product/features
+[modules]: https://doc.qt.io/qt-6/qtmodules.html
 [core]: https://doc.qt.io/qt-6/qtcore-index.html
 [gui]: https://doc.qt.io/qt-6/qtgui-index.html
 [widgets]: https://doc.qt.io/qt-6/qtwidgets-index.html
 [serial]: https://doc.qt.io/qt-6/qtserialport-index.html
+[classes]: https://doc.qt.io/qt-6/classes.html
 [creator]: https://doc.qt.io/qtcreator/index.html
 [qmake]: https://doc.qt.io/qt-6/qmake-manual.html
 [moc]: https://doc.qt.io/qt-6/moc.html
 [uic]: https://doc.qt.io/qt-6/uic.html
 [rcc]: https://doc.qt.io/qt-6/rcc.html
+[docs]: https://doc.qt.io/
+[cmake_and_qt]: https://doc.qt.io/qt-6/cmake-manual.html
+[getstarted]: https://doc.qt.io/qt-6/qt-intro.html
+[platforms]: https://doc.qt.io/qt-6/supported-platforms.html
+[overviews]: https://doc.qt.io/qt-6/overviews-main.html
+[devtools]: https://doc.qt.io/qt-6/topics-app-development.html
+[uioverview]: https://doc.qt.io/qt-6/topics-ui.html
+[coreoverview]: https://doc.qt.io/qt-6/topics-core.html
+[datastorage]: https://doc.qt.io/qt-6/topics-data-storage.html
+[QCoreApp]: https://doc.qt.io/qt-6/qcoreapplication.html
+[QApp]: https://doc.qt.io/qt-6/qapplication.html
+[QEvent]: https://doc.qt.io/qt-6/qevent.html
+[forum]: https://forum.qt.io/
+[wiki]: https://wiki.qt.io/Main
