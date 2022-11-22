@@ -42,7 +42,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 - [CMake](necessary_skills/CMake.md)
     - [Professional CMake Reference Textbook](necessary_skills/Professional_CMake_11th_Edition.pdf)
 - [Python](necessary_skills/Python.md)
-- [Qt Application Framework](necessary_skills/Qt.md)
+- [Qt Application Framework and Qt Creator](necessary_skills/Qt.md)
 - [Doxygen](necessary_skills/Doxygen.md)
 - [ROS](necessary_skills/ROS.md)
 - [Working with Strong Magnets](necessary_skills/Working_with_Strong_Magnets.md)

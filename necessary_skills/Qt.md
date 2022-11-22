@@ -1,11 +1,36 @@
 [Home](../Home)
-# Qt Application Framework
+# Qt Application Framework and Qt Creator
 
-Qt is pronounced "cute" not "cue tee".
+Qt is pronounced "cute", not "cue tee".
+
+>**IMPORTANT:** A good understanding of [C++](C_and_Cpp.md) and [CMake](CMake.md) is a prerequisite for learning and using Qt!
 
 **Contents**
 
 [TOC]
+
+---
+## Introduction
+
+Qt is a cross-platform **C++ framework** and a bunch of related **tools**. A *framework* is similar to a *library* in that it contains reusable code that you can use in your own project to avoid the need to write it yourself, but a framework is more than that. Whereas a library contains functionality you'd like to add to your application, a framework provides a skeleton for the entire application itself. The framework will typically define the structure and flow of an application and allow you specific ways to add the "meat" (i.e. what the application actually does).
+
+The Qt Framework is an event driven framework that contains lots of useful features for easily creating graphical user interfaces (GUIs) although the framework can absolutely be used without the GUI features. It also contains a modular method for C++ classes to talk to each other called *signals and slots*. The Qt Framework is divided into many *modules* that can be selectively imported into your project. The modules of most interest are: [Qt Core][core], [Qt GUI][gui], [Qt Widgets][widgets], and [Qt Serial Port][serial]. Note that contrary to the name, Qt Widgets will typically be the module most used to make simple GUIs, not Qt GUI. There are many other modules so be sure to check if Qt implements a functionality you want before looking elsewhere.
+
+Qt also consists of a variety of tools to compliment the framework. Most of these tools are for tasks that are outside the scope of what we do in our research lab and can be ignored. However, a few are very important. [Qt Creator][creator] is an integrated development environment (IDE) for writing, building, and running your code similar to Visual Studio, Visual Studio Code, the Arduino IDE, etc. Although it is absolutely possible  and easy to use something other than Qt Creator to write code that utilizes the Qt Framework, Qt Creator is recommended for Qt beginners.
+
+The links below can be used to explore the features/modules of the Qt Framework and its associated tools.
+
+- [Qt Main Page][mainpage]
+- [Qt Feature Overview][features]
+
+---
+## The Build Process for Qt-based Projects
+
+Qt-based projects can be built using the [CMake](CMake.md) build system. In fact, CMake is the official build system since Qt 6. Under CMake your *project file*, the file describing the source files that make up your project, how to build them, and which libraries and Qt Framework modules to link to, is a simple `CMakeLists.txt` file. There are official CMake variables for configuring Qt-based projects (see the *Learning the Qt Framework and Qt Creator* section).
+
+Although CMake can be used with Qt versions before Qt 6, the official build system before Qt 6 (Qt 5 and earlier) is [qmake][qmake]. qmake is similar to CMake but the project file has a `.pro` extension and its content uses a different syntax specific to qmake. Since CMake is now the official build system for Qt, **it is recommended to avoid qmake in favor of CMake for all new projects, even Qt 5 projects**. qmake is mentioned here because you may encounter older projects that still use it. Thus you should be familiar with qmake so you know how to identify qmake projects and have an idea of what to learn if you need to work with them or convert them to CMake projects.
+
+You may wonder why we have to use CMake (or qmake) at all. Is CMake necessary to build a Qt-based project? The answer is no, but it tremendously simplifies the process. Compiling a Qt-based project is more involved than compiling a standard C++ project. The Qt Framework does a number of things to implement its features that require your source files to undergo preliminary processing before they are fed to the compiler. This preliminary processing actually generates code for you! The  programs that perform this preprocessing are the [Meta-Object Compiler][moc] (`moc`), the [User Interface Compiler][uic] (`uic`), and the [Resource Compiler][rcc] (`rcc`). The `moc` takes your header files as input and produces source files with auto-generated code that implements features like the signals and slots mechanism. Qt Creator has a GUI design feature that allows you to design a GUI using a GUI (i.e. you can pick and place widgets like buttons, check boxes, etc.). This graphical GUI designer produces an XML file with a `.ui` extension. Since the `.ui` file is not C++ code, the `uic` takes a `.ui` file as input and produces its C++ code equivalent. You are unlikely to need the `rcc` but should be aware of it nonetheless. If you want to compile a Qt-based project manually, you will need to make sure to run these preprocessing steps on the necessary files in addition to the normal compilation steps and that gets complicated fast. CMake (and qmake) has functionality you can enable that automatically identifies the files that need to undergo this preprocessing and performs it for you so you don't have to think about it.
 
 ---
 ## Installing the Qt Framework and Qt Creator
@@ -17,11 +42,11 @@ On Linux, neither the Qt Online Installer nor the Qt packages in the Ubuntu repo
 sudo apt install build-essential libgl1-mesa-dev
 ```
 
-### Installing Using the Qt Online Installer **(Recommended Method)**
+### Installing With the Qt Online Installer **(Recommended Method)**
 
-The Qt Company recommends to install Qt and Qt Creator using the Qt Online Installer application from [the Qt website][1]. The benefit of using this installer is that you can install any version of Qt you like and multiple versions can exist on your system without conflict. You can also install/update or uninstall versions later whenever you wish using the Qt Maintenance Tool (installed with Qt). The download for the online installer can be tricky to find on their website. You want to go for the open source options wherever possible. As of the writing of these instructions, the following steps can get you to the correct download page:
+The Qt Company recommends to install Qt and Qt Creator using the Qt Online Installer application from [the Qt website][mainpage]. The benefit of using this installer is that you can install any version of Qt you like and multiple versions can exist on your system without conflict. You can also install/update or uninstall versions later whenever you wish using the Qt Maintenance Tool (installed with Qt). The download for the online installer can be tricky to find on their website. You want to go for the open source options wherever possible. As of the writing of these instructions, the following steps can get you to the correct download page:
 
-1. Click *Download. Try.* on the top right of the [qt.io][1] main page.
+1. Click *Download. Try.* on the top right of the [qt.io][mainpage] main page.
 2. Click *Go open source* in the "Downloads for open source users" section.
 3. Scroll to near the bottom and click on *Download the Qt Online Installer* in the middle of the page.
 4. You should now be at the download page. Download the Qt Online Installer for your platform.
@@ -34,10 +59,10 @@ Run the installer and follow the instructions. **Below are some specific instruc
         ```
         error while loading shared libraries: libxcb-xinerama.so.0: cannot open shared object file: No such file or directory
         ```
-1. The Qt Online Installer doesn't really configure things correctly to perform an installation for the entire system (i.e. to install it for every user). The installer is pretty much configured to install on a per-user basis. Furthermore, the online installer requires you to create an account with Qt. The Qt Maintenance Tool will also cache your login information and auto-populate these fields when you start it. With these facts in mind, make sure the installation directory is set as follows:
+1. The Qt Online Installer doesn't really configure things correctly to perform an installation for the entire system (i.e. to install it once for all users). The installer is pretty much configured to install on a per-user basis. Furthermore, the online installer requires you to create an account with Qt. The Qt Maintenance Tool will also cache your login information and auto-populate these fields when you start it. With these facts in mind, make sure the installation directory is set as follows:
     - **Install Directory On Windows:** `C:\Users\your_user_folder\Qt`
         - Replace `your_user_folder` with the name of the folder associated with your user account (e.g. `C:\Users\John\Qt`).
-        - Note that the above recommended directory is not the default used by the online installer on Windows (which happens to be `C:\Qt`). **You will need to change the install directory from the default to the recommended directory.**
+        - Note that the above recommended directory is not the default used by the online installer on Windows (the default directory happens to be `C:\Qt`). **You will need to change the install directory from the default to the recommended directory.**
     - **Install Directory on Linux:** `/home/your_user_folder/Qt`
         - Replace `your_user_folder` with the name of the folder associated with your user account (e.g. `/home/john/Qt`).
         - This is the default directory for the online installer on Linux.
@@ -58,7 +83,7 @@ Once the installation is complete you may delete the Qt Online Installer executa
 
 ### Installing on Ubuntu using the Ubuntu Package Repositories and APT
 
-It is recommended that you use the Qt Online Installer (see above) even on Ubuntu. However, for the sake of completeness and for reasons described in the next section, instructions for installing Qt using the Ubuntu Package Repositories and `apt` are given here. Note that using the Ubuntu Package Repositories means you will not be able to select your version of Qt and therefore will not have access to bug fixes found in later versions. This method will install Qt and Qt Creator for your entire system (unlike the Qt Online Installer which does a per-user installation).
+It is recommended that you use the Qt Online Installer (see above) even on Ubuntu. However, for the sake of completeness and for reasons described in the *A Note About Qt Creator On Ubuntu Older Than 20.04* section, instructions for installing Qt using the Ubuntu Package Repositories and `apt` are given here. Note that using the Ubuntu Package Repositories means you will not be able to select your version of Qt and therefore will not have access to features or bug fixes introduced in later versions. This method will install Qt and Qt Creator for your entire system (unlike the Qt Online Installer which does a per-user installation).
 
 #### Installing Qt 5
 
@@ -95,4 +120,22 @@ Note that Qt 6 does not exist in the Ubuntu Repositories until Ubuntu 22.04 or l
 
 Qt 6 requires Ubuntu 20.04 or newer and Qt Creator version 6 or newer depends on Qt 6. The Qt Online Installer always installs the newest version of Qt Creator so if you have any version of Ubuntu older than Ubuntu 20.04, you will want to install Qt Creator from the Ubuntu Package Repositories using `apt` (see above). You will probably want to install Qt 5 with `apt` as well and forgo using the Qt Online Installer entirely. If you need a different Qt 5 version than the version provided by the Ubuntu repositories, you can use the online installer to install it. Keep in mind you will still need to install Qt Creator through the Ubuntu repositories and you will need to manually add the newly installed version of Qt (installed with the online installer) to your kits in Qt Creator. The versions of Qt installed through the online installer will not automatically appear in Qt Creator because the online installer is not aware of your Qt Creator installation from the Ubuntu Package Repositories.
 
-[1]: https://www.qt.io/
+
+---
+## Learning the Qt Framework and Qt Creator
+
+Give an explanation of how to learn Qt.
+
+
+
+[mainpage]: https://www.qt.io/
+[features]: https://www.qt.io/product/features
+[core]: https://doc.qt.io/qt-6/qtcore-index.html
+[gui]: https://doc.qt.io/qt-6/qtgui-index.html
+[widgets]: https://doc.qt.io/qt-6/qtwidgets-index.html
+[serial]: https://doc.qt.io/qt-6/qtserialport-index.html
+[creator]: https://doc.qt.io/qtcreator/index.html
+[qmake]: https://doc.qt.io/qt-6/qmake-manual.html
+[moc]: https://doc.qt.io/qt-6/moc.html
+[uic]: https://doc.qt.io/qt-6/uic.html
+[rcc]: https://doc.qt.io/qt-6/rcc.html
