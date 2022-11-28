@@ -1,7 +1,7 @@
 [Home](../Home)
 # Qt Application Framework and Qt Creator
 
-Qt is pronounced "cute", not "cue tee".
+Qt is pronounced "*cute*", not "*cue tee*".
 
 >**IMPORTANT:** A good understanding of [C++](C_and_Cpp.md) and [CMake](CMake.md) is a prerequisite for learning and using Qt!
 
@@ -26,7 +26,7 @@ The links below can be used to explore the features/modules of the Qt Framework 
 ---
 ## The Build Process for Qt-based Projects
 
-Qt-based projects can be built using the [CMake](CMake.md) build system. In fact, CMake is the official build system since Qt 6. Under CMake your *project file*, the file describing the source files that make up your project, how to build them, and which libraries and Qt Framework modules to link to, is a simple `CMakeLists.txt` file. There are official CMake variables for configuring Qt-based projects (see the *Learning the Qt Framework and Qt Creator* section).
+Qt-based projects can be built using the [CMake](CMake.md) build system. In fact, CMake is the official build system since Qt 6. Under CMake, your *project file* (the file describing the source files that make up your project, how to build them, and which libraries and Qt Framework modules to link to) is a simple `CMakeLists.txt` file. There are official CMake variables for configuring Qt-based projects (see the *Learning the Qt Framework and Qt Creator* section).
 
 Although CMake can be used with Qt versions before Qt 6, the official build system before Qt 6 (Qt 5 and earlier) is [qmake][qmake]. qmake is similar to CMake but the project file has a `.pro` extension and its content uses a different syntax specific to qmake. Since CMake is now the official build system for Qt, **it is recommended to avoid qmake in favor of CMake for all new projects, even Qt 5 projects**. qmake is mentioned here because you may encounter older projects that still use it. Thus you should be familiar with qmake so you know how to identify qmake projects and have an idea of what to learn if you need to work with them or convert them to CMake projects.
 
@@ -74,16 +74,16 @@ Run the installer and follow the instructions. **Below are some specific instruc
             - Components marked as deprecated
             - WebAssembly (unless you specifically need it)
             - Android (unless you specifically need it)
-            - Prebuilt components for compilers you don't have or intend to use (e.g. if you are only going to use the MinGW compiler that comes with Qt, you can avoid installing prebuilt components for MSVC and UWP)
+            - Prebuilt components for compilers you don't have or intend to use (e.g. on Windows, if you are only going to use the MinGW compiler that comes with Qt, you can avoid installing prebuilt components for MSVC and UWP)
             - 32-bit components (just stick with 64-bit components)
         - **(Windows)** Install the MinGW compiler which is found in the *Developer and Designer Tools* section (it is recommended to install the version(s) associated with your selected MinGW Qt components). This way you don't need to install a compiler separately (e.g. installing MSVC or UWP compilers by installing Visual Studio).
-        - Install CMake and Ninja, also in the *Developer and Designer Tools* section.
+        - Install CMake and Ninja from the *Developer and Designer Tools* section.
 
 Once the installation is complete you may delete the Qt Online Installer executable file. The Qt Maintenance Tool will be used to manage your Qt installation in the future.
 
 ### Installing on Ubuntu using the Ubuntu Package Repositories and APT
 
-It is recommended that you use the Qt Online Installer (see above) even on Ubuntu. However, for the sake of completeness and for reasons described in the *A Note About Qt Creator On Ubuntu Older Than 20.04* section, instructions for installing Qt using the Ubuntu Package Repositories and `apt` are given here. Note that using the Ubuntu Package Repositories means you will not be able to select your version of Qt and therefore will not have access to features or bug fixes introduced in later versions. This method will install Qt and Qt Creator for your entire system (unlike the Qt Online Installer which does a per-user installation).
+It is recommended that you use the Qt Online Installer (see above) even on Ubuntu. However, for the sake of completeness and for reasons described in the *A Note About Qt Creator On Ubuntu Older Than 20.04* section, instructions for installing Qt using the Ubuntu Package Repositories and `apt` are given here. Note that using the Ubuntu Package Repositories means you will not be able to select your version of Qt and therefore will not have access to features or bug fixes introduced in later versions. This method will install Qt and Qt Creator for your entire system (unlike the Qt Online Installer which does a per-user installation). Note that installations from APT and the Qt Online Installer can coexist on your system.
 
 #### Installing Qt 5
 
@@ -139,12 +139,12 @@ The documentation offered by Qt is one of the best ways to learn the Qt Framewor
     - [User Interface Compiler (uic)][uic]
     - [Resource Compiler (rcc)][rcc]
 - [Qt Creator][creator]
-    - You should understand what Kits are and how to configure a project properly. The more familiar you are with your IDE, the smoother the programming process becomes.
+    - You should understand what [kits][kitsdef] are and how to create/edit them and you should understand how to configure a project properly. All of this is covered in the Qt Creator Manual. The more familiar you are with your IDE, the smoother the programming process becomes.
 - [Getting Started][getstarted]
 - [Supported Platforms][platforms]
 - [Important Core Concept Overviews][overviews]
     - [Core Internals][coreoverview]
-        - The **most important** concepts to learn. It is vital that you understand the Object Model and the QObject class, the Meta-Object System, the Event System, the Signals and Slots System, Timers, and Container Classes. It is also vital to become familiar with and read the Detailed Description for the [QCoreApplication][QCoreApp], [QApplication][QApp], and [QEvent][Qevent] classes. You will also want to learn the Threading topic as well. The Property System is much less important than the other topics.
+        - The **most important** concepts to learn. It is vital that you understand the Object Model, Object Tree, the QObject class, the Meta-Object System, the Event System, the Signals and Slots System, Timers, and Container Classes. It is also vital to become familiar with and read the Detailed Description for the [QCoreApplication][QCoreApp], [QApplication][QApp], and [QEvent][Qevent] classes. You will also want to learn the Threading topic as well. The Property System is much less important than the other topics.
     - [User Interfaces][uioverview]
         - Focus on Qt Widgets. Qt Widgets is for desktop UIs, Qt Quick is geared more toward touch screen UIs.
     - [Development Tools][devtools]
@@ -163,7 +163,7 @@ The documentation offered by Qt is one of the best ways to learn the Qt Framewor
 
 **Other Resources**
 
-- Meta-Object Compiler and Signals and Slots In-Depth
+- In-Depth Meta-Object Compiler and Signals and Slots
     - [Inside the Qt Object Model](https://www.youtube.com/watch?v=9gVd4hLSnUY&t=1081s) - Talk from CppCon 2017
         - Explains how events and signals and slots work! **A must watch**.
     - [DIY moc](https://www.youtube.com/watch?v=rtIBjTPE45Q) - Talk from Qt Developer Days 2014
@@ -178,6 +178,7 @@ The documentation offered by Qt is one of the best ways to learn the Qt Framewor
 [serial]: https://doc.qt.io/qt-6/qtserialport-index.html
 [classes]: https://doc.qt.io/qt-6/classes.html
 [creator]: https://doc.qt.io/qtcreator/index.html
+[kitsdef]: https://doc.qt.io/qtcreator/creator-glossary.html#glossary-buildandrun-kit
 [qmake]: https://doc.qt.io/qt-6/qmake-manual.html
 [moc]: https://doc.qt.io/qt-6/moc.html
 [uic]: https://doc.qt.io/qt-6/uic.html
