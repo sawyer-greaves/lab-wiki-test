@@ -77,7 +77,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 
 - [Universal Robots UR5e Robot Arm](lab_equipment/UR5e.md)
 - [Sensoray 826 (s826) PCIe Data Acquisition Card](https://bitbucket.org/utahtelerobotics/s826-daq/src/master/)
-- [Sensoray 626 (s626) PCI Data Acquisition Card](https://bitbucket.org/utahtelerobotics/s626-daq/src/master/) - **OLD prefer using the s826 above**
+- [Sensoray 626 (s626) PCI Data Acquisition Card](https://bitbucket.org/utahtelerobotics/s626-daq/src/master/) (**This card is EOL, prefer using the s826 above**)
 - [JIMEE - Junk Immobilizng Magnetic End Effector](lab_equipment/JIMEE.md)
 - [Teensy-based Magnetometer](https://bitbucket.org/utahtelerobotics/teensy-magnetometer/src/main/)
 
