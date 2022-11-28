@@ -11,6 +11,5 @@
 ### Pages with little to no content
 
 - Fill out [Onboarding](Onboarding.md)
-- Fill out [Qt Application Framework](necessary_skills/Qt.md)
 - Fill out [Eigen Linear Algebra Library](useful_resources/Eigen_Library.md)
 - Fill out [OpenCV](useful_resources/OpenCV.md)
