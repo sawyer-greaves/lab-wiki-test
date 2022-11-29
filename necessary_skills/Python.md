@@ -10,6 +10,7 @@
 
 Python is an interpreted programming language (i.e. not compiled like [C++](C_and_Cpp.md)) in which a *Python script* is written and subsequently executed via a Python interpreter. In this sense, Python is similar to MATLAB. Python is well known as a language that is easy to learn with a concise and easy-to-read syntax. It is used most commonly for data science applications (e.g. machine learning, deep learning, computer vision, etc) and is one of the two main languages used to write programs with [ROS](ROS.md). The major drawback of Python is its speed. Python tends to rely on bindings to compiled C-based libraries to improve performance. It is recommended to install Python using some flavor of Conda distribution (see the *Anaconda and Conda* section below).
 
+---
 ## Python Documentation and Resources
 
 - [Python 3 Documentation](https://docs.python.org/3/index.html)
