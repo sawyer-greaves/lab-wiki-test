@@ -33,6 +33,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 
 ### Most Lab Members
 
+#### Computer Science Skills
 - [Linux](necessary_skills/Linux.md)
     - [Linux for Beginners Book](necessary_skills/Linux_for_Beginners.pdf)
     - [Linux Command Line Cheat Sheet](necessary_skills/Linux_Command_Line_Cheat_Sheet.pdf)
@@ -45,6 +46,8 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 - [Qt Application Framework and Qt Creator](necessary_skills/Qt.md)
 - [Doxygen](necessary_skills/Doxygen.md)
 - [ROS](necessary_skills/ROS.md)
+
+#### Magnetics Skills
 - [Working with Strong Magnets](necessary_skills/Working_with_Strong_Magnets.md)
 
 ---
