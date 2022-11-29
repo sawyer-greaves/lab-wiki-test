@@ -11,7 +11,6 @@
 ### Pages with little to no content
 
 - Fill out [Onboarding](Onboarding.md)
-- Fill out [OpenCV](useful_resources/OpenCV.md)
 
 ### Missing Pages/Links
 
