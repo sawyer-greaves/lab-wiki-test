@@ -7,7 +7,7 @@
 
 ## Introduction
 
-Python is an interpreted programming language (i.e. not compiled like [C++](C_and_Cpp.md)) in which a *Python script* is written and subsequently executed via a Python interpreter. In this sense, Python is similar to MATLAB. Python is well known as a language that is easy to learn with a concise and easy-to-read syntax. It is used most commonly for data science applications (e.g. machine learning, deep learning, computer vision, etc) and is one of the two main languages used to write programs with [ROS](ROS.md). The major drawback of Python is its speed. Python tends to rely on bindings to compiled C-based libraries to improve performance.
+Python is an interpreted programming language (i.e. not compiled like [C++](C_and_Cpp.md)) in which a *Python script* is written and subsequently executed via a Python interpreter. In this sense, Python is similar to MATLAB. Python is well known as a language that is easy to learn with a concise and easy-to-read syntax. It is used most commonly for data science applications (e.g. machine learning, deep learning, computer vision, etc) and is one of the two main languages used to write programs with [ROS](ROS.md). The major drawback of Python is its speed. Python tends to rely on bindings to compiled C-based libraries to improve performance. It is recommended to install Python using some flavor of Conda distribution (see the *Anaconda and Conda* section below).
 
 ## Python Documentation and Resources
 
@@ -25,18 +25,18 @@ Python is an interpreted programming language (i.e. not compiled like [C++](C_an
 - [Setuptools Documentation](https://setuptools.pypa.io/en/latest/index.html)
     - Setuptools is a fully-featured, actively-maintained, and stable library designed to facilitate packaging Python projects. This documentation is where you can go to learn about the format of python packages (such knowledge is very useful for users of [ROS](ROS.md)).
     - Be aware that `setup.py` files were the norm until `setuptools` version 61.0.0 (released early 2022) when they were superseded by `pyproject.toml` files (see [PEP-621](https://peps.python.org/pep-0621/)). The use of `setup.py` files is now discouraged but is still used by ROS python packages.
-    - Here is a useful [blog post](https://ianhopkinson.org.uk/2022/02/understanding-setup-py-setup-cfg-and-pyproject-toml-in-python/#:~:text=toml%20file%20was%20introduced%20in,the%20idea%20that%20the%20pyproject.) by Ian Hopkinson explaining `setup.py`, `setup.cfg`, and `pyproject.toml` files.
+    - Here is a useful [blog post](https://ianhopkinson.org.uk/2022/02/understanding-setup-py-setup-cfg-and-pyproject-toml-in-python/) by Ian Hopkinson explaining `setup.py`, `setup.cfg`, and `pyproject.toml` files.
 
 ## Learning Python
 
-There are many ways to learn Python, but perhaps the most complete way is using the Python documentation itself (above). At the bare minimum, it is recommended to complete the **entire** tutorial offered by the Python documentation which covers the Python language and the Python Standard Library. In addition to the Python language and its standard library, the Python package manager (pip) and the concept of *virtual environments* are vital topics to understand in order to become proficient with Python. Finally, below is a list of common Python packages you'll want to be familiar with.
+There are many ways to learn Python, but perhaps the most complete way is using the Python documentation itself (above). At the bare minimum, it is recommended to complete the **entire** tutorial offered by the Python documentation which covers the Python language and introduces the Python Standard Library. In addition to the Python language and its standard library, the Python package manager (pip) and the concept of *virtual environments* are vital topics to understand in order to become proficient with Python. Finally, below is a list of common Python packages you'll want to be familiar with.
 
 ### Common Python Packages
 
 - [NumPy](https://numpy.org/doc/)
     - A Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.
 - [pandas](https://pandas.pydata.org/docs/)
-    - Provides high-performance, easy-to-use data structures and data analysis tools for tabular, time series, or matrix data (e.g. work with Excel spreadsheets or data for machine learning).
+    - Provides high-performance, easy-to-use data structures and data analysis tools for tabular, time series, or matrix data (e.g. work with Excel spreadsheets or machine learning datasets).
 - [Numba](https://numba.readthedocs.io/en/stable/)
     - A just-in-time  compiler for Python meant to drastically improve performance of Python code. It works best on code that uses functions, loops and NumPy arrays.
 - [Tk and tkinter](https://docs.python.org/3/library/tk.html)
@@ -48,7 +48,7 @@ There are many ways to learn Python, but perhaps the most complete way is using 
 
 ## Anaconda and Conda
 
-Anaconda is a set of repositories filled with data science packages (including a Python interpreter/distribution) and mostly consists of Python packages. Conda is a package and environment manager (it can be thought of as some sort of combination of pip and Virtualenv) used to interact with the Anaconda package repositories and manage virtual environments composed of Anaconda packages. While Conda is designed to work with Anaconda repositories out of the box, it is not restricted to them and acts as a general purpose package and virtual environment manager. Anaconda and its Python distribution are very commonly used in robotics research and applications.
+Anaconda is a set of repositories filled with data science packages (including a Python interpreter/distribution) and mostly consists of Python packages. Conda is a package and environment manager (it can be thought of as some sort of combination of pip and Virtualenv) used to interact with the Anaconda package repositories and manage virtual environments composed of Anaconda packages. While Conda is designed to work with Anaconda repositories out of the box, it is not restricted to them and acts as a general purpose package and virtual environment manager for many programming languages. Anaconda and its Python distribution are very commonly used in robotics research and applications. It is recommended to install Python using some flavor of Conda distribution.
 
 ### Anaconda and Conda Resources
 
@@ -81,7 +81,7 @@ Miniforge is basically the same as Miniconda except for the following changes:
 - Optional support for Mamba in place of Conda.
 - An emphasis on supporting various CPU architectures (x86_64, ppc64le, and aarch64 including Apple M1).
 
-Miniforge is installed using the installers that cen be downloaded from the [Miniforge Github Repository](https://github.com/conda-forge/miniforge).
+Miniforge is installed using the installers that can be downloaded from the [Miniforge Github Repository](https://github.com/conda-forge/miniforge).
 
 #### Mambaforge
 
@@ -96,4 +96,4 @@ Mambaforge is the same as Miniforge but comes with mamba pre-installed (in addit
 - [Mamba Documentation](https://mamba.readthedocs.io/en/latest/index.html)
 - [Mamba Github Repository](https://github.com/mamba-org/mamba)
 
-Mambaforge is installed using the installers that cen be downloaded from the [Miniforge Github Repository](https://github.com/conda-forge/miniforge).
+Mambaforge is installed using the installers that can be downloaded from the [Miniforge Github Repository](https://github.com/conda-forge/miniforge).
