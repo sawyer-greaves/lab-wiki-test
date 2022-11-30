@@ -19,7 +19,7 @@ Repositories should be given a descriptive name using lowercase letters and dash
 
 ## Best Practices
 
-- Each repository must have a `README.md` file that give enough information to understand the repository and how to use it.
+- Each repository must have a `README.md` file that gives enough information to understand the repository and how to use it.
 - Use an appropriate `.gitignore` file to avoid committing unwanted files to the repository (see the *What Not To Commit* section below).
 - Avoid committing large files unless there is a good reason (e.g. images for documentation, etc).
 - Make smaller commits and push often.
