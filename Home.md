@@ -79,6 +79,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 ## Lab Equipment
 
 **Robots**
+
 - [Yaskawa Motoman MH5 6-DOF Robot Arm](lab_equipment/Yaskawa_Motoman_MH5_Robot_Arm.md)
 - [Universal Robots UR5e 6-DOF Robot Arm](lab_equipment/UR5e.md)
 
