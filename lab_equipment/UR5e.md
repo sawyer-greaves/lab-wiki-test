@@ -1,5 +1,5 @@
 [Home](../Home)
-# Universal Robots UR5e Robot Arm
+# Universal Robots UR5e 6-DOF Robot Arm
 
 **Contents**
 

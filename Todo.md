@@ -11,8 +11,5 @@
 ### Pages with little to no content
 
 - Fill out [Onboarding](Onboarding.md)
-
-### Missing Pages/Links
-
-- Yaskawa Motoman Robot Arm
-- SAMM
+- Fill out [Yaskawa Motoman MH5 6-DOF Robot Arm](lab_equipment/Yaskawa_Motoman_MH5_Robot_Arm.md)
+- Fill out [SAMM - Spherical-Actuator-Magnet Manipulator](lab_equipment/SAMM.md)

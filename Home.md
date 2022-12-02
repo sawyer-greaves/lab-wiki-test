@@ -78,10 +78,22 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 ---
 ## Lab Equipment
 
-- [Universal Robots UR5e Robot Arm](lab_equipment/UR5e.md)
+**Robots**
+- [Yaskawa Motoman MH5 6-DOF Robot Arm](lab_equipment/Yaskawa_Motoman_MH5_Robot_Arm.md)
+- [Universal Robots UR5e 6-DOF Robot Arm](lab_equipment/UR5e.md)
+
+**Robot End-Effectors**
+
+- [SAMM - Spherical-Actuator-Magnet Manipulator](lab_equipment/SAMM.md)
+- [JIMEE - Junk Immobilizng Magnetic End Effector](lab_equipment/JIMEE.md)
+
+**DAQ Cards**
+
 - [Sensoray 826 (s826) PCIe Data Acquisition Card](https://bitbucket.org/utahtelerobotics/s826-daq/src/master/)
 - [Sensoray 626 (s626) PCI Data Acquisition Card](https://bitbucket.org/utahtelerobotics/s626-daq/src/master/) (**This device is EOL, prefer using the s826 above**)
-- [JIMEE - Junk Immobilizng Magnetic End Effector](lab_equipment/JIMEE.md)
+
+**Magnetics**
+
 - [Magnetic Sensors](lab_equipment/magnetic_sensors.md)
 
 ---
