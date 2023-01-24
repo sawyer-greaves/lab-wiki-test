@@ -1,5 +1,5 @@
 [Home](../Home)
-# Omni Magnet System
+# Omnimagnet Manipulation System
 
 
 

@@ -97,6 +97,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 **Magnetics**
 
 - [Magnetic Sensors](lab_equipment/magnetic_sensors.md)
+- [Omnimagnet Manipulation System](lab_equipment/Omnimagnet_Manipulation_System.md)
 
 ---
 ## Logistical
