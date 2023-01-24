@@ -59,7 +59,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 
 
 ---
-## Lab Custom Common Software Libraries
+## Lab Custom Software Libraries
 
 - [libmatlab](https://bitbucket.org/utahtelerobotics/libmatlab/src/master/)
     - A collection of libraries of MATLAB functions useful for robotics and magnetics applications.
