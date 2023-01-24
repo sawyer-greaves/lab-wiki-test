@@ -92,6 +92,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 
 - [Sensoray 826 (s826) PCIe Data Acquisition Card](https://bitbucket.org/utahtelerobotics/s826-daq/src/master/)
 - [Sensoray 626 (s626) PCI Data Acquisition Card](https://bitbucket.org/utahtelerobotics/s626-daq/src/master/) (**This device is EOL, prefer using the s826 above**)
+- [Advantech PCI-1724U Analog Output PCI Card](https://bitbucket.org/utahtelerobotics/docs-pci-1724u/src/master/) (**This device provides analog output channels only**)
 
 **Magnetics**
 
