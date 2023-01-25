@@ -8,7 +8,7 @@
 ---
 ## Introduction
 
-The C/C++ (pronounced "cee" and "cee plus plus") programming languages are very popular in robotics, especially for writing software that interacts more directly with hardware (e.g. for writing a robot or camera driver). The reason for this popularity is that C/C++ programs are compiled rather then interpreted like MATLAB or Python. This means programs often execute much faster than MATLAB and Python. These languages are also very well established with a large ecosystem of libraries and support. C++ is one of the two main languages supported directly by ROS.
+The C/C++ (pronounced "cee" and "cee plus plus") programming languages are very popular in robotics, especially for writing software that interacts more directly with hardware (e.g. for writing a robot or camera driver). The reason for this popularity is that C/C++ programs are compiled rather than interpreted like MATLAB or Python. This means programs often execute much faster than MATLAB and Python. These languages are also very well established with a large ecosystem of libraries and support. C++ is one of the two main languages supported directly by ROS.
 
 C/C++ is quite a bit more difficult to become proficient with when compared to MATLAB or Python, but there exist a large number of free online learning resources. This page is intended to provide you with the resources necessary to become proficient with C/C++ and to point out important topics people often neglect that usually leads to a lot of unnecessary confusion and frustration.
 
@@ -45,6 +45,8 @@ Here is a list of topics you should make sure to understand:
     - Static library files, `.a` on Linux and `.lib` on Windows 
     - Dynamic library files, `.so` on Linux and `.dll` on Windows (on Windows there is also another file necessary to use `.dll` files that has the same `.lib` extension as static library files)
 - How to link against a library
+- Build systems (their purpose and how to use them) with particular focus on learning [CMake](CMake.md) and obtaining at least a high-level understanding of [Make and Makefiles](https://www.gnu.org/software/make/).
+
 
 Unfortunately, there is no good single source to find the information of everything listed above. See the *Learning Resources* section for a list of resources that can help you learn these topics.
 
