@@ -13,3 +13,4 @@
 - Fill out [Onboarding](Onboarding.md)
 - Fill out [Yaskawa Motoman MH5 6-DOF Robot Arm](lab_equipment/Yaskawa_Motoman_MH5_Robot_Arm.md)
 - Fill out [SAMM - Spherical-Actuator-Magnet Manipulator](lab_equipment/SAMM.md)
+- Fill out [Flea 3 Camera](lab_equipment/Flea3_Camera.md)

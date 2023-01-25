@@ -94,6 +94,10 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 - [Sensoray 626 (s626) PCI Data Acquisition Card](https://bitbucket.org/utahtelerobotics/s626-daq/src/master/) (**This device is EOL, prefer using the s826 above**)
 - [Advantech PCI-1724U Analog Output PCI Card](https://bitbucket.org/utahtelerobotics/docs-pci-1724u/src/master/) (**This device provides analog output channels only**)
 
+**Cameras**
+
+- [Flea 3 Camera](lab_equipment/Flea3_Camera.md)
+
 **Magnetics**
 
 - [Magnetic Sensors](lab_equipment/magnetic_sensors.md)
