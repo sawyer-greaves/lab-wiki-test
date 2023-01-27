@@ -91,8 +91,8 @@ The Ethernet communication uses the TCP/IP protocol. As such, the network interf
 ```
 DX100 Network Settings
 
-IPv4 Address:       192.168.255.1
-Subnet Mask:        255.255.255.0
+IPv4 Address:   192.168.255.1
+Subnet Mask:    255.255.255.0
 ```
 
 The network interface (i.e. Ethernet port) on the host computer that is connected to the DX100 should be set to a manual (or static) IPv4 address as follows:
@@ -118,9 +118,9 @@ The `MH5Robot` class is integrated rather thoroughly with the rest of the Roboti
 
 **Class Implementation Notes**
 
-The connection to the DX100 Ethernet server will time out automatically after 30 seconds of activity. The `MH5Robot` class will automatically detect this and reestablish the connection. You will notice infrequent warning messages on the console output when this occurs. These messages are normal and can be ignored.
+The connection to the DX100 Ethernet server will time out automatically after 30 seconds of inactivity. The `MH5Robot` class will automatically detect this and reestablish the connection. You will notice infrequent warning messages on the console output when this occurs. These messages are normal and can be ignored.
 
-The DX100 Ethernet server processes requests at an unfortunately slow rate. This fact prevents the host computer from obtaining or commanding the robot state at high frequencies. Therefore, the implementation of the `MH5Robot` class maintains a sort of "digital twin" simulation that estimates the motion of the robot in between commanded poses. When a request for the robot pose is made to the  `MH5Robot` class, it returns this estimate instead of directly asking the DX100. This enables tracking the robot state at much higher rates. Unfortunately, there is no way to artificially increase the rate at which the robot can be commanded to new poses. You may use issue new commands via the `MH5Robot` class as fast as you like, however, the class implementation sends commands at a fixed internal rate and it uses the most recently received command.
+The DX100 Ethernet server processes requests at an unfortunately slow rate. This fact prevents the host computer from obtaining or commanding the robot state at high frequencies. Therefore, the implementation of the `MH5Robot` class maintains a sort of "digital twin" simulation that estimates the motion of the robot in between commanded poses. When a request for the robot pose is made to the  `MH5Robot` class, it returns this estimate instead of directly asking the DX100. This enables tracking the robot state at much higher rates. Unfortunately, there is no way to artificially increase the rate at which the robot can be commanded to new poses. You may issue new commands via the `MH5Robot` class as fast as you like, however, the class implementation sends commands at a fixed internal rate and it uses the most recently received command when doing so.
 
 [rob]: https://bitbucket.org/utahtelerobotics/roboticsframework/src/master/
 [docs]: https://bitbucket.org/utahtelerobotics/docs-yaskawa-motoman-6dof-arm/src/master/
