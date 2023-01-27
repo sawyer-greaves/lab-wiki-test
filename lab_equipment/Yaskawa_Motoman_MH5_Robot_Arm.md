@@ -21,7 +21,7 @@ The Yaskawa Motoman MH5 6-DOF Robot Arm is our blue industrial robot arm found i
 ---
 ## The MH5 Robot Arm
 
-The MH5 robot arm has 6 joints. Each joint is named with a letter from base to tool flange: `S L U R B T`.
+The MH5 robot arm has 6 joints. Each joint is named with a letter from base to tool flange as follows: `S L U R B T`.
 
 ### Robot Coordinate Frame
 
@@ -29,7 +29,7 @@ From the point of view of the robot, the x-axis points forward away from the rob
 
 ### Encoder Battery
 
-The encoders measuring joint positions are not absolute encoders. The absolute joint position is known because the encoders are never powered off. There is a battery in the base of the arm that keeps the encoders powered even when the main DX100 power switch is turned off. This battery lasts about **10 years** and a warning will appear on the pendant when the battery level gets low. When this happens, you must contact Yaskawa to purchase a new battery. There are two ports to plug in a battery such that the new battery can be connected before the old battery is removed. In this way power to the encoders is never lost.
+The encoders measuring joint positions are not absolute encoders. The absolute joint position is known because the encoders are never powered off. There is a battery in the base of the arm that keeps the encoders powered even when the main DX100 power switch is turned off. This battery lasts about **10 years** and a warning will appear on the pendant when the battery level gets low. When this happens, you must contact Yaskawa to purchase a new battery. There are two battery ports such that the new battery can be connected before the old battery is removed. In this way power to the encoders is never lost.
 
 The encoder battery was last replaced in February 2019.
 
