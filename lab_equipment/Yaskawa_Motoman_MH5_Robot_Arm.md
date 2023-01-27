@@ -33,7 +33,7 @@ The MH5 robot arm has 6 revolute joints. Each joint is named with a letter as fo
 - Joint 5 - `B`
 - Joint 6 - `T`
 
-Below is the table of DH parameters we use and the corresponding zero-angle diagram. Note that the distances were taken directly from CAD drawings found in the MH5 Manipulator Manual. A diagram indicating the locations of the link frame origins in the context of the actual robot geometry is also included.
+Below is the table of DH parameters we use and the corresponding zero-angle diagram. Note that the distances were taken directly from CAD drawings found in the MH5 Manipulator Manual. A diagram indicating the locations of the link frame origins in the context of the actual robot link geometry is also included.
 
 > :information_source: **Reminder: Joint i corresponds to axis z<sub>i-1</sub>**
 
@@ -62,7 +62,7 @@ The robot is powered on and off using a large switch on the door panel of the DX
 
 ### DX100 Programming Pendant
 
-The DX100 Programming Pendant is used to control the robot manually. It is primarily designed to program robot motion in factory settings. In our lab, it is primarily used to manually jog the robot, manage DX100 Controller settings, and view/investigate error and warning messages. Below is a diagram of the pendant.
+The DX100 Programming Pendant is used to control the robot manually. It is primarily designed to program robot motion in factory settings. However, in our lab it is primarily used to manually jog the robot, manage DX100 Controller settings, and view/investigate error and warning messages. Below is a diagram of the pendant.
 
 ![](images/DX100_programming_pendant_diagram.png)
 
@@ -70,7 +70,7 @@ A user ID (or password) is required to change the security mode to a higher leve
 
 ### Manually Jogging the MH5
 
-To jog the robot you must first make sure that the mode switch in the top left corner of the pendant is set to *TEACH*. Then power the joint servos by pressing and holding the enable switch (a black bar on the back of the pendant). Once the servos are powered, you can jog the robot using the axis keys. The axis keys will either jog individual joints or jog the tool flange in task space. The type of jogging is selected using the *COORD* button just under the display on the left. Pressing the *COORD* button changes an icon in the top right of the display. When that icon looks like a robot arm, the axis keys will jog the joints. When the icon looks like a cartesian coordinate frame, the axis keys will jog the tool flange in task space. When the DX100 is powered on, it defaults to jogging in joints space. The jogging speed is controlled using the manual speed keys and the current speed setting is indicated at the top of the display next to the coordinate icon. See the DX100 Operators Manual for more details.
+To jog the robot you must first make sure that the mode switch in the top left corner of the pendant is set to *TEACH*. Then enable power to the joint servos by pressing and holding the enable switch (a black bar on the back of the pendant). Once the servos are powered, you can jog the robot using the axis keys. The axis keys will either jog individual joints or jog the tool flange in task space. The type of jogging is selected using the *COORD* button just under the display on the left. Pressing the *COORD* button changes an icon in the top right of the display. When that icon looks like a robot arm, the axis keys will jog the joints. When the icon looks like a cartesian coordinate frame (without a robot gripper), the axis keys will jog the tool flange in task space. When the DX100 is powered on, it defaults to jogging in joint space. The jogging speed is controlled using the manual speed keys and the current speed setting is indicated at the top of the display next to the coordinate icon. See the DX100 Operators Manual for more details.
 
 ### Errors and Warnings
 
@@ -80,22 +80,47 @@ Errors and warnings will appear in the bottom right of the pendant display. Some
 ---
 ## Software Control from a Host Computer Using the Robotics Framework
 
-Need to have the mode switch on the pendant set to *REMOTE*.
+The DX100 runs an Ethernet server that accepts text-based commands to drive the robot. An Ethernet cable has been routed through a hole on the bottom of the DX100 to the Ethernet port inside it. The cable must be connected to the host computer to control the robot. Additionally, the mode switch on the pendant must be set to *REMOTE*. It is common to forget to set the mode switch back to *REMOTE* after manually jogging the robot.
 
-Set the network interface card (NIC) that is plugged directly into the DX100 to a manual IPv4 address with the following settings:
+> :warning: **In order to control the robot using a host computer, the mode switch on the pendant must be set to *REMOTE*.**
+
+### IP Network Interface Settings
+
+The Ethernet communication uses the TCP/IP protocol. As such, the network interface must be configured on both the DX100 and the host computer. The network interface settings for the DX100 are configured using the pedant and have already been set up. The IP address and subnet mask configured for the DX100 are:
 
 ```
-IPv4: 192.168.255.2
-Netmask: 255.255.255.0
+DX100 Network Settings
+
+IPv4 Address:       192.168.255.1
+Subnet Mask:        255.255.255.0
 ```
 
-All other settings can be left at default. The IPv4 address of the server running on the DX100 which the MH5Communicator class uses to communicate with the robot is: `192.168.255.1`. Since the MH5Robot class is hard-coded to give this IP to the MH5Communicator class, it should not matter what the Gateway and DNS settings are for the NIC since DNS is unnecessary (we already have an IP address), and the IP protocol will automatically recognize that the server IP is on the same subnet and will not attempt to send traffic to the Gateway. Also, make sure that any security is turned off in the security settings.
+The network interface (i.e. Ethernet port) on the host computer that is connected to the DX100 should be set to a manual (or static) IPv4 address as follows:
 
-The Robots component of the [Robotics Framework][rob] also contains implementations of these interfaces for specific robots. Currently only the Yaskawa Motoman MH5 robot is implemented as part of the core framework because it is the only implementation that does not have additional library dependencies. This implementation is found in `Robots/Motoman` and the implementation is called MH5Robot.
+```
+Host Computer network Settings
 
-Talk about the "digital twin" implementation of the MH5Robot class.
+IPv4 Address:   192.168.255.2
+Subnet Mask:    255.255.255.0
+```
 
-The DX100 will time out the server connection after 30 seconds of inactivity. The functions of the MH5Communicator class will automatically recognize this situation and reestablish the connection.
+> :information_source: **Note that these network settings result in a subnet with IP addresses in the range `192.168.255.0` to `192.168.255.255`. Any other IP address is considered to be on a different subnet.**
+
+There is no need to configure a DNS server since we are already working with IP addresses and therefore we have no need to resolve domain names into IP addresses. There is also no need to configure a default gateway since both sides of the communication will be on the same subnet. In fact, the host computer's interface can be configured to any IP address within the same subnet as the DX100 as long as it is not the address configured for the DX100.
+
+It is important that all other network interfaces on the host computer (e.g. a connection to the internet) be on a different subnet from that used by the interface connected to the DX100. Otherwise, the host computer won't know which interface to use to send messages to the DX100. If another network interface on the host computer is already using the subnet the DX100 is using, you will need to change one of them in order to avoid network conflicts. If you change the subnet of the DX100, make sure that the subnet address range is entirely contained in the [private address ranges](https://en.wikipedia.org/wiki/Private_network) designated by the IANA. Otherwise you may have trouble accessing certain parts of the internet. More information can be found on this [National Instruments page](https://www.ni.com/en-us/support/documentation/supplemental/11/best-practices-for-using-multiple-network-interfaces--nics--with.html).
+
+### The MH5Robot C++ Class
+
+The Core component of the [Robotics Framework][rob] contains a C++ class that can be used for software control of the MH5 robot. The class is called `MH5Robot` and is found under the `Robots/Motoman` directory of the framework. The `MH5Robot` class is hard-coded to expect that the IP address of the DX100 is configured as stated in the *IP Network Interface Settings* section above. Documentation on the `MH5Robot` class can be obtained by building the framework documentation. Please see the [Robotics Framework][rob] repository for details on its usage and building its documentation. 
+
+The `MH5Robot` class is integrated rather thoroughly with the rest of the Robotics Framework. Therefore, it is not recommended to attempt to use this class separately from the framework (e.g. to copy the source files and use them directly in your own project). Please use the framework as it was intended if you wish to use the `MH5Robot` class.
+
+**Class Implementation Notes**
+
+The connection to the DX100 Ethernet server will time out automatically after 30 seconds of activity. The `MH5Robot` class will automatically detect this and reestablish the connection. You will notice infrequent warning messages on the console output when this occurs. These messages are normal and can be ignored.
+
+The DX100 Ethernet server processes requests at an unfortunately slow rate. This fact prevents the host computer from obtaining or commanding the robot state at high frequencies. Therefore, the implementation of the `MH5Robot` class maintains a sort of "digital twin" simulation that estimates the motion of the robot in between commanded poses. When a request for the robot pose is made to the  `MH5Robot` class, it returns this estimate instead of directly asking the DX100. This enables tracking the robot state at much higher rates. Unfortunately, there is no way to artificially increase the rate at which the robot can be commanded to new poses. You may use issue new commands via the `MH5Robot` class as fast as you like, however, the class implementation sends commands at a fixed internal rate and it uses the most recently received command.
 
 [rob]: https://bitbucket.org/utahtelerobotics/roboticsframework/src/master/
 [docs]: https://bitbucket.org/utahtelerobotics/docs-yaskawa-motoman-6dof-arm/src/master/
