@@ -8,11 +8,12 @@
 ---
 ## Introduction
 
-The Yaskawa Motoman MH5 6-DOF Robot Arm is our blue industrial robot arm found inside an aluminum safety cage. Specifically, the MH5 refers to the robot manipulator arm itself. The DX100 is the large controller box found underneath the MH5 and is responsible for driving it. Connected to the DX100 is a handheld pendant device that is used to manually control the MH5. The MH5 can be software controlled using a computer communicating with the DX100 over Ethernet. A software implementation for controlling the MH5 from a host computer has been implemented in the [Robotics Framework][rob] (see details in the *Software Control from a Host Computer Using the Robotics Framework* section below).
+The Yaskawa Motoman MH5 6-DOF Robot Arm is our blue industrial robot arm found inside an aluminum safety cage. Specifically, the MH5 refers to the robot manipulator arm itself. The DX100 is the large controller box found underneath the MH5 and is responsible for driving the robot. Connected to the DX100 is a handheld pendant device that is used to manually control the robot. The robot can be software controlled using a computer communicating with the DX100 over Ethernet. A software implementation for controlling the robot from a host computer has been implemented in the [Robotics Framework][rob] (see details in the *Software Control from a Host Computer Using the Robotics Framework* section below).
 
 - [MH5 and DX100 Documentation][docs]
     
     Contains:
+
     - Documentation from the manufacture
     - A Solidworks CAD model of the MH5 Manipulator
     - Information related to maintenance (receipts, etc.)
@@ -21,20 +22,34 @@ The Yaskawa Motoman MH5 6-DOF Robot Arm is our blue industrial robot arm found i
 ---
 ## The MH5 Robot Arm
 
-The MH5 robot arm has 6 joints. Each joint is named with a letter from base to tool flange as follows: `S L U R B T`.
+###  DH Parameters and Robot Base Coordinate Frame
 
-### Robot Coordinate Frame
+The MH5 robot arm has 6 revolute joints. Each joint is named with a letter as follows:
 
-From the point of view of the robot, the x-axis points forward away from the robot, the y-axis points to the left, and the z-axis points upward (the coordinate axes match the ROS standard outlined in [REP 103](https://www.ros.org/reps/rep-0103.html)). A diagram is attached to the peg board in the workspace for quick reference. The exact location of the frame origin is unknown but it is somewhere in the center of the robot base. 
+- Joint 1 - `S`
+- Joint 2 - `L`
+- Joint 3 - `U`
+- Joint 4 - `R`
+- Joint 5 - `B`
+- Joint 6 - `T`
+
+Below is the table of DH parameters we use and the corresponding zero-angle diagram. Note that the distances were taken directly from CAD drawings found in the MH5 Manipulator Manual. A diagram indicating the locations of the link frame origins in the context of the actual robot geometry is also included.
+
+> :information_source: **Reminder: Joint i corresponds to axis z<sub>i-1</sub>**
+
+![](images/MH5_DH_parameters.png)
+
+![](images/MH5_frame_origins_diagram.png)
+
+As indicated in the diagrams above, the robot base coordinate frame is defined as follows. From the point of view of the robot, the x-axis points forward away from the robot, the y-axis points to the left, and the z-axis points upward (these coordinate axes match the ROS standard outlined in [REP 103](https://www.ros.org/reps/rep-0103.html)). A diagram is attached to the peg board in the workspace for quick reference. The base frame origin lies on the joint 1 axis (z<sub>0</sub>) at the same z-height as the Joint 2 axis (z<sub>1</sub>). This results in a base frame that is suspended in the air above the robot's physical base. The DX100 definitely does not internally use these same DH parameters (e.g. three of the joints axis point in the opposite direction from ours), but they may be similar. Regardless, the robot base frame in the diagrams above matches that used internally by the DX100.
 
 ### Encoder Battery
 
-The encoders measuring joint positions are not absolute encoders. The absolute joint position is known because the encoders are never powered off. There is a battery in the base of the arm that keeps the encoders powered even when the main DX100 power switch is turned off. This battery lasts about **10 years** and a warning will appear on the pendant when the battery level gets low. When this happens, you must contact Yaskawa to purchase a new battery. There are two battery ports such that the new battery can be connected before the old battery is removed. In this way power to the encoders is never lost.
-
-The encoder battery was last replaced in February 2019.
-
 >:warning: **The encoder battery in the base of the MH5 robot arm must be replaced approximately every 10 years or the robot's zero angle calibration will be invalidated and the robot will need to be manually recalibrated!**
 
+The encoders measuring joint positions are not absolute encoders. The absolute joint position is known because the encoders are never powered off. There is a battery in the base of the arm that keeps the encoders powered even when the main DX100 power switch is turned off. This battery lasts about **10 years** and a warning will appear on the pendant when the battery level gets low. When this happens, you must contact Yaskawa to purchase a new battery. There are two battery ports such that the new battery can be connected before the old battery is removed. In this way power to the encoders is never lost. More details can be found in the MH5 Manipulator Manual and the DX100 documentation.
+
+The encoder battery was last replaced in February 2019.
 
 ---
 ## Basic Operation
