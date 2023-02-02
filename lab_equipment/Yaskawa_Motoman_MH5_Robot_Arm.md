@@ -33,7 +33,7 @@ The MH5 robot arm has 6 revolute joints. Each joint is named with a letter as fo
 - Joint 5 - `B`
 - Joint 6 - `T`
 
-Below is the table of DH parameters we use and the corresponding zero-angle diagram. Note that the distances were taken directly from CAD drawings found in the MH5 Manipulator Manual. A diagram indicating the locations of the link frame origins in the context of the actual robot link geometry is also included.
+Below is the table of DH parameters we use and the corresponding zero-angle diagram. Note that the distances were taken directly from CAD drawings found in the MH5 Manipulator Manual. A diagram of the robot in its zero angle configuration indicating the locations of the link frame origins in the context of the actual robot link geometry is also included. When the robot is in the zero angle configuration, the stickers on the robot with red arrows will all be aligned. For the last joint, the notch on the tool flange acts as a red arrow. This notch indicates the **-y<sub>6</sub>** direction. There is also a black marker dot on the tool flange indicating the **+x<sub>6</sub>** direction.
 
 > :information_source: **Reminder: Joint i corresponds to axis z<sub>i-1</sub>**
 
