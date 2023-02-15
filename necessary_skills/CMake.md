@@ -7,6 +7,8 @@ CMake is a tool to manage building of source code. Originally, CMake was designe
 
 CMake is widely used for the C and C++ languages, but it may be used to build source code of other languages too. It is a common misconception that the "C" in "CMake" refers to the C and C++ languages. In fact, the "C" stands for *cross-platform*.
 
+Our lab has a simple [example CMake-based C++ project](https://bitbucket.org/utahtelerobotics/example-qt-cmake-project/src/master/) that depends on the [Qt Framework](Qt.md) and can serve as a template for projects built with CMake.
+
 **Contents**
 
 [TOC]
