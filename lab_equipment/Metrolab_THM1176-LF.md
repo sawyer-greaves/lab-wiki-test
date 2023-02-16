@@ -1,7 +1,7 @@
 [Home](../Home)
 # Metrolab THM1176-LF Three-Axis Hall Magnetometer
 
-> **IMPORTANT**: Please be careful with this magnetometer and avoid exposure to fields stronger than 3 T. It has been sent to the manufacture to be fixed multiple times and we want to avoid this need in the future.
+> **IMPORTANT**: Please be careful with this magnetometer and avoid exposure to fields stronger than 3 T. It has been sent to the manufacturer to be fixed multiple times and we want to avoid this need in the future.
 
 The Metrolab magnetometer is probably the most readily usable sensor in our
 lab. It is meant to measure low fields and should be kept away from magnetic fields stronger than 3 T. It has a range of 8 mT and a resolution of 2 uT.

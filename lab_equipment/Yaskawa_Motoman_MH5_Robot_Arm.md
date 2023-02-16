@@ -14,7 +14,7 @@ The Yaskawa Motoman MH5 6-DOF Robot Arm is our blue industrial robot arm found i
     
     Contains:
 
-    - Documentation from the manufacture
+    - Documentation from the manufacturer
     - A Solidworks CAD model of the MH5 Manipulator
     - Information related to maintenance (receipts, etc.)
 

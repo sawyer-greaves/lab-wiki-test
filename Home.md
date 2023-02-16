@@ -86,7 +86,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 **Robot End-Effectors**
 
 - [SAMM - Spherical-Actuator-Magnet Manipulator](lab_equipment/SAMM.md)
-- [JIMEE - Junk Immobilizng Magnetic End Effector](lab_equipment/JIMEE.md)
+- [JIMEE - Junk Immobilizing Magnetic End Effector](lab_equipment/JIMEE.md)
 
 **DAQ Cards**
 
