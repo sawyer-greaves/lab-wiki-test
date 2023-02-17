@@ -7,21 +7,22 @@
 
 ## User Accounts on Lab Computers
 
->**The lab's default password for computer user accounts is `telerobo2156`. Please use this password for lab administrator accounts on lab computers. Personal user accounts that are actively being used should have personal passwords. When you no longer need to use a personal account (e.g. when you graduate or will no longer be working with the lab) it should be deleted, but at the very least its password should be changed to the lab default password.**
+>**The lab's default password is `FlamencoMagnet`. This password should be used for lab administrator accounts on all lab computers. Actively used personal user accounts on lab computers should have personal passwords. When you no longer need to use a personal account (e.g. when you graduate or will no longer be working with the lab) it should be removed from the computer, but at the very least its password should be changed to the lab default password.**
 
->**Old lab default passwords:** None yet, this is where old passwords will be listed if the lab default password changes.
+>**The lab administrator account was previously called `Telerobotics` or `telerobotics`. Previous lab default passwords are: `telerobo2156`. Computers with old administrator accounts and or passwords do not need to be updated to comply with the rules in outlined below. Lab members should just be aware that these old accounts and passwords exist.**
 
 >**Passwords on Linux:** You may need to bypass password complexity requirements to use the default lab password on Linux. To do so use `sudo passwd <username>` from the command line where you replace `<username>` with the username of the account whose password is being changed.
 
 Every computer in the lab must have a user for the purposes of lab computer administration according to the following rules:
 
-- Username: `Telerobotics` or `telerobotics`
-- Password: `telerobo2156`
-- The `Telerobotics` user must have full administration privileges
-- The `Telerobotics` user **must not** be used for anything other than general administration of the computer (e.g. creating and removing other users, installing software for all users, etc.). **No lab work should be conducted from the `Telerobotics` user**.
-- If a computer has multiple operating systems, there **must** be a `Telerobotics` user on each operating system.
+- **Username (Linux)**: `labadmin` (set Full Name to `Lab Admin`)
+- **Username (Windows)**: `LabAdmin`
+- Password: `FlamencoMagnet`
+- The `labadmin` user must have full administration privileges
+- The `labadmin` user **must not** be used for anything other than general administration of the computer (e.g. creating and removing other users, installing software for all users, etc.). **No lab work should be conducted from the `labadmin` user**.
+- If a computer has multiple operating systems, there **must** be a `labadmin` user on each operating system.
 
-By having a `Telerobotics` user on every computer, we can avoid lost data due to forgotten passwords and can create/remove users on the computer under which actual research/work should be taking place. The department IT team will usually also put a `localadmin` user on Windows operating systems. This user serves the same purpose that the `Telerobotics` user is meant to serve but we have the `Telerobotics` users to avoid contacting IT whenever we need to create/remove a user, etc.
+By having a `labadmin` user on every computer, we can avoid lost data due to forgotten passwords and can create/remove users under which actual research/work should be taking place. The department IT team will usually also put a `localadmin` user (or similar) on Windows operating systems. This user serves the same purpose that the `labadmin` user is meant to serve but we have the `labadmin` users to avoid contacting IT whenever we need to create/remove a user, etc.
 
 In general, each member of the lab should have a **personal user account** on the computer(s) that they regularly use. The reason for this is that things like [SSH authentication with Git](necessary_skills/Using_Git_with_SSH.md) and [mounting the lab network drive](Lab_Network_Drive.md) require passwords and authentication that is specific to a particular member of the lab and these things get very messy when multiple people are sharing the same user. It also makes it easy to remove any sensitive personal information such as saved web browser login info (Google Chrome login, etc.), saved cloud drive syncing login info (e.g. Google Drive, OneDrive, etc.), and other similar items when a member of the lab leaves/graduates by simply removing any of their personal user accounts from lab computers.
 
@@ -31,7 +32,7 @@ Exceptions to this rule would be computers on which **all** of the following app
 - Mounting the lab network drive is not necessary
 - Logging into web browsers, cloud drive syncing apps, or anything similar is not necessary
 
-For example, a computer that is dedicated to **only** use and take data with a particular piece of lab equipment would not need a user for every member of the lab that wants to use that computer to take data with the equipment. If someone wants to do something more on that computer, then that lab member should create a personal user on the computer.
+For example, a computer that is dedicated to **only** use and take data with a particular piece of lab equipment would not need a user for every member of the lab that wants to use that computer to take data with the equipment. If someone wants to do something more on that computer (including develop software related to using that piece of lab equipment), then that lab member should create a personal user on the computer.
 
 >**Keep in Mind**: Since most people should be using their own personal user accounts on each computer, you should avoid hardcoding filepaths in your software projects that contain a user home directory. There are often ways to get the user home directory for whichever user is currently active (e.g. using the `$HOME` environment variable).
 
@@ -98,7 +99,7 @@ To download the VPN software for accessing the University of Utah network remote
 - **Do not** assign a TeamViewer account (found in the General options)
 - **Do not** enable easy access (a TeamViewer account must be assigned to enable this anyway)
 - **Disable** the random password (found in the Security options)
-- If there is at least one computer in the "allow list" (see below), set the "personal password" to `telerobo2156` (found in the Advanced options). If no computers are in the "allow list" then the "personal password" should be **removed**.
+- If there is at least one computer in the "allow list" (see below), set the "personal password" to the lab default password `FlamencoMagnet` (found in the Advanced options). If no computers are in the "allow list" then the "personal password" should be **removed**.
 - You may turn on the option to start TeamViewer with the operating system
 
 The "allow list" (found in the Security options) is a list of TeamViewer IDs, which is a number that is computer-specific rather than person-specific, of the computers that we want to allow access to the lab computer. No computer other than those with IDs in the "allow list" can connect under any circumstances.
@@ -109,7 +110,7 @@ Currently, there are three ways to connect to a computer with TeamViewer: (1) us
 If the above rules are followed on each lab computer, you can set up a personal computer to remote login to a lab computer by following these steps:
 
 - Add your personal computer's TeamViewer ID to the "allow list" of the lab computer in the TeamViewer Security options. TeamViewer may ask you to login with a TeamViewer account when adding to the allow list, but if you say you don't want to you should be able to get to a point where you can add TeamViewer IDs (which are computer-specific rather than person-specific) to the allow list. **Remember, do not assign a TeamViewer account to any lab computer by logging in.**
-- Add the lab computer's TeamViewer ID and the personal password `telerobo2156` to your personal computer's contacts list or your personal TeamViewer account's contact list.
+- Add the lab computer's TeamViewer ID and the personal password `FlamencoMagnet` to your personal computer's contacts list or your personal TeamViewer account's contact list.
 
 >:exclamation: **Don't forget to remove the TeamViewer ID from the allow list of the lab computer when your personal computer no longer needs access to it.**
 
