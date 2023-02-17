@@ -32,6 +32,18 @@ The **5** in **UR5e** refers to the payload the robot can support in kilograms (
 - **URScript**: A scripting/programming language interpretable by URControl used to command the robot (no need to learn this if you are using the ROS 2 driver).
 - **URCap**: A software bundle meant to be installed onto the teach pendant and runs as a child process of PolyScope. URCaps contribute additional functionality to PolyScope.
 
+---
+## Electrical Signalling
+
+The digital I/O signal ports inside the control box have been connected to the LED signal tower stack (the stoplight-like light) and the relay connecting power to the end-effector (currently the [JIMEE](JIMEE.md)) such that when the emergency stop button on the teach pendant is pressed, power to the end-effector is disconnected. The installation settings on the teach pendant are also set such that the status indicator has the following meaning:
+
+- Solid Green: Robot power is on
+- Blinking Yellow: Robot is running a program and may move. **Use caution when standing or walking near the robot.**
+- Solid Red: The robot in currently emergency stopped.
+
+These settings, including the effects resulting from pressing the emergency stop button are specific to the installation used. If you use a new installation, you will need to configure the I/O settings appropriately.
+
+**ADD THE INSTALLATION SETTINGS USED HERE**
 
 ---
 ## Software Control from a Host Computer Using ROS 2
@@ -50,13 +62,17 @@ The [ROS 2](../necessary_skills/ROS.md) driver for UR robots consists of several
 - `ur_robot_driver` - driver / hardware interface for communication with UR robots.
 
 
-The documentation explaining setup and usage of the ROS 2 driver is a little disorganized because it was written and improved gradually over the course of several ROS releases (ROS Foxy through ROS Humble). However, as they improved the documentation, Universal Robots didn't really retroactively update it in branches for prior ROS releases (e.g. the release for ROS Foxy). In earlier releases (ROS Foxy) the documentation was basically all in the README file for the [Universal_Robots_ROS2_Driver][ros2driver-repo] repository. By the time of the release for ROS Humble, the repository README is still the starting place for the documentation, but the majority of the official driver documentation is found on docs.ros.org:
+The documentation explaining setup and usage of the ROS 2 driver is a little disorganized because it was written and improved gradually over the course of several ROS releases (ROS Foxy through ROS Humble). However, as they improved the documentation, Universal Robots didn't really retroactively update it in branches for prior ROS releases (e.g. the release for ROS Foxy). In earlier releases (ROS Foxy) the documentation was basically all in the README file for the [Universal_Robots_ROS2_Driver][ros2driver-repo] repository. By the time of the release for ROS Humble, the repository README is still the starting place for the documentation, but the majority of the official driver documentation was moved to docs.ros.org:
 
 - [Driver Documentation][driver-docs]
 
-Subtle things have changed with each release making it hard to recommend 
+If you are using ROS Humble, simply start at the README for the [Universal_Robots_ROS2_Driver][ros2driver-repo] repository which will link to the driver documentation linked above. Unfortunately, if you are using an earlier ROS release, neither the README nor the documentation link above are perfect resources alone because the README is incomplete and makes you believe that you have to build the driver from source and the documentation on docs.ros.org (which is aimed at the release for ROS Humble) has subtle differences from earlier releases (e.g. the launch files are in different packages for ROS Humble and ROS Foxy). Probably the best course of action is to start at the README for any given release and then supplement with the docs.ros.org documentation. Honestly, the docs.ros.org documentation can treated as the primary documentation, you just need to be familiar with the few differences if you are using earlier releases like ROS Foxy. These differences are basically: 1) the package where a launch file is found, and 2) whether a package dependency has been released on the ROS 2 APT repository (in which case you would need to build that package from source).
 
-This wiki page attempts to unify this information such that it can be used as the main starting point and refers to the driver repository README for any information not described here.
+**Setup Already Completed**
+
+The IP address of the UR5e has been configured to `192.168.1.102`. The UR5e already has the **External Control** URCap installed and configured to talk to a host PC with the IP address `192.168.1.101`. A program using the URCap has also already been made called `Control_with_ROS.urp`.
+
+**Installing the Driver**
 
 Since ROS Foxy, the driver packages have been released on the ROS 2 APT repository and therefore can be easily installed on Linux using the APT package manager:
 
@@ -64,17 +80,21 @@ Since ROS Foxy, the driver packages have been released on the ROS 2 APT reposito
 sudo apt install ros-${ROS_DISTRO}-ur-robot-driver
 ```
 
-The above command will install the `ur_robot_driver` package and all the other driver packages as a result of the package dependency tree.
-
+The above command will install the `ur_robot_driver` package but will also result in installing the other driver packages due to the package dependency tree. It is recommended to install the driver in this way. If you need to build the driver from source, follow the instructions on the README for each respective release.
 
 
 ### Specific ROS 2 Driver Usage Tips
 
+**Overriding the Default Robot Description from the driver (URDF, SRDF, etc.)**
+
+Talk about this when I've done this with Travis.
+
 ### Dealing With Non-Smooth Motion
 
-If you experience non-smooth motion on the robot, it may be necessary to switch to using a real-time kernel. Universal Robots provides instructions on how to do this in the `doc/` directory of the   `ur_robot_driver` ROS package. For ROS 2 Foxy these instructions are located [here](https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/blob/foxy/ur_robot_driver/doc/real_time.md). For other distributions, the structure of the `doc/` directory is different.
+If you experience non-smooth motion on the robot, it may be necessary to switch to using a real-time kernel. Universal Robots provides instructions on how to do this on docs.ros.org [here][rt-kernel].
 
 [docs]: https://bitbucket.org/utahtelerobotics/docs-ur5e-6dof-arm/src/master/
 [ur-github]: https://github.com/UniversalRobots
 [ros2driver-repo]: https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver
 [driver-docs]: https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/index.html
+[rt-kernel]: https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/installation/real_time.html
