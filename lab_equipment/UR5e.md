@@ -33,7 +33,7 @@ The **5** in **UR5e** refers to the payload the robot can support in kilograms (
 - **URCap**: A software bundle meant to be installed onto the teach pendant and runs as a child process of PolyScope. URCaps contribute additional functionality to PolyScope.
 
 ---
-## Electrical Signalling
+## Electrical Signaling
 
 The digital I/O signal ports inside the control box have been connected to the LED signal tower stack (the stoplight-like light) and the relay connecting power to the end-effector (currently the [JIMEE](JIMEE.md)) such that when the emergency stop button on the teach pendant is pressed, power to the end-effector is disconnected. The installation settings on the teach pendant are also set such that the status indicator has the following meaning:
 
