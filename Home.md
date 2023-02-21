@@ -115,6 +115,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 - [Motors, Drivers, and Inductive Loads](https://bitbucket.org/utahtelerobotics/docs-motors-and-inductive-loads/src/master/)
 - [Discrete Electronic Components](https://bitbucket.org/utahtelerobotics/docs-discrete-electronic-components/src/master/)
 - [ATI Force/Torque Sensors](lab_equipment/ATI_FT_Sensors.md)
+- [SpaceExplorer 3D Mouse](lab_equipment/SpaceExplorer_3D_Mouse.md)
 
 ---
 ## Logistical
