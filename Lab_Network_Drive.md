@@ -96,6 +96,8 @@ If it worked, the `~/telerobotics-group` directory should contain the group driv
 ---
 ## Standards for Using the Group Drive
 
+>:warning: **This section is incomplete! Please add any information that may be missing or useful!**
+
 - Use Handbrake to reduce video file size when putting them on the group drive
 
 [1]: https://wiki.ubuntu.com/MountWindowsSharesPermanently

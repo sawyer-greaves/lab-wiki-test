@@ -9,15 +9,14 @@
 
 >**The lab's default password is `FlamencoMagnet`. This password should be used for lab administrator accounts on all lab computers. Actively used personal user accounts on lab computers should have personal passwords. When you no longer need to use a personal account (e.g. when you graduate or will no longer be working with the lab) it should be removed from the computer, but at the very least its password should be changed to the lab default password.**
 
->**The lab administrator account was previously called `Telerobotics` or `telerobotics`. Previous lab default passwords are: `telerobo2156`. Computers with old administrator accounts and or passwords do not need to be updated to comply with the rules in outlined below. Lab members should just be aware that these old accounts and passwords exist.**
+>**The lab administrator account was previously called `Telerobotics` or `telerobotics`. Previous lab default passwords are: `telerobo2156`. Computers with old administrator accounts and/or passwords do not need to be updated to comply with the rules outlined below, however, doing so would help reduce confusion. Regardless, lab members should be aware that these old accounts and passwords exist.**
 
->**Passwords on Linux:** You may need to bypass password complexity requirements to use the default lab password on Linux. To do so use `sudo passwd <username>` from the command line where you replace `<username>` with the username of the account whose password is being changed.
+>**Passwords on Linux:** You may need to bypass password complexity requirements to set a password on Linux. To do so use `sudo passwd <username>` from the command line where you replace `<username>` with the username of the account whose password is being changed.
 
 Every computer in the lab must have a user for the purposes of lab computer administration according to the following rules:
 
-- **Username (Linux)**: `labadmin` (set Full Name to `Lab Admin`)
-- **Username (Windows)**: `LabAdmin`
-- Password: `FlamencoMagnet`
+- **Username:** `labadmin` (on Linux, set *Full Name* to `Lab Admin`)
+- **Password:** `FlamencoMagnet`
 - The `labadmin` user must have full administration privileges
 - The `labadmin` user **must not** be used for anything other than general administration of the computer (e.g. creating and removing other users, installing software for all users, etc.). **No lab work should be conducted from the `labadmin` user**.
 - If a computer has multiple operating systems, there **must** be a `labadmin` user on each operating system.
@@ -88,6 +87,8 @@ Administrator privileges are required to perform the steps in this section.
 
 ---
 ## Remote Access to Lab Computers
+
+>:warning: **This section is incomplete! TeamViewer is no longer the primary method of remote access to lab computer because it is common for TeamViewer to revoke the free license due to triggers indicating falsely that it is being used commercially. In its place, the department recommends using Remote Desktop Connection to access Windows computers and AnyDesk to access Linux computers.**
 
 ### Via Remote Desktop Connection (Windows Only)
 

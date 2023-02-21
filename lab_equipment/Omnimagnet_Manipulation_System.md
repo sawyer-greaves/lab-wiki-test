@@ -1,8 +1,7 @@
 [Home](../Home)
 # Omnimagnet Manipulation System
 
-
-
+>:warning: **This page is incomplete! Please add any information that may be missing or useful!**
 
 DAQ card in omnicomputer: PCI-1724U
 This DAQ card has 62 pins, AO0-AO31, the rest are ground. The comedi driver software uses the analog pin number. The mapping between analog pin number and wire pin is found in the [DAQ datasheet repo](https://bitbucket.org/utahtelerobotics/docs-pci-1724u/src/master/).
