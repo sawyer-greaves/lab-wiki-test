@@ -1,5 +1,5 @@
 [Home](../Home)
-# Flea 3 Camera
+# Basler Camera
 
 >:warning: **This page is incomplete! Please add any information that may be missing or useful!**
 

@@ -97,6 +97,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 **Cameras**
 
 - [Flea 3 Camera](lab_equipment/Flea3_Camera.md)
+- [Basler Camera](lab_equipment/Basler_Camera.md)
 
 **Magnetics**
 
