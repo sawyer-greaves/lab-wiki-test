@@ -17,3 +17,4 @@
 - Fill out [SensAble Phantom Omni](lab_equipment/Phantom_Omni.md)
 - Fill out [Utah Magnetic Haptic Device](lab_equipment/umhd.md)
 - Fill out [Helmholtz Coils](lab_equipment/Helmholtz_Coils.md)
+- Fill out [ATI Force/Torque Sensors](lab_equipment/ATI_FT_Sensors.md)

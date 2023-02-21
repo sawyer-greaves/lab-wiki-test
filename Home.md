@@ -110,6 +110,12 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 - [SensAble Phantom Omni](lab_equipment/Phantom_Omni.md)
 - [Utah Magnetic Haptic Device](lab_equipment/umhd.md)
 
+**Miscellaneous**
+
+- [Motors, Drivers, and Inductive Loads](https://bitbucket.org/utahtelerobotics/docs-motors-and-inductive-loads/src/master/)
+- [Discrete Electronic Components](https://bitbucket.org/utahtelerobotics/docs-discrete-electronic-components/src/master/)
+- [ATI Force/Torque Sensors](lab_equipment/ATI_FT_Sensors.md)
+
 ---
 ## Logistical
 
