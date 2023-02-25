@@ -7,5 +7,5 @@
 
 [ROS 2 Node][ros2-node]
 
-[docs]: https://bitbucket.org/utahtelerobotics/ati_ft_sensor/src/master/
-[ros2-node]: https://bitbucket.org/utahtelerobotics/ati_ft_sensor_nidaqmx_ros2_node/src/master/
+[docs]: https://bitbucket.org/mmrobotics/ati_ft_sensor/src/master/
+[ros2-node]: https://bitbucket.org/mmrobotics/ati_ft_sensor_nidaqmx_ros2_node/src/master/

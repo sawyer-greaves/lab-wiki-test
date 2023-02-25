@@ -7,4 +7,4 @@ User manuals and installation software can be found in the [phantom-omni-haptic-
 
 ![](images/phantom_andres.jpeg)
 
-[repo]: https://bitbucket.org/utahtelerobotics/phantom-omni-haptic-device/src/main/
+[repo]: https://bitbucket.org/mmrobotics/phantom-omni-haptic-device/src/main/

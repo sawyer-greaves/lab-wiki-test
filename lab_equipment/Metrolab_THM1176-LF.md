@@ -13,4 +13,4 @@ The magnetometer also comes with a zero field chamber for calibration.
 - [Datasheet and User Manual][docs]
 
 [product_page]: https://www.metrolab.com/products/thm1176-three-axis-hall-magnetometer/
-[docs]: https://bitbucket.org/utahtelerobotics/docs-magnetic-sensors/src/master/
+[docs]: https://bitbucket.org/mmrobotics/docs-magnetic-sensors/src/master/

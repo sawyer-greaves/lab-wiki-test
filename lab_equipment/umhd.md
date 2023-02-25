@@ -5,4 +5,4 @@
 
 Source code is found in the [untethered-magnetic-haptic-device][source] repository.
 
-[source]: https://bitbucket.org/utahtelerobotics/untethered-magnetic-haptic-device/src/main/
+[source]: https://bitbucket.org/mmrobotics/untethered-magnetic-haptic-device/src/main/

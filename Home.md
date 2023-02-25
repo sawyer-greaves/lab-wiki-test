@@ -1,8 +1,8 @@
-# Utah Telerobotics Lab Wiki
+# Magnetic & Medical Robotics Lab Wiki
 
-Welcome to the Utah Telerobotics Lab Wiki!
+Welcome to the Magnetic & Medical Robotics Lab Wiki!
 
-The Utah Telerobotics Lab Wiki is part of a Git repository on Bitbucket dedicated for the purpose of hosting the lab wiki. Every Bitbucket repository comes with a wiki and the `lab-wiki` repository is simply an empty repository in which we are utilizing only the wiki feature to host this wiki.
+The Magnetic & Medical Robotics Lab Wiki is part of a Git repository on Bitbucket dedicated for the purpose of hosting the lab wiki. Every Bitbucket repository comes with a wiki and the `lab-wiki` repository is simply an empty repository in which we are utilizing only the wiki feature to host this wiki.
 
 This Home page acts as the wiki's table of contents and every wiki page should have a `Home` link at the top to return here. As an additional navigation option, Bitbucket displays a breadcrumb trail above each page. Clicking on an item in the trail will allow you to browse the directory structure of the wiki and open desired wiki pages directly.
 
@@ -62,9 +62,9 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 ---
 ## Lab Custom Software Libraries
 
-- [libmatlab](https://bitbucket.org/utahtelerobotics/libmatlab/src/master/)
+- [libmatlab](https://bitbucket.org/mmrobotics/libmatlab/src/master/)
     - A collection of libraries of MATLAB functions useful for robotics and magnetics applications.
-- [RoboticsFramework](https://bitbucket.org/utahtelerobotics/roboticsframework/src/master/) **(Linux Only**)
+- [RoboticsFramework](https://bitbucket.org/mmrobotics/roboticsframework/src/master/) **(Linux Only**)
     - A ROS-like, single-process robotics framework for [C++](necessary_skills/C_and_Cpp.md) based on top of the [Qt Application Framework](necessary_skills/Qt.md) and Qt's signal-slot features
     - Can be used in conjunction with [ROS](necessary_skills/ROS.md) within a ROS node
     - Components can be selectively built and installed so you can use only what is needed and avoid installing unnecessary dependencies
@@ -91,9 +91,9 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 
 **DAQ Cards**
 
-- [Sensoray 826 (s826) PCIe Data Acquisition Card](https://bitbucket.org/utahtelerobotics/s826-daq/src/master/)
-- [Sensoray 626 (s626) PCI Data Acquisition Card](https://bitbucket.org/utahtelerobotics/s626-daq/src/master/) (**This device is EOL, prefer using the s826 above**)
-- [Advantech PCI-1724U Analog Output PCI Card](https://bitbucket.org/utahtelerobotics/docs-pci-1724u/src/master/) (**This device provides analog output channels only**)
+- [Sensoray 826 (s826) PCIe Data Acquisition Card](https://bitbucket.org/mmrobotics/s826-daq/src/master/)
+- [Sensoray 626 (s626) PCI Data Acquisition Card](https://bitbucket.org/mmrobotics/s626-daq/src/master/) (**This device is EOL, prefer using the s826 above**)
+- [Advantech PCI-1724U Analog Output PCI Card](https://bitbucket.org/mmrobotics/docs-pci-1724u/src/master/) (**This device provides analog output channels only**)
 
 **Cameras**
 
@@ -113,8 +113,8 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 
 **Miscellaneous**
 
-- [Motors, Drivers, and Inductive Loads](https://bitbucket.org/utahtelerobotics/docs-motors-and-inductive-loads/src/master/)
-- [Discrete Electronic Components](https://bitbucket.org/utahtelerobotics/docs-discrete-electronic-components/src/master/)
+- [Motors, Drivers, and Inductive Loads](https://bitbucket.org/mmrobotics/docs-motors-and-inductive-loads/src/master/)
+- [Discrete Electronic Components](https://bitbucket.org/mmrobotics/docs-discrete-electronic-components/src/master/)
 - [ATI Force/Torque Sensors](lab_equipment/ATI_FT_Sensors.md)
 - [NDI Polaris Spectra](lab_equipment/NDI_Polaris_Spectra.md)
 - [SpaceExplorer 3D Mouse](lab_equipment/SpaceExplorer_3D_Mouse.md)

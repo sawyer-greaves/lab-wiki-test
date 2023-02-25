@@ -118,8 +118,8 @@ A repository called `SAMM-interface` also exists containing older versions of th
 The implementation of the `SAMM` class follows the algorithms outlined in the TRO paper. Specifically, an extended Kalman filter is implemented to estimate the state of the permanent magnet and the control algorithm outputs desired velocities of the motors (which are realized with the ESCON servo controllers).
 
 
-[tro-paper]: https://www.telerobotics.utah.edu/uploads/Main/Wright_TRO17.pdf
-[rob]: https://bitbucket.org/utahtelerobotics/roboticsframework/src/master/
-[maxon-doc]: https://bitbucket.org/utahtelerobotics/docs-motors-and-inductive-loads/src/master/
+[tro-paper]: https://mmrobotics.mech.utah.edu/wp-content/uploads/2023/01/Wright_TRO17.pdf
+[rob]: https://bitbucket.org/mmrobotics/roboticsframework/src/master/
+[maxon-doc]: https://bitbucket.org/mmrobotics/docs-motors-and-inductive-loads/src/master/
 [escon-web]: https://www.maxongroup.com/maxon/view/content/escon-detailsite
-[s626]: https://bitbucket.org/utahtelerobotics/s626-daq/src/master/
+[s626]: https://bitbucket.org/mmrobotics/s626-daq/src/master/

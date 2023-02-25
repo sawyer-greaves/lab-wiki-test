@@ -9,7 +9,7 @@ This pages contains the standards that everyone in the lab is expected to follow
 
 ## Bitbucket
 
-Our lab hosts all Git repositories on Bitbucket under a workspace named **Utah Telerobotics**. This workspace contains two user groups: **Administrators** and **Developers**. The Administrators group should consist of Jake and one responsible long-term member of the lab at all times. Every member of the lab should belong to the Developers group. Seek out the member of the lab with administrator privileges to be added as a member of the Developers group.
+Our lab hosts all Git repositories on Bitbucket under a workspace named **Magnetic & Medical Robotics Lab**. This workspace contains two user groups: **Administrators** and **Developers**. The Administrators group should consist of Jake and one responsible long-term member of the lab at all times. Every member of the lab should belong to the Developers group. Seek out the member of the lab with administrator privileges to be added as a member of the Developers group.
 
 Members of the Developers group have the ability to create repositories belonging to the lab workspace. All code written for research in the lab should be maintained in **private repositories** belonging to the lab workspace (as opposed to each member's personal workspace), thus these repositories will belong to the lab after the member has graduated and has been removed from the workspace. Members of the Developers group also have read access by default to all repositories created in the lab workspace.
 
@@ -24,7 +24,7 @@ Repositories should be given a descriptive name using lowercase letters and dash
 - Avoid committing large files unless there is a good reason (e.g. images for documentation, etc).
 - Make smaller commits and push often.
 - Use descriptive commit messages
-- Set `user.email` to the email address that is associated with your membership in the Utah Telerobotics Bitbucket workspace so your commits can be associated properly on the website.
+- Set `user.email` to the email address that is associated with your membership in the Magnetic & Medical Robotics Lab Bitbucket workspace so your commits can be associated properly on the website.
 - Mark important commits (e.g. commits that correspond to the state of the code for
   a journal or conference publication) using a Git tag.
 - If a repository depends on another repository, tag the commit of the dependee

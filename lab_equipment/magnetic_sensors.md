@@ -27,5 +27,5 @@ Here is a list of magnetic sensors we currently have or have used in the lab.
 
 - [TLV493D-A1B6][docs] three-axis Hall-effect sensor (used on the Teensy-based Magnetometer)
 
-[teensy-mag-repo]: https://bitbucket.org/utahtelerobotics/teensy-magnetometer/src/main/
-[docs]: https://bitbucket.org/utahtelerobotics/docs-magnetic-sensors/src/master/
+[teensy-mag-repo]: https://bitbucket.org/mmrobotics/teensy-magnetometer/src/main/
+[docs]: https://bitbucket.org/mmrobotics/docs-magnetic-sensors/src/master/

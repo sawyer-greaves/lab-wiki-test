@@ -93,7 +93,7 @@ Talk about this when I've done this with Travis.
 
 If you experience non-smooth motion on the robot, it may be necessary to switch to using a real-time kernel. Universal Robots provides instructions on how to do this on docs.ros.org [here][rt-kernel].
 
-[docs]: https://bitbucket.org/utahtelerobotics/docs-ur5e-6dof-arm/src/master/
+[docs]: https://bitbucket.org/mmrobotics/docs-ur5e-6dof-arm/src/master/
 [ur-github]: https://github.com/UniversalRobots
 [ros2driver-repo]: https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver
 [driver-docs]: https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/index.html

@@ -65,11 +65,11 @@ The URL of the wiki is the same as the URL for the `lab-wiki` repository but has
 
 SSH
 ```
-$ git clone git@bitbucket.org:utahtelerobotics/lab-wiki.git/wiki
+$ git clone git@bitbucket.org:mmrobotics/lab-wiki.git/wiki
 ```
 HTTPS
 ```
-$ git clone https://bitbucket.org/utahtelerobotics/lab-wiki.git/wiki
+$ git clone https://bitbucket.org/mmrobotics/lab-wiki.git/wiki
 ```
 
 Since the Markdown files that makeup the wiki repository just contain plain text, they are easily created and modified with the text editor of your choice. **[Visual Studio Code](../useful_resources/Visual_Studio_Code.md) is highly recommended as a preferred text editor** because it has built-in support for Markdown syntax highlighting and IntelliSense out-of-the-box and has a Markdown preview window to see how edits affect the rendered page in real-time. There are extensions to enhance the preview window to see what the page will look like on [Bitbucket][2] or [GitHub][3] as well as enable it to [render emojis][4]. There is also a handy [spell checker extension][5]. All of these extensions can be installed and enabled in seconds from within VS Code with a single click.

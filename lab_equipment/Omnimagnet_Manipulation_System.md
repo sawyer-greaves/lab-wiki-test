@@ -28,5 +28,5 @@ On the computer the omnimagnets are plugged into the following analog out pins o
 
 3 of the amplifiers are currently not currently in use.
 
-[source]: https://bitbucket.org/utahtelerobotics/omnimagnet_system_driver/src
-[pci-1724u-docs]: https://bitbucket.org/utahtelerobotics/docs-pci-1724u/src/master/
+[source]: https://bitbucket.org/mmrobotics/omnimagnet_system_driver/src
+[pci-1724u-docs]: https://bitbucket.org/mmrobotics/docs-pci-1724u/src/master/

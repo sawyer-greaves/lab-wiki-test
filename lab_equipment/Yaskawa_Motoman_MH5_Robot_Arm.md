@@ -122,5 +122,5 @@ The connection to the DX100 Ethernet server will time out automatically after 30
 
 The DX100 Ethernet server processes requests at an unfortunately slow rate. This fact prevents the host computer from obtaining or commanding the robot state at high frequencies. Therefore, the implementation of the `MH5Robot` class maintains a sort of "digital twin" simulation that estimates the motion of the robot in between commanded poses. When a request for the robot pose is made to the  `MH5Robot` class, it returns this estimate instead of directly asking the DX100. This enables tracking the robot state at much higher rates. Unfortunately, there is no way to artificially increase the rate at which the robot can be commanded to new poses. You may issue new commands via the `MH5Robot` class as fast as you like, however, the class implementation sends commands at a fixed internal rate and it uses the most recently received command when doing so.
 
-[rob]: https://bitbucket.org/utahtelerobotics/roboticsframework/src/master/
-[docs]: https://bitbucket.org/utahtelerobotics/docs-yaskawa-motoman-6dof-arm/src/master/
+[rob]: https://bitbucket.org/mmrobotics/roboticsframework/src/master/
+[docs]: https://bitbucket.org/mmrobotics/docs-yaskawa-motoman-6dof-arm/src/master/

@@ -5,4 +5,4 @@
 
 Source code is found in the [helmholtz-coils][source] repository.
 
-[source]: https://bitbucket.org/utahtelerobotics/helmholtz-coils/src/master/
+[source]: https://bitbucket.org/mmrobotics/helmholtz-coils/src/master/
