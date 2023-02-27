@@ -49,7 +49,7 @@ Administrator privileges are required to perform the steps in this section.
     2. Click on *Add a user without a Microsoft account*.
     3. Enter a user name. Avoid spaces in the username.
     4. Enter a password.
-    5. Enter security questions.
+    5. Enter security questions. If you are creating the `labadmin` account, the lab default password should be the response to all security questions.
     6. Click *Next*.
 5. Click on the new account created in *Family & other users* and then click on *Change account type*.
 6. Change the account type to *Administrator* and click *OK*.
