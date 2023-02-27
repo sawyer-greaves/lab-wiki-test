@@ -20,7 +20,7 @@ Accessing the group drive involves two steps:
 
 Mounting the group drive allows you to access the drive as if it were a local drive on your system. Mounting is done on your computer on a per user basis. In other words, every user on a system will need to mount the drive themselves. The reason for this is that your personal CADE account information is used to access the drive. Below are instructions for mounting/mapping the drive on Windows and Linux.
 
->**IMPORTANT:** Your computer must be connected to the University of Utah network in order to access the group drive. It cannot be accessed remotely over the internet without using University of Utah remote access.
+>**IMPORTANT:** Your computer must be connected to the University of Utah network in order to access the group drive. University of Utah remote access must be used to access the group drive remotely over the internet.
 
 ### Windows
 
