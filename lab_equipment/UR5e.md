@@ -89,6 +89,10 @@ The above command will install the `ur_robot_driver` package but will also resul
 
 Talk about this when I've done this with Travis.
 
+**ROS Foxy Specific Tips**
+
+The `ur_control.launch.py` script launches the `dashboard_client` node when `use_fake_hardware` is set to `true`. This node should not be run in this situation since it interfaces with the hardware. Blah Blah Blah....
+
 ### Dealing With Non-Smooth Motion
 
 If you experience non-smooth motion on the robot, it may be necessary to switch to using a real-time kernel. Universal Robots provides instructions on how to do this on docs.ros.org [here][rt-kernel].
