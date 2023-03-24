@@ -91,7 +91,6 @@ Talk about this when I've done this with Travis.
 
 **ROS Foxy Specific Tips**
 
-The `ur_control.launch.py` script launches the `dashboard_client` node when `use_fake_hardware` is set to `true`. This node should not be run in this situation since it interfaces with the hardware. Blah Blah Blah....
 
 ### Dealing With Non-Smooth Motion
 
