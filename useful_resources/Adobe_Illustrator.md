@@ -18,6 +18,7 @@ Use the following export settings when you want to export a project to PDF and k
 3. Use the following **General** and **Compression** settings in the *Save Adobe PDF* dialog box that appears. Leave all other settings as default.
 
     ![](images/illustrator_export_settings_1.png)
+    
     ![](images/illustrator_export_settings_2.png)
 
 4. Once the settings have been configured, you can save them as an *Adobe PDF Preset* using the button in the image below (indicated with a red underline) to easily use them every time you need to export to PDF. It is recommended to name the preset something descriptive like `300dpi` or similar.
