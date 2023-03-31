@@ -35,13 +35,40 @@ The **5** in **UR5e** refers to the payload the robot can support in kilograms (
 ---
 ## Electrical Signaling
 
-The digital I/O signal ports inside the control box have been connected to the LED signal tower stack (the stoplight-like light) and the relay connecting power to the end-effector (currently the [JIMEE](JIMEE.md)) such that when the emergency stop button on the teach pendant is pressed, power to the end-effector is disconnected. The **Installation** settings on the teach pendant are also set such that the LED signal tower stack acts as a status indicator and has the following meaning:
+> :exclamation: **If the proper settings are not configured in the Installation in the teach pendant, the emergency stop will not properly deactivate the end-effector power relay and/or the status LEDs will not indicate the correct status.**
 
-- **Solid Green**: Robot power is on.
-- **Blinking Yellow**: Robot is running a program and may move. **Use caution when standing or walking near the robot.**
-- **Solid Red**: The robot in currently emergency stopped.
+The digital I/O signal ports inside the control box have been connected to the LED signal tower stack (the stoplight-like light) and the relay connecting power to the end-effector (currently the [JIMEE](JIMEE.md)) such that when the emergency stop button on the teach pendant is pressed, power to the end-effector is disconnected. Power to the end-effector is similarly disconnected when the UR5e is powered off. 
 
-These settings, including the effects resulting from pressing the emergency stop button are specific to the **Installation** used. If you use a new **Installation**, you will need to configure the I/O settings for that **Installation** appropriately.
+The status light and end-effector power relay are connected to the I/O ports inside the UR5e e-Series Control Box via an aviation plug and a 6-conductor wire with the following configuration:
+
+|Aviation Plug Terminal  | Wire Color  | Signal      | UR5e Control Box Pin |
+|-                       |-            |-            |-                     |
+| 8                      | Black       | GND         | 0V                   |
+| 1                      | Brown       | Amber Light | DO1                  |
+| 2                      | Blue        | Green Light | DO0                  |
+| 3                      | Red         | Red Light   | Power 24V            |
+| 4                      | White       | Relay A1    | CO0                  |
+| 5                      | Green       | Relay A2    | 0V                   |
+
+The following table indicates the configuration of the relay. Note that to get an inverted signal for the red signal light, the red light power wire is connected through normally closed terminals in the relay:
+
+|Terminal Pair   | Configuration   | Use                             |
+|-               |-                |-                                |
+| (A1, A2)       | Actuator        | Activates/Deactivates the relay |
+| (13, 14)       | Normally Open   | End-Effector Power              |
+| (23, 24)       | Normally Open   | End-Effector GND                |
+| (33/31, 34/32) | Normally Closed | Unused                          |
+| (43/41, 44/42) | Normally Closed | Red LED Status Light Power      |
+
+The **Installation** settings on the teach pendant are set such that the digital outputs in the UR5e control box activate the LED signal tower stack to act as a status indicator with the following meaning:
+
+| Status Light Color | Meaning                                |
+|-                   |-                                       |
+| Solid Green        | Robot power is on                      |
+| Flashing Amber     | Robot is running a program and may move. **Use caution when standing or walking near the robot.** |
+| Solid Red          | System emergency stop has been pressed |
+
+The **Installation** settings are important to get the proper status signals and effects resulting from pressing the emergency stop button. If you use a new **Installation**, you will need to configure the I/O settings for that **Installation** appropriately. The **Installation** settings should be as follows:
 
 **----------------ADD THE INSTALLATION SETTINGS USED HERE----------------------**
 
