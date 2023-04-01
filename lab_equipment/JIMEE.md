@@ -26,7 +26,7 @@ A software driver for controlling the JIMEE from a host computer has been implem
 
 The implementation of the JIMEE in our lab contains a XX.X-mm-diameter (X-inch-diameter), Grade-NXX, cylindrical permanent magnet with a dipole strength of XX.XX A m<sup>2</sup>. The magnet is diametrically magnetized such that when it is rotated within the JIMEE the dipole moment rotates orthogonal to the rotation axis.
 
-The drive motor is a Portescap 35GLT2R82-234E.1 brushed DC motor, with an `E9` Encoder that has 500 lines per revolution.
+The drive motor is a Portescap 35GLT2R82-234E.1 brushed DC motor, with an E9 Encoder that has 500 lines per revolution.
 
 **Talk about other hardware specs**
 
@@ -42,15 +42,15 @@ The motor on the JIMEE is driven by an Advanced Motion Controls (AMC) dpralte-02
 | 8  | Orange | Ch B    | 4  |
 | 10 | Brown  | Ch Z    | 8  |
 
-The drive accepts reference command signals from a host PC by connecting digital and analog I/O pins from a DAQ card installed in the PC to the I/O port on the servo drive. If you are using the [JIMEE ROS 2 Driver][driver_repo], then this DAQ card will be a Sensoray 826 (s826) card. The following table shows the connections necessary in the context of using a s826 card:
+The drive accepts reference command signals from a host PC by connecting digital and analog I/O pins from a DAQ card installed in the PC to the I/O port on the servo drive. If you are using the [JIMEE ROS 2 driver][driver_repo], then this DAQ card will be a Sensoray 826 (s826) card. The following table shows the connections necessary in the context of using an s826 card:
 
 | AMC Servo Drive I/O Signal | AMC Servo Drive I/O Port Pin | Wire Color | s826 Port, Pin | Notes |
 |-                              |-      |-   |-       |-  |
 |GND                            | 2  | Black  | J3, 48 |  |
 |Analog Output (180 rpm/V)      | 7   | TBD  | TBD    | This signal is currently not used, but could be used to obtain true velocity of the JIMEE's magnet. |
-|Analog Input + (Vref)          | 4   | Red  | J1, 42 | Used to specify the desired velocity. Range is +/- 10 Volts. Pin for the s826 is configurable by the JIMEE ROS 2 Driver. |
+|Analog Input + (Vref)          | 4   | Red  | J1, 42 | Used to specify the desired velocity. Range is +/- 10 Volts. Pin for the s826 is configurable by the JIMEE ROS 2 driver. |
 |Analog Input - (GND)           | 5 | Black  | J1, 40 |  |
-|Digital Input (Low to disable) | 11   | Red | J3, 47 | Used to enable the velocity controller and cause the magnet to spin. Pin for the s826 is configurable by the JIMEE ROS 2 Driver. |
+|Digital Input (Low to disable) | 11   | Red | J3, 47 | Used to enable the velocity controller and cause the magnet to spin. Pin for the s826 is configurable by the JIMEE ROS 2 driver. |
 
 ### Power Supply and Emergency-Stop-Activated Relay
 
@@ -68,7 +68,7 @@ The following table indicates the configuration of the relay:
 | (33/31, 34/32) | Normally Closed | Unused                          |
 | (43/41, 44/42) | Normally Closed | UR5e Red LED Status Light Power |
 
-The terminal pair (A1, A2) is connected to the configurable output pair (0V, CO0) inside the UR5e e-Series Control Box.
+The terminal pair (A1, A2) is connected to the configurable output pair (0V, CO0) inside the UR5e e-Series control box.
 
 ### UR5e Status Light
 
