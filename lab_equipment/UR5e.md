@@ -39,16 +39,16 @@ The **5** in **UR5e** refers to the payload the robot can support in kilograms (
 
 The digital I/O signal ports inside the control box have been connected to the LED signal tower stack (the stoplight-like light) and the relay connecting power to the end-effector (currently the [JIMEE](JIMEE.md)) such that when the emergency stop button on the teach pendant is pressed, power to the end-effector is disconnected. Power to the end-effector is similarly disconnected when the UR5e is powered off. 
 
-The status light and end-effector power relay are connected to the I/O ports inside the UR5e e-Series Control Box via an aviation plug and a 6-conductor wire with the following configuration:
+The status light and end-effector power relay are connected to the I/O ports inside the UR5e e-Series control box via an aviation plug and a 6-conductor wire with the following configuration:
 
-|Aviation Plug Terminal  | Wire Color  | Signal      | UR5e Control Box Pin |
-|-                       |-            |-            |-                     |
-| 8                      | Black       | GND         | 0V                   |
-| 1                      | Brown       | Amber Light | DO1                  |
-| 2                      | Blue        | Green Light | DO0                  |
-| 3                      | Red         | Red Light   | Power 24V            |
-| 4                      | White       | Relay A1    | CO0                  |
-| 5                      | Green       | Relay A2    | 0V                   |
+| UR5e Control Box Pin | Signal      | Wire Color | Aviation Plug Terminal |
+|-                     |-            |-           |-                       |
+| 0V                   | GND         | Black      | 8                      |
+| DO1                  | Amber Light | Brown      | 1                      |
+| DO0                  | Green Light | Blue       | 2                      |
+| Power 24V            | Red Light   | Red        | 3                      |
+| CO0                  | Relay A1    | White      | 4                      |
+| 0V                   | Relay A2    | Green      | 5                      |
 
 The following table indicates the configuration of the relay. Note that to get an inverted signal for the red signal light, the red light power wire is connected through normally closed terminals in the relay:
 
@@ -68,7 +68,7 @@ The **Installation** settings on the teach pendant are set such that the digital
 | Flashing Amber     | Robot is running a program and may move. **Use caution when standing or walking near the robot.** |
 | Solid Red          | System emergency stop has been pressed |
 
-The **Installation** settings are important to get the proper status signals and effects resulting from pressing the emergency stop button. If you use a new **Installation**, you will need to configure the I/O settings for that **Installation** appropriately. The **Installation** settings should be as follows:
+The **Installation** settings are important to get the proper status signals and proper effect from pressing the emergency stop button. If you use a new **Installation**, you will need to configure the I/O settings for that **Installation** appropriately. The **Installation** settings should be as follows:
 
 **----------------ADD THE INSTALLATION SETTINGS USED HERE----------------------**
 
@@ -88,25 +88,30 @@ The [ROS 2](../necessary_skills/ROS.md) driver for UR robots consists of several
 - `ur_moveit_config` - example MoveIt configuration for UR robots.
 - `ur_robot_driver` - driver / hardware interface for communication with UR robots.
 
-The documentation explaining setup and usage of the ROS 2 driver is a little disorganized because it was written and improved gradually over the course of several ROS releases (ROS Foxy through ROS Humble). However, as they improved the documentation, Universal Robots didn't really retroactively update it in branches for prior ROS releases (e.g. the release for ROS Foxy). In earlier releases (ROS Foxy) the documentation was basically all in the README file for the [Universal_Robots_ROS2_Driver][ros2driver-repo] repository. By the time of the release for ROS Humble, the repository README is still the starting place for the documentation, but the majority of the official driver documentation was moved to docs.ros.org:
+The documentation explaining setup and usage of the ROS 2 driver is a little disorganized because it was written and improved gradually over the course of several ROS releases (ROS Foxy through ROS Humble). As they improved the documentation, Universal Robots didn't really retroactively update it in branches for prior ROS releases (e.g. the release for ROS Foxy). In earlier releases (ROS Foxy) the documentation was basically all in the README file for the [Universal_Robots_ROS2_Driver][ros2driver-repo] repository. By the time of the release for ROS Humble, the repository README is still the starting place for the documentation, but the majority of the official driver documentation was moved to docs.ros.org:
 
 - [Driver Documentation][driver-docs]
 
-If you are using ROS Humble, simply start at the README for the [Universal_Robots_ROS2_Driver][ros2driver-repo] repository which will link to the driver documentation linked above. Unfortunately, if you are using an earlier ROS release, neither the README nor the documentation link above are perfect resources alone because the README is incomplete and makes you believe that you have to build the driver from source. On the other hand, the documentation on docs.ros.org (which is aimed at the release for ROS Humble) has subtle differences from earlier releases (e.g. the launch files are in different packages for ROS Humble and ROS Foxy). Probably the best course of action is to start at the README for any given release and then supplement with the docs.ros.org documentation. Honestly, the docs.ros.org documentation can be treated as the primary documentation, you just need to be familiar with the few differences if you are using earlier releases like ROS Foxy. These primary difference is the package where each particular launch file is found.
+If you are using ROS Humble, simply start at the README for the [Universal_Robots_ROS2_Driver][ros2driver-repo] repository which will link to the driver documentation linked above. Unfortunately, if you are using an earlier ROS release, neither the README nor the documentation link above are perfect resources alone because the README is incomplete and makes you believe that you have to build the driver from source. On the other hand, the documentation on docs.ros.org (which is aimed at the release for ROS Humble) has subtle differences from earlier releases (e.g. the launch files are in different packages for ROS Humble and ROS Foxy). Probably the best course of action is to start at the README for any given release and then supplement with the docs.ros.org documentation. Honestly, the docs.ros.org documentation can be treated as the primary documentation, you just need to be familiar with the few differences if you are using earlier releases like ROS Foxy. The primary difference is the package where each particular launch file is found.
 
 **Setup Necessary Only Once (e.g. setup already completed)**
 
-The IP address of the UR5e has been configured to `192.168.1.102`. The UR5e already has the **External Control** URCap installed and configured to talk to a host PC with the IP address `192.168.1.101`. A program using the URCap has also already been made which is called `Control_with_ROS.urp`.
+The IP address of the UR5e has been configured to `192.168.1.102`. The UR5e already has the **External Control** URCap installed and configured to talk to a host PC with the IP address `192.168.1.101`. A program using the URCap also already exists on the teach pendant called `Control_with_ROS.urp`.
 
 **Installing the Driver**
 
 Since ROS Foxy, the driver packages have been released on the ROS 2 APT repository and therefore can be easily installed on Linux using the APT package manager:
 
+*Before ROS Humble*
 ```
 sudo apt install ros-${ROS_DISTRO}-ur-robot-driver
 ```
+*ROS Humble and beyond*
+```
+sudo apt install ros-${ROS_DISTRO}-ur
+```
 
-The above command will install the `ur_robot_driver` package but will also result in installing the other driver packages due to the package dependency tree. It is recommended to install the driver in this way. The only package that may not automatically install is `ur_calibration`. If you need this package simply install it with
+The above command will install all driver packages due to the package dependency tree. It is recommended to install the driver in this way. If you are using a ROS distribution before ROS Humble, the `ur_calibration` package may not automatically install. If you need this package simply install it with
 
 ```
 sudo apt install ros-${ROS_DISTRO}-ur-calibration
@@ -116,7 +121,7 @@ If you need to build the driver from source, follow the instructions on the READ
 
 ### Overriding Driver Default Configuration and Robot Description (URDF, SRDF, etc.)
 
-The UR robot driver packages contain launch files that set up and launch the driver and, if desired, the `move_group` node from MoveIt 2 for motion planning with UR robots. There are many launch files, but the most important ones are: `ur_control.launch.py` and `ur_moveit.launch.py`. As mentioned above, the package in which these files are found is not the same in each ROS 2 release (e.g. in ROS Foxy they are found in the `ur_bringup` package). These launch files use `xacro` and many YAML configuration files to produce a URDF (and an SRDF in the case of `ur_moveit.launch.py`) of the robot at runtime and are designed to accept many arguments that allow for limited changes to the configuration and robot description (e.g. specifying the robot IP address, changing the UDRF/SRDF files used, etc). Although overriding the configuration and robot description used by these launch files is not strictly necessary, it must be done to achieve accurate robot motion or if the robot has a custom end effector. The following is a list of some reasons (not necessarily all of them) to override the default configuration:
+The UR robot driver packages contain launch files that set up and launch the driver and, if desired, the `move_group` node from MoveIt 2 for motion planning with UR robots. There are many launch files, but the most important ones are: `ur_control.launch.py` and `ur_moveit.launch.py`. As mentioned above, the package in which these files are found is not the same in each ROS 2 release (e.g. in ROS Foxy they are found in the `ur_bringup` package). These launch files use `xacro` and many YAML configuration files to produce a URDF (and an SRDF in the case of `ur_moveit.launch.py`) of the robot at runtime and are designed to accept many arguments that allow for limited changes to the configuration and robot description (e.g. specifying the robot IP address, changing the UDRF/SRDF files used, etc). Although overriding the configuration and robot description used by these launch files is not strictly necessary, it must be done to achieve accurate robot motion or if the robot has a custom end-effector. The following is a list of some reasons (not necessarily all of them) to override the default configuration:
 
 1. It is important to use calibrated kinematic parameters specific to the robot in use. The driver launch files obtain this calibration from a `default_kinematics.yaml` file found in the `config/ur5e/` directory of the *description package* they are told to use. This package defaults to the `ur_description` package which contains a `default_kinematics.yaml` file with a default calibration. A calibration file with parameters for a specific robot can be obtained using the `ur_calibration` package. Overriding the default file makes forward and inverse kinematics accurate.
 2. If an end-effector is attached to the robot (e.g. the [JIMEE][jimee]) you will need to modify the URDF of the robot. You will also likely want to modify the SRDF if motion planning with MoveIt is desired. Further, for some reason, adding collision obstacles to the MoveIt motion planning scene using the `PlanningSceneInterface` class has not worked as expected. As a workaround these obstacles can be added as links of the robot itself in the URDF.
@@ -128,7 +133,7 @@ The driver launch files do not allow for overriding every part of the configurat
 
 ### Dealing With Non-Smooth Motion
 
-If you experience non-smooth motion on the robot, it may be necessary to switch to using a real-time kernel. Universal Robots provides instructions on how to do this on [here on docs.ros.org][rt-kernel].
+If you experience non-smooth motion on the robot, it may be necessary to switch to using a real-time kernel. Universal Robots provides instructions on how to do this [here on docs.ros.org][rt-kernel].
 
 [docs]: https://bitbucket.org/mmrobotics/docs-ur5e-6dof-arm/src/master/
 [ur-github]: https://github.com/UniversalRobots
