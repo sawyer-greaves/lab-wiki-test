@@ -44,8 +44,8 @@ The status light and end-effector power relay are connected to the I/O ports ins
 | UR5e Control Box Pin | Signal      | Wire Color | Aviation Plug Terminal |
 |-                     |-            |-           |-                       |
 | 0V                   | GND         | Black      | 8                      |
-| DO1                  | Amber Light | Brown      | 1                      |
 | DO0                  | Green Light | Blue       | 2                      |
+| DO1                  | Amber Light | Brown      | 1                      |
 | Power 24V            | Red Light   | Red        | 3                      |
 | CO0                  | Relay A1    | White      | 4                      |
 | 0V                   | Relay A2    | Green      | 5                      |
@@ -55,10 +55,10 @@ The following table indicates the configuration of the relay. Note that to get a
 |Terminal Pair   | Configuration   | Use                             |
 |-               |-                |-                                |
 | (A1, A2)       | Actuator        | Activates/Deactivates the relay |
-| (13, 14)       | Normally Open   | End-Effector Power              |
-| (23, 24)       | Normally Open   | End-Effector GND                |
-| (33/31, 34/32) | Normally Closed | Unused                          |
 | (43/41, 44/42) | Normally Closed | Red LED Status Light Power      |
+| (33/31, 34/32) | Normally Closed | Unused                          |
+| (23, 24)       | Normally Open   | End-Effector GND                |
+| (13, 14)       | Normally Open   | End-Effector Power              |
 
 The **Installation** settings on the teach pendant are set such that the digital outputs in the UR5e control box activate the LED signal tower stack to act as a status indicator with the following meaning:
 
@@ -70,7 +70,15 @@ The **Installation** settings on the teach pendant are set such that the digital
 
 The **Installation** settings are important to get the proper status signals and proper effect from pressing the emergency stop button. If you use a new **Installation**, you will need to configure the I/O settings for that **Installation** appropriately. The **Installation** settings should be as follows:
 
-**----------------ADD THE INSTALLATION SETTINGS USED HERE----------------------**
+In the **Installation** tab,
+
+- Safety
+    - I/O
+        - Output Signal: `config_out[0], config_out[1]`, Function Assignment: `System Emergency Stop`
+- General
+    - I/O Setup
+        - Output: `DO[0]`, Action in program: `High when not running (Prog-Stop-HI)`
+        - Output: `DO[1]`, Action in program: `Continuous pulse when running (Cont-Pulse)`, High: `0.5` seconds, Low: `0.5` seconds
 
 ---
 ## Software Control from a Host Computer Using ROS 2
