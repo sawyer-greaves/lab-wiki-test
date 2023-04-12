@@ -14,5 +14,4 @@
 - Fill out [Utah Magnetic Haptic Device](lab_equipment/umhd.md)
 - Fill out [Helmholtz Coils](lab_equipment/Helmholtz_Coils.md)
 - Fill out [ATI Force/Torque Sensors](lab_equipment/ATI_FT_Sensors.md)
-- Fill out [SpaceExplorer 3D Mouse](lab_equipment/SpaceExplorer_3D_Mouse.md)
 - Fill out [NDI Polaris Spectra](lab_equipment/NDI_Polaris_Spectra.md)
