@@ -9,7 +9,6 @@
 ### Pages with little to no content
 
 - Fill out [Onboarding](Onboarding.md)
-- Fill out [Flea 3 Camera](lab_equipment/Flea3_Camera.md)
 - Fill out [Omnimagnet Manipulation System](lab_equipment/Omnimagnet_Manipulation_System.md)
 - Fill out [SensAble Phantom Omni](lab_equipment/Phantom_Omni.md)
 - Fill out [Utah Magnetic Haptic Device](lab_equipment/umhd.md)
