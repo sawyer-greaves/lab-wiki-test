@@ -10,6 +10,7 @@ The [Visual Studio Code home page][1] has a link to install VS Code on Windows a
 - [Keyboard Shortcuts for Linux](VSCode_keyboard_shortcuts_linux.pdf)
 
 Tips using VS Code for:
+
 - [Markdown][5]
 - [C/C++][6]
     - More info is available [here][7]
