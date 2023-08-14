@@ -34,7 +34,7 @@ To map the group drive on Windows, follow these steps:
 3. Select a drive letter that isn't already in use to assign to the group drive. Using `Z:` is recommended if it is available but you may chose any available letter.
 4. Put the group drive URL `\\chips.eng.utah.edu\telerobotics` into the Folder box and make sure *Reconnect at sign-in* is checked.
 5. Click *Finish*.
-6. You will be asked for your CADE username and password. Your username must be prepended with `USERS\`. For example, for a username of `johndoe` you would type `USERS\johndoe` in the username box.
+6. You will be asked for your CADE username and password. Your username must be appended with `@users.coe.utah.edu`. For example, for a username of `johndoe` you would type `johndoe@users.coe.utah.edu` in the username box.
 7. Make sure *Remember my credentials* is checked if you don't want to enter your password every time you login.
 7. Click *OK*.
 
@@ -50,9 +50,9 @@ You will be using `cifs` (Common Internet File System) to mount the drive by add
 
 The following conventions are assumed for the rest of these instructions:
 
-- `linuxusername` is your username on your Linux system
-- `cadeusername` is your CADE username
-- `cadepassword` is your CADE password
+- `<linuxusername>` is your username on your Linux system
+- `<cadeusername>` is your CADE username
+- `<cadepassword>` is your CADE password
 
 Next we need to create the directory where the drive will be mounted. It is recommended that you use a directory named `telerobotics-group` in your home directory. This directory is assumed as the mounting directory throughout the rest of these instructions.
 
@@ -68,8 +68,8 @@ This will open the `gedit` text editor and set it up such that saving will creat
 
 Add your CADE login info to the file by adding the following lines (with your personal CADE info of course):
 
-    username=cadeusername
-    password=cadepassword
+    username=<cadeusername>
+    password=<cadepassword>
 
 The syntax of the `.smbcredentials` file is very important. Make sure you only have those two lines and no white space anywhere (except perhaps if you have a space in your password).
 
@@ -85,7 +85,7 @@ Now we are ready to add the special line to `/etc/fstab`. You will need root pri
 
 Now add the following line to the end of the file (again be careful to use your Linux username where it appears). Be careful not to make any change to other lines in the `/etc/fstab` file.
     
-    //chips.eng.utah.edu/telerobotics /home/linuxusername/telerobotics-group cifs credentials=/home/linuxusername/.smbcredentials,uid=linuxusername,gid=linuxusername,vers=2.0 0 0
+    //chips.eng.utah.edu/telerobotics /home/<linuxusername>/telerobotics-group cifs credentials=/home/<linuxusername>/.smbcredentials,uid=<linuxusername>,gid=<linuxusername>,vers=2.0 0 0
 
  Save and close the file. Now mount the drive using:
 
