@@ -58,6 +58,7 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 - [Visual Studio Code](useful_resources/Visual_Studio_Code.md)
 - [Eigen Linear Algebra Library for C++](useful_resources/Eigen_Library.md)
 - [OpenCV Computer Vision Library](useful_resources/OpenCV.md)
+- [Ansys Maxwell Tutorials](useful_resources/Ansys_Maxwell_Modules)
 
 
 ---
