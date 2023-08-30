@@ -6,7 +6,7 @@ Ansys Maxwell is Finite Element Analysis software contained within Ansys Electro
 The following modules were created by Ansys to onboard users into the software. The collection is a work in progress.
 
 - Module 1: 
-    - [Basics](useful_resources/Ansys_Maxwell_Modules/Module_1_basics.pdf)
+    - [Basics](useful_resources/Ansys_Maxwell_Modules/Module_1_Basics.pdf)
     - [Workshop 1.1](useful_resources/Ansys_Maxwell_Modules/Workshop_1_1_Magnetostatic_2D.pdf) Magnetostatic 2D 
     - [Workshop 1.2](useful_resources/Ansys_Maxwell_Modules/Workshop_1_2_Magnetostatic_3D.pdf) Magnetostatic 3D 
 - Module 2:
@@ -17,7 +17,8 @@ The following modules were created by Ansys to onboard users into the software. 
     - [Workshop 2.4](useful_resources/Ansys_Maxwell_Modules/Workshop_2_4_Electrostatic_Analysis.pdf) Electrostatic Analysis
 - Module 3:
     - [Transient Solvers](useful_resources/Ansys_Maxwell_Modules/Module_3_Transient_Solvers.pdf) 
-    - [Workshop 3.1](useful_resources/Ansys_Maxwell_Modules/Workshop_3_1_2D_Magnetic_Transient_Analysis.pdf) 2D Magnetic Transient Analysis
+    - [Workshop 3.1](useful_resources/Ansys_Maxwell_Modules/Workshop_3_1_2D_Magnetic_Transient_Analysis.pdf) 2D Magnetic Transient Analysis 
+        - Note: This workshop requires an Ansys supplied example file (WS3_1.aedt), which has not been located. The content is still worthwhile, as the procedure for Motion Setup is shown.
     - [Workshop 3.2](useful_resources/Ansys_Maxwell_Modules/Workshop_3_2_3D_Magnetic_Transient_Analysis.pdf) 3D Magnetic Transient Analysis
 - Module 4:
     - [Postprocessing and Parametric](useful_resources/Ansys_Maxwell_Modules/Module_4_Postprocessing_and_Parametric.pdf)
