@@ -3,7 +3,7 @@
 Ansys Maxwell is Finite Element Analysis software contained within Ansys Electronics Desktop (AEDT), not Ansys Workbench, used to simulate electro-magnetic phenomena. Simulations can be performed for 2D or 3D, and either statically or transient.
 
 ## Modules
-The following modules were created by Ansys to onboard users into the software. The collection is a work in progress.
+The following modules were created by Ansys to onboard users into the software. The collection is a work in progress, as these modules are not listed conveniently on any Ansys webpage (at time of writing), and this list is the result of much google-foo.
 
 - Module 1: 
     - [Basics](useful_resources/Ansys_Maxwell_Modules/Module_1_Basics.pdf)
