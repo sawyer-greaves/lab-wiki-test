@@ -91,6 +91,8 @@ Below is a list of further resources that members of the lab have found useful.
 
 - [The Cherno's C++ playlist](https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
     - The clearest and most thorough tutorial video series for C++ we've found online.
+- [LearnCpp](https://www.learncpp.com)
+    - An online textbook with content, examples, and tutorials. Each section also includes a comment section for further discussion.
 - [cppreference.com](https://en.cppreference.com/w/)
     - The C++ language and standard library reference.
 - [stack overflow](https://stackoverflow.com/)
