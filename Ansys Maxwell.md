@@ -27,3 +27,7 @@ The following modules were created by Ansys to onboard users into the software. 
 - Module 5:
     - [Multiphysics](useful_resources/Ansys_Maxwell_Modules/Module_5_Multiphysics.pdf)
     - [Workshop 5.2](useful_resources/Ansys_Maxwell_Modules/Workshop_5_2_Electromagnetic_Thermal_Coupling.pdf) Magnetic Thermal Coupling
+
+
+## Scripting 
+All Ansys software can be ran via external scripting. This gives the benefit of additional control regarding the mesh process, and most importantly the ability to automate simulations. Ansys created their own scripting language APDL (Ansys Parametric Design Language) and MAPDL (Mechanical APDL) as a further extension of their scripting software. These are available at the student license level. Alternatively, there are packages for Python that accomplish the same thing. A user of Python and MAPDL found the process too unwieldy, and set about making PyAnsys. Ansys has since employed this person and encouraged them to expand their efforts to the various depths of Ansys software. PyAnsys is obtained from [here](https://aedt.docs.pyansys.com/version/stable/index.html).
