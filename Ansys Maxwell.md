@@ -2,7 +2,7 @@
 
 Ansys Maxwell is Finite Element Analysis software contained within Ansys Electronics Desktop (AEDT), not Ansys Workbench, used to simulate electro-magnetic phenomena. Simulations can be performed for 2D or 3D, and either statically or transient.
 
-## Modules
+# Tutorial Modules
 The following modules were created by Ansys to onboard users into the software. The collection is a work in progress, as these modules are not listed conveniently on any Ansys webpage (at time of writing), and this list is the result of much google-foo.
 
 - Module 1: 
@@ -29,5 +29,27 @@ The following modules were created by Ansys to onboard users into the software. 
     - [Workshop 5.2](useful_resources/Ansys_Maxwell_Modules/Workshop_5_2_Electromagnetic_Thermal_Coupling.pdf) Magnetic Thermal Coupling
 
 
-## Scripting 
-All Ansys software can be ran via external scripting. This gives the benefit of additional control regarding the mesh process, and most importantly the ability to automate simulations. Ansys created their own scripting language APDL (Ansys Parametric Design Language) and MAPDL (Mechanical APDL) as a further extension of their scripting software. These are available at the student license level. Alternatively, there are packages for Python that accomplish the same thing. A user of Python and MAPDL found the process too unwieldy, and set about making PyAnsys. Ansys has since employed this person and encouraged them to expand their efforts to the various depths of Ansys software. PyAnsys is obtained from [here](https://aedt.docs.pyansys.com/version/stable/index.html).
+# Scripting 
+All Ansys software can be ran via external scripting. This gives the benefit of additional control regarding the mesh process, and most importantly the ability to automate simulations. 
+
+## APDL and MAPDL
+Ansys created their own scripting language APDL (Ansys Parametric Design Language) and MAPDL (Mechanical APDL) as a further extension of their scripting software. These are available at every licensing level, including the student license level. 
+
+## PyAEDT
+Alternatively, there are packages for Python that accomplish the same level of control. A user of Python and MAPDL found the process too unwieldy, and set about making PyAnsys. Ansys has since employed this person and encouraged them to expand their efforts to the various depths of Ansys software. [PyAEDT](https://aedt.docs.pyansys.com/version/stable/index.html) provides scripting abilities for the Electronic Desktop (AEDT) portion of Ansys that is a companion to Ansys Workbench, and contains Maxwell. Several installation methods are provided and explained [here](https://aedt.docs.pyansys.com/version/stable/Getting_started/Installation.html).
+
+Installation Methods
+
+- Install from a Python file:
+    - Following this installation procedure installs PyAEDT to be run with CPython, which AEDT already includes. 
+    - This option allows for console-style control, or to script via web-based Jupyter, from within the Tools>Toolkit options within AEDT. Once a script has been generated and saved locally to the device, the option "Run_PyAEDT_Script" allows for the generated script to run. 
+    -This installation method does not install the PyAEDT package into any locally installed IDE.
+
+- Install PyAEDT in Conda virtual environment:
+    - Following this in installation procedure installs PyAEDT such that any IDE launched from Anaconda can access the package (i.e. Spyder, Jupyter, etc.).
+    - Launching the virtual environment is done via the CMD.exe prompt within Anaconda.
+    - PyAEDT scripts can then run within the Python IDE or your choice, and Ansys can boot from the script, with or without a graphical interface. 
+
+## User Guides
+
+The [PyAnsys](https://aedt.docs.pyansys.com/version/stable/User_guide/index.html) website provides several code examples, across all AEDT functionality, that include the whole process. Additional resources can be found by navigating throughout.
