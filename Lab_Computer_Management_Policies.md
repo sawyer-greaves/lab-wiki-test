@@ -85,6 +85,8 @@ Administrator privileges are required to perform the steps in this section.
 4. Click on *Remove User...*
 5. Choose to delete all user files. **This will remove the user's home directory and everything associated with this user. Make sure you have stored any data that you don't want to lose in another location.**
 
+In the scenario where there is not a `lab admin` account, and the only available user is `testuser`, the default password is `test1234`. After creating a personal user, the credentials for `testuser` should be altered to match the guidelines listed above regarding `lab admin` accounts.
+
 ---
 ## Remote Access to Lab Computers
 
