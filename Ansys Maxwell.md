@@ -55,9 +55,11 @@ Running a Script
 
 After PyAEDT has been installed, a new entry will have been added to the dropdown menu of the Tools tab in the ribbon. Selecting `Tools`-`Toolkit`-`PersonalLib`-`PyAEDT` will show three options for interfacing with PyAEDT (if this option is not present in the toolbar, try restating Ansys first, then check installation). Regardless of the PyAEDT interface chosen, the commands and syntax are identical. Regardless of the PyAEDT interface chosen, the commands and syntax are identical. The three options are as follows:
 
-- Console: This option opens a terminal and launches PyAEDT. From here, individual commands can be entered, and can be used in concert with the graphical portion of Ansys.
+- Console: This option opens a terminal and launches PyAEDT. From here, individual commands can be entered, and can be used in concert with the graphical portion of Ansys. This option can be quite useful for tinkering and testing commands (the commands can easily be undone by deleting the newly added feature through the graphical interface).
 - Jupyter: This option opens a Jupyter notebook in the default browser, and allows for live scripting. (This option is not recommended, as it crashed every time the author tried to explore what it launched).
 - Run PyAEDT Script: This option asks you to navigate to a extant Python script saved wherever. It then runs the code to completion. Inside the script when the Ansys instance options are declared, a boolean exists to declare if the script will open Ansys graphically or not.
+
+Additionally, one can run generate Python scripts from the IDE, without ever (visually) opening Ansys. This option is recommended for stable, solid scripts, as debugging is very difficult this way.
 
 
 
