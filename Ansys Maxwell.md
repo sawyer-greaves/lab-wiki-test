@@ -66,4 +66,4 @@ After PyAEDT has been installed, a new entry will have been added to the dropdow
 
 ## User Guides
 
-The [PyAnsys](https://aedt.docs.pyansys.com/version/stable/User_guide/index.html) website provides several code examples, across all AEDT functionality, that include examples for the entire process. Additional resources can be found by navigating throughout.
+The [PyAnsys](https://aedt.docs.pyansys.com/version/stable/User_guide/index.html) website provides several code examples, across all AEDT functionality, that include examples for the entire process. Additional resources can be found by navigating throughout. For command documentation see [PyAEDT API](https://aedt.docs.pyansys.com/version/stable/API/index.html).
