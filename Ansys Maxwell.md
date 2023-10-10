@@ -50,6 +50,20 @@ Installation Methods
     - Launching the virtual environment is done via the CMD.exe prompt within Anaconda.
     - PyAEDT scripts can then run within the Python IDE or your choice, and Ansys can boot from the script, with or without a graphical interface. 
 
+
+Running a Script
+
+After PyAEDT has been installed, a new entry will have been added to the dropdown menu of the Tools tab in the ribbon. Selecting `Tools`-`Toolkit`-`PersonalLib`-`PyAEDT` will show three options for interfacing with PyAEDT (if this option is not present in the toolbar, try restating Ansys first, then check installation). Regardless of the PyAEDT interface chosen, the commands and syntax are identical. Regardless of the PyAEDT interface chosen, the commands and syntax are identical. The three options are as follows:
+
+- Console: This option opens a terminal and launches PyAEDT. From here, individual commands can be entered, and can be used in concert with the graphical portion of Ansys.
+- Jupyter: This option opens a Jupyter notebook in the default browser, and allows for live scripting. (This option is not recommended, as it crashed every time the author tried to explore what it launched).
+- Run PyAEDT Script: This option asks you to navigate to a extant Python script saved wherever. It then runs the code to completion. Inside the script when the Ansys instance options are declared, a boolean exists to declare if the script will open Ansys graphically or not.
+
+
+
+
+
+
 ## User Guides
 
-The [PyAnsys](https://aedt.docs.pyansys.com/version/stable/User_guide/index.html) website provides several code examples, across all AEDT functionality, that include the whole process. Additional resources can be found by navigating throughout.
+The [PyAnsys](https://aedt.docs.pyansys.com/version/stable/User_guide/index.html) website provides several code examples, across all AEDT functionality, that include examples for the entire process. Additional resources can be found by navigating throughout.
