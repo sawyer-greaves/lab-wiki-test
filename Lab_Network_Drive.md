@@ -18,7 +18,7 @@ Accessing the group drive involves two steps:
 ---
 ## Mounting/Mapping the Group Drive
 
-Mounting the group drive allows you to access the drive as if it were a local drive on your system. Mounting is done on your computer on a per user basis. In other words, every user on a system will need to mount the drive themselves. The reason for this is that your personal CADE account information is used to access the drive. Below are instructions for mounting/mapping the drive on Windows and Linux.
+Mounting the group drive allows you to access the drive as if it were a local drive on your system. Mounting is done on your computer on a per user basis. In other words, every user on a system will need to mount the drive themselves. The reason for this is that your personal CADE account information is used to access the drive. Below are instructions for mounting/mapping the drive on Windows, Linux (broken), and Mac.
 
 >**IMPORTANT:** Your computer must be connected to the University of Utah network in order to access the group drive. University of Utah remote access must be used to access the group drive remotely over the internet.
 
@@ -92,6 +92,11 @@ Now add the following line to the end of the file (again be careful to use your 
     sudo mount -a
 
 If it worked, the `~/telerobotics-group` directory should contain the group drive. Depending on your version of Ubuntu, you may also see an icon on your desktop that will take you directly to the drive.
+
+
+### Apple
+
+Open Finder and `ctrl` + `k` to open the server connection window. Enter `smb://chips.eng.utah.edu/telerobotics` in the box and press `Connect`. Enter your university credentials similar to the Windows setup username:`username@users.coe.utah.edu` and your CADE password, click the checkbox to add the credentials to your Apple passkey if you'd like. After that the server should be available in the left hand side of finder, you can eject/disconnect using the ejection button or the disconnect button when the drive is selected. 
 
 ---
 ## Standards for Using the Group Drive
