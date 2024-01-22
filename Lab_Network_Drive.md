@@ -40,8 +40,17 @@ To map the group drive on Windows, follow these steps:
 
 ### Linux
 
+>**NOTE:** The following instructions have worked on an Ubuntu 20.04 machine, but some machines (Roborunner) are not able to connect using any of the methods for unknown reasons. 
+
+1. Open the file explorer and click `Other Locations`. 
+2. Enter `smb://chips.eng.utah.edu/telerobotics` in the server address box and press enter.
+3. Add your CADE credentials in the window, following the `username@users.coe.utah.edu` schema and your regular CADE password. Make sure the `registered user` button is selected. You can select the duration you wish the machine to remember your password before connecting. 
+4. The group drive should now appear in the file explorer left hand side. 
+
 >**NOTE:** Root privileges will be needed.
 
+
+>**NOTE:** The following instructions may be out of date. Try using the GUI instructions provided above before attempting this method. 
 These instructions are adapted from [this Ubuntu Wiki page][1] and [this serverfault StackExchange question][2] to give specific instructions for our lab.
 
 You will be using `cifs` (Common Internet File System) to mount the drive by adding a line to the `/etc/fstab` file on your system (`fstab` stands for file systems table). Therefore you must first install `cifs` if it is not already installed:
