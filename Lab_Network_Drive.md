@@ -96,7 +96,10 @@ If it worked, the `~/telerobotics-group` directory should contain the group driv
 
 ### Apple
 
-Open Finder and `ctrl` + `k` to open the server connection window. Enter `smb://chips.eng.utah.edu/telerobotics` in the box and press `Connect`. Enter your university credentials similar to the Windows setup username:`username@users.coe.utah.edu` and your CADE password, click the checkbox to add the credentials to your Apple passkey if you'd like. After that the server should be available in the left hand side of finder, you can eject/disconnect using the ejection button or the disconnect button when the drive is selected. 
+1. Open Finder and `ctrl` + `k` to open the server connection window. 
+2. Enter `smb://chips.eng.utah.edu/telerobotics` in the box and press `Connect`. 
+3. Enter your university credentials similar to the Windows setup username:`username@users.coe.utah.edu` and your CADE password, click the checkbox to add the credentials to your Apple passkey if you'd like. 
+4. After that the server should be available in the left hand side of finder, you can eject/disconnect using the ejection button or the disconnect button when the drive is selected. 
 
 ---
 ## Standards for Using the Group Drive
