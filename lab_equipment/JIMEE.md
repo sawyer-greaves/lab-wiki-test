@@ -22,6 +22,8 @@ A software driver for controlling the JIMEE from a host computer has been implem
 ---
 ## Hardware Specifications and Implementation Details
 
+This section includes some important information about the parts in a JIMEE, but is not an exhaustive description of how to construct a JIMEE. Such a description is listed below this section.
+
 ### Magnet
 
 The implementation of the JIMEE in our lab contains a 2-inch-diameter (50.8-mm-diameter), 2-inch-thick, Grade-N42, cylindrical permanent magnet with a 1/4-inch-diameter hole. (K&J Magnetics product [RY04Y0DIA][perm_mag]). The dipole strength is currently unknown. The magnet is diametrically magnetized such that when it is rotated within the JIMEE, the dipole moment is always orthogonal to the magnet rotation axis.
@@ -85,3 +87,47 @@ When the emergency stop has been pressed, everything on the robot is disabled, i
 
 [driver_repo]: https://bitbucket.org/mmrobotics/jimee_ros2_driver/src/master/
 [perm_mag]: https://www.kjmagnetics.com/proddetail.asp?prod=RY04Y0DIA
+
+## JIMEE Construction Procedure
+
+This document explains all details concerning the construction of a JIMEE end effector. You will need access to the `production_JIMEE` directory on box. Ask Travis Allen for help with this. 
+
+## What's in a JIMEE
+"Part Number" in the first column refers to the part numbers in [production_JIMEE_exploded_view.pdf](images/production_JIMEE_exploded_view.pdf). Note that **the following list does not contain all of the parts in a JIMEE!** There are two subassemblies listed below that allowed for better organization and clearer assembly instructions than if they were included in this list and in production_JIMEE_exploded_view.pdf or production_JIMEE.sldasm. Additionally, note that this construction guide does NOT include instructions for constructing the JIMEE's hall effect sensor array. 
+
+| Part Number | Name | Supplier| Supplier Part Number | Quantity | CAD File Name| Related Information |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | JIMEE Base | Custom | None | 1 | base.sldprt | Machined from 3/4" Delrin |
+| 2 | 0.125" Brass Dowel Pin | McMaster | 97325A135 | 10 | 97325A135.sldprt | None | 
+| 3 | Drive-Side Side Plate| Custom | None | 1 | side_plate_DS.sldprt | Laser cut from 1/4" acrylic | 
+| 4 | Non-Drive-Side Side Plate | Custom | None | 1 | side_plate_NDS.sldprt | Laser cut from 1/4" acrylic |
+| 5 | Front | Custom | None | 1 | front.sldprt | Machined from 1/2" Delrin |
+| 6 | Motor Mount | Custom | None | 1 | motor_mount.sldprt | Machined from 1/2" Delrin |
+| 7 | Motor Shaft Bearing | McMaster | 60355K283 | 2 | 60355K283.sldprt | None | 
+| 8 | Magnet Shaft Bearing | McMaster | 60355K291 | 2 | 60355K601.sldprt | Note part number and filename are different |
+| 9 | Motor Shaft Coupler | McMaster | 8011N126 | 1 | 8011N126.sldprt | None |
+| 10 | Drive-Side Magnet Shaft | Custom | None | 1 | shaft_DS.sldprt | Machined from 6061 aluminum |
+| 11 | Non-Drive-Side Magnet Shaft | Custom | None | 1 | shaft_NDS.sldprt | Machined from 6061 aluminum |
+| 12 | Magnet | K & J Magnetics | RY04Y0DIA | 1 | RY04Y0DIA.sldprt | None |
+| 13 | Motor Bracket | Custom | None | 1 | motor_bracket.sldprt | Machined from aluminum angle |
+| 14 | Motor | Portescap | 35GLT2R82-234E.1 | 1 | 35GLT2R82-234E.sldprt | With Portescap E9 encoder |
+| 15 | Motor Shaft | Custom | None | 1 | motor_shaft.sldprt | Machined from 6061 aluminum |
+| 16 | Magnet Cover | Custom | None | 1 | magnet_cover.sldprt | FDM 3D printed from PETG |
+| 17 | 1/4"-20 x 1" Brass BHCS | McMaster | 97715A267 | 12 | 97715A267.sldprt | None |
+| 18 | One Bolt Belt Support Spacer | Custom | None | 1 | belt_support_spacer_one_bolt.sldprt | FDM 3D printed from PETG |
+| 19 | Two Bolt Belt Support Spacer | Custom | None | 1 | belt_support_spacer_two_bolt.sldprt | FDM 3D printed from PETG |
+| 20 | 1/4"-20 x 1.5" Bronze Carriage Bolt | McMaster | 94050A210 | 1 | 94050A210.sldprt | None |
+| 21 | 24t Timing Belt Pulley | McMaster | 1277N764 | 1 | 1277N764.sldprt | None |
+| 22 | 16t Timing Belt Pulley | McMaster | 1277N747 | 1 | 1277N747.sldprt | None |
+| 23 | 16" Kevlar Timing Belt | McMaster | 1679K29 | 1 | 1679K29.sldprt | None |
+| 24 | Belt Bearing Support | Custom | None | 1 | belt_bearing_support.sldprt | None |
+| 25 | 1/4"-20 x 1 3/4" Brass BHCS | McMaster | 97715A527 | 2 | 97715A527.sldprt | None |
+| 26 | Belt Cover | Custom | None | 1 | belt_cover.sldprt | None |
+| 27 | 1/4"-20 Thin Bronze Hex Nut | McMaster | 91952A110 | 3 | 91952A110.sldprt | None |
+| 28 | 10-24 x 1" Stainless Carriage Bolt | McMaster | 93180A120 | 2 | 93180A120.sldprt | None |
+| 29 | #10 Brass Washer | McMaster | 92916A345 | 4 | 92916A345.sldprt | None |
+| 30 | 10-24 Brass Nylok Hex Nut | McMaster | 92092A025 | 4 | 92092A025.sldprt | None |
+| 31 | 10-24 Brass Threaded Rod | McMaster | 98812A011 | 1 | 98812A011.sldprt | Cut to length |
+| 32 | M3x0.5mm x 6mm SHCS | McMaster | 91290A111 | 4 | 91290A111.sldprt | None |
+
+
