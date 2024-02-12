@@ -5,7 +5,7 @@
 
 ## Introduction
 
-Our lab has several 6 degree-of-freedom (6DOF) force/torque transducers produced by ATI Industrial Automation. This page concerns the information related to these sensors and covers their use within our lab.
+Our lab has several 6 degree-of-freedom (6 DOF) force/torque transducers produced by ATI Industrial Automation. This page concerns the information related to these sensors and covers their use within our lab.
 
 ---
 
@@ -24,10 +24,10 @@ It is important to note that the sensor is used by reading the amplifier's outpu
 ### Precautions for use
 
 There are several safety precautions for using the ATI Nano17 Titanium sensor, listed here:
-- **Handle with care:** As mentioned above, each sensor costs in excess of $10,000. As a result you must be extraordinarly cautious when using the sensor. One small mistake may end up being a third of your (student) salary.
-- **Serialization:** Each sensor package (transducer, amplifier) has a serial number. You must pay attention to this, as the calibration of each sensor refers to the serialized package. **Do not connect transducers and amplifiers with different serial numbers.** The serial number follows the form `FTXXXXX` where `X` is a single digit integer, _e.g._ `FT42918`. All software that turns instantaneous sensor voltages into a 6 DOF wrench relies on a `.cal` calibration file which informs the software of the correct scaling, and this calibration file is specific to each transducer/amplifier pair.
-- **Screw insertion depth:** The most common way in which the sensors are damaged is by using mounting screws that intrude too far into the sensor body. The maximum screw insertion depth is listed on the sensor's [technical drawing](https://www.ati-ia.com/app_content/Documents/9230-05-1336.auto.pdf). For clarity's sake, this depth is **3.5mm**. _The prudent engineer applies a factor of safety to all of their calculations, especially those which carry an associated risk._
-- **Tool transform/moment arm:** Another common way to damage these sensors is to over-torque them, _i.e._ to subject them to a torque that is significantly beyond their saturation limit. This often happens when the sensor is subject to a force applied through a moment arm, which creates a torque on the sensor. Even a small moment arm can seriously amplify the torque that the sensor is subjected to, so be cautious of this fact and plan for it when designing the apparatuses that surround the sensor in your experiment. 
+* **Handle with care:** As mentioned above, each sensor costs in excess of $10,000. As a result you must be extraordinarly cautious when using the sensor. One small mistake may end up being a third of your (student) salary.
+* **Serialization:** Each sensor package (transducer, amplifier) has a serial number. You must pay attention to this, as the calibration of each sensor refers to the serialized package. **Do not connect transducers and amplifiers with different serial numbers.** The serial number follows the form `FTXXXXX` where `X` is a single digit integer, _e.g._ `FT42918`. All software that turns instantaneous sensor voltages into a 6 DOF wrench relies on a `.cal` calibration file which informs the software of the correct scaling, and this calibration file is specific to each transducer/amplifier pair.
+* **Screw insertion depth:** The most common way in which the sensors are damaged is by using mounting screws that intrude too far into the sensor body. The maximum screw insertion depth is listed on the sensor's [technical drawing](https://www.ati-ia.com/app_content/Documents/9230-05-1336.auto.pdf). For clarity's sake, this depth is **3.5mm**. _The prudent engineer applies a factor of safety to all of their calculations, especially those which carry an associated risk._
+* **Tool transform/moment arm:** Another common way to damage these sensors is to over-torque them, _i.e._ to subject them to a torque that is significantly beyond their saturation limit. This often happens when the sensor is subject to a force applied through a moment arm, which creates a torque on the sensor. Even a small moment arm can seriously amplify the torque that the sensor is subjected to, so be cautious of this fact and plan for it when designing the apparatuses that surround the sensor in your experiment. 
 
 >:warning: **Remember - one small mistake when using these sensors can cost our lab $10,000. Think, be intentional, and make every move a careful one.**
 
