@@ -1,5 +1,5 @@
 [Home](../Home)
-# Universal Robots UR5e 6-DOF Robot Arm
+# Universal Robots UR5e 6-DOF Robot Arms
 
 **Contents**
 
@@ -8,11 +8,11 @@
 ---
 ## Introduction
 
-The Universal Robots UR5e 6-DOF Robot Arm is our silver and blue robot arm. The robot consists of the 6-DOF manipulator arm itself, the e-Series control box responsible for driving the robot, and the teach pendant device providing the primary touch-screen user interface for the robot. Among other things, the teach pendant enables manual jogging of the robot joints and writing and executing programs for robot motion. The robot can also be remotely software controlled using a computer communicating with the e-Series control box over Ethernet. Several communication protocols are supported with varying paradigms for telling the robot what to do. These techniques are all detailed in the documentation and using them requires additional software development. As an alternative, Universal Robots develops and maintains a ROS 2 driver (see details in the *Software Control from a Host Computer Using ROS 2* section below). The ROS 2 driver is the method we use in the lab for controlling this robot.
+The Universal Robots UR5e 6-DOF Robot Arms are our silver and blue robot arms. Each robot consists of the 6-DOF manipulator arm itself, the e-Series control box responsible for driving the robot, and the teach pendant device providing the primary touch-screen user interface for the robot. Among other things, the teach pendant enables manual jogging of the robot joints and writing and executing programs for robot motion. Each robot can also be remotely software controlled using a computer communicating with the e-Series control box over Ethernet. Several communication protocols are supported with varying paradigms for telling the robot what to do. These techniques are all detailed in the documentation and using them requires additional software development. As an alternative, Universal Robots develops and maintains a ROS 2 driver (see details in the *Software Control from a Host Computer Using ROS 2* section below). The ROS 2 driver is the method we use in the lab for controlling these robots.
 
 The **5** in **UR5e** refers to the payload the robot can support in kilograms (the UR3e can support 3 kg, the UR5e can support 5 kg, etc.), the **e** indicates that it is an e-Series robot.
 
-> :warning: **You must read and be familiar with the UR5e User Manual (found at the documentation link below) before attempting to interact with the UR5e robot or use the teach pendant!**
+> :warning: **You must read and be familiar with the Universal Robots e-Series User Manual (found at the documentation link below) before attempting to interact with a UR5e robot or use the teach pendant!**
 
 > :warning: **The joints are back-drivable when drive power is off, but considerable manual force/torque is required. Back-driving the joints in this way is only intended for emergency purposes.**
 
@@ -33,13 +33,22 @@ The **5** in **UR5e** refers to the payload the robot can support in kilograms (
 - **URCap**: A software bundle meant to be installed onto the teach pendant and runs as a child process of PolyScope. URCaps contribute additional functionality to PolyScope.
 
 ---
+## Multiple Robots
+
+Our lab has two UR5e's. They are referred to as the "north" and "south" arms, and their placements on the table that holds onto them correspond to these cardinal directions. They are also labelled accordingly on the base of the physical robot, as well as on each robot's control box. 
+
+> :warning: **The two robots are connected to one another such that the Emergency Stop on the north UR5e functions as the Emergency Stop for BOTH the north and south UR5e's.**
+
+---
 ## Electrical Signaling
 
-> :exclamation: **If the proper settings are not configured in the Installation in the teach pendant, the emergency stop will not properly deactivate the end-effector power relay and/or the status LEDs will not indicate the correct status.**
+> :exclamation: **If the proper settings are not configured in the Installation in the teach pendant, the emergency stop will not properly deactivate both robots and the end-effector power relay and/or the status LEDs will not indicate the correct status.**
 
-The digital I/O signal ports inside the control box have been connected to the LED signal tower stack (the stoplight-like light) and the relay connecting power to the end-effector (currently the [JIMEE](JIMEE.md)) such that when the emergency stop button on the teach pendant is pressed, power to the end-effector is disconnected. Power to the end-effector is similarly disconnected when the UR5e is powered off. 
+The emergency stop signals of both robots, north and south, are connected to each other such that when the emergency stop is pressed on **EITHER** robot, both robots will undergo a Category 1 Stop (see Universal Robots e-Series manual pp. I-14 for more information regarding Stop Categories). This has the consequence that both robots must turned on during operation, even if you only want to use one robot. The robots are electrically connected according to the diagram on pp. I-36 of the Universal Robots e-Series Manual, where the north UR5e is robot "A" and the south UR5e is robot "B".
 
-The status light and end-effector power relay are connected to the I/O ports inside the UR5e e-Series control box via an aviation plug and a 6-conductor wire with the following configuration:
+The digital I/O signal ports inside the north control box have been connected to the LED signal tower stack (the stoplight-like light) and the relay connecting power to the end-effector (currently the [JIMEE](JIMEE.md)) such that when the emergency stop button on the teach pendant is pressed, power to the end-effector is disconnected. Power to the end-effector is similarly disconnected when the UR5e is powered off. 
+
+The status light and end-effector power relay are connected to the I/O ports inside the north UR5e e-Series control box via an aviation plug and a 6-conductor wire with the following configuration:
 
 | UR5e Control Box Pin | Signal      | Wire Color | Aviation Plug Terminal |
 |-                     |-            |-           |-                       |
@@ -60,12 +69,12 @@ The following table indicates the configuration of the relay. Note that to get a
 | (23, 24)       | Normally Open   | End-Effector GND                |
 | (13, 14)       | Normally Open   | End-Effector Power              |
 
-The **Installation** settings on the teach pendant are set such that the digital outputs in the UR5e control box activate the LED signal tower stack to act as a status indicator with the following meaning:
+The **Installation** settings on the teach pendant are set such that the digital outputs in the north UR5e control box activate the LED signal tower stack to act as a status indicator with the following meaning:
 
 | Status Light Color | Meaning                                |
 |-                   |-                                       |
-| Solid Green        | Robot power is on                      |
-| Flashing Amber     | Robot is running a program and may move. **Use caution when standing or walking near the robot.** |
+| Solid Green        | Power is on for both robots            |
+| Flashing Amber     | Robots are running programs and may move. **Use caution when standing or walking near the robots.** |
 | Solid Red          | System emergency stop has been pressed |
 
 The **Installation** settings are important to get the proper status signals and proper effect from pressing the emergency stop button. If you use a new **Installation**, you will need to configure the I/O settings for that **Installation** appropriately. The **Installation** settings should be as follows:
@@ -79,6 +88,8 @@ In the **Installation** tab,
     - I/O Setup
         - Output: `DO[0]`, Action in program: `High when not running (Prog-Stop-HI)`
         - Output: `DO[1]`, Action in program: `Continuous pulse when running (Cont-Pulse)`, High: `0.5` seconds, Low: `0.5` seconds
+
+The safety settings of an **Installation** are password protected. The password for both robots is `telerobo2156`.
 
 ---
 ## Software Control from a Host Computer Using ROS 2
@@ -104,7 +115,9 @@ If you are using ROS Humble, simply start at the README for the [Universal_Robot
 
 **Setup Necessary Only Once (e.g. setup already completed)**
 
-The IP address of the UR5e has been configured to `192.168.1.102`. The UR5e already has the **External Control** URCap installed and configured to talk to a host PC with the IP address `192.168.1.101`. A program using the URCap also already exists on the teach pendant called `Control_with_ROS.urp`.
+The IP address of the **north** UR5e has been configured to `192.168.1.102`. The **nort**h** UR5e already has the **External Control** URCap installed and configured to talk to a host PC with the IP address `192.168.1.101`. A program using the URCap also already exists on the teach pendant called `Control_with_ROS.urp`.
+
+The IP address of the **south** UR5e has been configured to `192.168.2.102`. The **south** UR5e already has the **External Control** URCap installed and configured to talk to a host PC with the IP address `192.168.2.101`. A program using the URCap also already exists on the teach pendant called `Control_with_ROS.urp`.
 
 **Installing the Driver**
 
