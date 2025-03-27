@@ -59,7 +59,7 @@ The "History" button will show a list of commits that modified the file in some 
 
 >**IMPORTANT:** Understanding [how to use Git](Git.md) is a prerequisite for this method of editing the wiki!
 
-The wiki itself is actually a Git repository in its own right that exists alongside the `lab-wiki` repository currently hosting the wiki. This means you can clone it, edit it locally/offline, add images or any other file type, and push it back to Bitbucket. Pushed changed will be live on the web immediately.
+The wiki itself is actually a Git repository in its own right that exists alongside the `lab-wiki` repository currently hosting the wiki. This means you can clone it, edit it locally/offline, add images or any other file type, and push it back to Bitbucket. Pushed changes will be live on the web immediately.
 
 The URL of the wiki is the same as the URL for the `lab-wiki` repository but has `/wiki` appended to it (to specify that we want the wiki itself and not the empty repository hosting the wiki). The wiki can be cloned using:
 
