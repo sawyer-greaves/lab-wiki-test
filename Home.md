@@ -113,6 +113,10 @@ Please see [How to Edit this Wiki](necessary_skills/Editing_the_Wiki.md) for ins
 - [SensAble Phantom Omni](lab_equipment/Phantom_Omni.md)
 - [Utah Magnetic Haptic Device](lab_equipment/umhd.md)
 
+**3D Printers**
+
+- [Bambu 3D Printers](lab_equipment/Bambu_3D_Printers.md)
+
 **Miscellaneous**
 
 - [Motors, Drivers, and Inductive Loads](https://bitbucket.org/mmrobotics/docs-motors-and-inductive-loads/src/master/)
